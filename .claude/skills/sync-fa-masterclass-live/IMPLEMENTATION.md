@@ -127,16 +127,25 @@ Rebuild from the four files above:
 }
 ```
 
-## Phase 7: Commit & push
+## Phase 7: Deploy — copy data into docs/, commit, push
+
+GitHub Pages serves this repo from `docs/` (branch `main`, path `/docs`), which
+is the **built** output of `dashboard/`, not the source. A routine data-only
+sync doesn't need a rebuild — just copy the fresh JSON into `docs/data/` too:
 
 ```bash
 cd /Users/jayvee/Documents/ds-work/fa-masterclass-live-dashboard
-git add dashboard/public/data/*.json sync/attribution_cache.json
+cp dashboard/public/data/*.json docs/data/
+git add dashboard/public/data/*.json docs/data/*.json sync/attribution_cache.json
 git commit -m "Sync masterclass data through <date>"
 git push origin main
 ```
 
-Skip if `--no-push`.
+Only rerun `cd dashboard && npm run build && rm -rf ../docs && cp -r dist ../docs`
+(then re-add `.nojekyll`) when frontend **code** changed, not for a plain
+data sync.
+
+Skip the push if `--no-push`.
 
 ## Bootstrap note (first sync, 2026-09-14)
 

@@ -1,0 +1,50 @@
+{
+  "meta": {
+    "generatedAt": "2026-09-14T05:13:08.701991Z",
+    "source": "GHL MCP direct pull (search-contacts-advanced, tag 'accelerator masterclass - attended D/M'), no BigQuery",
+    "dataWindow": "2026-06-04 to 2026-09-08",
+    "totalAttendees": 338
+  },
+  "masterclassAttendance": [
+    {
+      "date": "2026-09-08",
+      "attended": 32
+    },
+    {
+      "date": "2026-09-01",
+      "attended": 36
+    },
+    {
+      "date": "2026-08-18",
+      "attended": 33
+    },
+    {
+      "date": "2026-08-11",
+      "attended": 38
+    },
+    {
+      "date": "2026-08-05",
+      "attended": 76
+    },
+    {
+      "date": "2026-08-04",
+      "attended": 40
+    },
+    {
+      "date": "2026-07-28",
+      "attended": 32
+    },
+    {
+      "date": "2026-07-22",
+      "attended": 33
+    },
+    {
+      "date": "2026-07-16",
+      "attended": 17
+    },
+    {
+      "date": "2026-06-04",
+      "attended": 1
+    }
+  ]
+}
