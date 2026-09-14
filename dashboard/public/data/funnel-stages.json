@@ -1,0 +1,77 @@
+{
+  "meta": {
+    "generatedAt": "2026-09-14T05:12:08.133633Z",
+    "source": "GHL MCP direct pull (search-opportunity, per-stage), no BigQuery",
+    "dataWindow": "2026-09-14",
+    "totalOpportunities": 6553,
+    "pipelineId": "djiSwm3hJsW7Rv9tyqSl"
+  },
+  "stages": [
+    {
+      "name": "Registered",
+      "count": 4945,
+      "position": 0,
+      "winProbability": 75.46
+    },
+    {
+      "name": "Replay Optin",
+      "count": 407,
+      "position": 1,
+      "winProbability": 6.21
+    },
+    {
+      "name": "Close Lost",
+      "count": 373,
+      "position": 2,
+      "winProbability": 5.69
+    },
+    {
+      "name": "Call Cancelled / Not Interested",
+      "count": 267,
+      "position": 3,
+      "winProbability": 4.07
+    },
+    {
+      "name": "No-Showed",
+      "count": 258,
+      "position": 4,
+      "winProbability": 3.94
+    },
+    {
+      "name": "Call Cancelled / Need To Reschedule",
+      "count": 153,
+      "position": 5,
+      "winProbability": 2.33
+    },
+    {
+      "name": "Close Won",
+      "count": 80,
+      "position": 6,
+      "winProbability": 1.22
+    },
+    {
+      "name": "Bad Fit",
+      "count": 29,
+      "position": 7,
+      "winProbability": 0.44
+    },
+    {
+      "name": "VIP Upgrade",
+      "count": 17,
+      "position": 8,
+      "winProbability": 0.26
+    },
+    {
+      "name": "Appointment Booked",
+      "count": 17,
+      "position": 9,
+      "winProbability": 0.26
+    },
+    {
+      "name": "Pending Sale",
+      "count": 7,
+      "position": 10,
+      "winProbability": 0.11
+    }
+  ]
+}

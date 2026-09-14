@@ -1,0 +1,5474 @@
+{
+  "meta": {
+    "generatedAt": "2026-09-14T03:27:43.634Z",
+    "source": "Google Sheet 'CONSOLIDATED' (direct CSV pull) x-referenced with GHL attributionSource, bootstrapped from prior BigQuery-era classification, incremental going forward",
+    "dataWindow": "Nov 2025 - Sep 2026"
+  },
+  "monthlySummary": [
+    {
+      "month": "2026-03",
+      "totalCash": 27018,
+      "cashFromAds": 23524,
+      "cashFromOrganic": 3494,
+      "transactionCount": 33
+    },
+    {
+      "month": "2026-04",
+      "totalCash": 188973,
+      "cashFromAds": 117511,
+      "cashFromOrganic": 71462,
+      "transactionCount": 94
+    },
+    {
+      "month": "2026-05",
+      "totalCash": 151976,
+      "cashFromAds": 114938,
+      "cashFromOrganic": 37038,
+      "transactionCount": 84
+    },
+    {
+      "month": "2026-06",
+      "totalCash": 166179,
+      "cashFromAds": 101426,
+      "cashFromOrganic": 64753,
+      "transactionCount": 137
+    },
+    {
+      "month": "2026-07",
+      "totalCash": 107706,
+      "cashFromAds": 78092,
+      "cashFromOrganic": 29614,
+      "transactionCount": 97
+    },
+    {
+      "month": "2026-08",
+      "totalCash": 98273.32,
+      "cashFromAds": 42247.670000000006,
+      "cashFromOrganic": 56025.65,
+      "transactionCount": 40
+    },
+    {
+      "month": "2026-09",
+      "totalCash": 48406.66,
+      "cashFromAds": 30806.66,
+      "cashFromOrganic": 17600,
+      "transactionCount": 15
+    }
+  ],
+  "dailyBreakdown": [
+    {
+      "date": "2026-03-11",
+      "totalCash": 194,
+      "cashFromAds": 97,
+      "cashFromOrganic": 97
+    },
+    {
+      "date": "2026-03-12",
+      "totalCash": 100,
+      "cashFromAds": 0,
+      "cashFromOrganic": 100
+    },
+    {
+      "date": "2026-03-13",
+      "totalCash": 2247,
+      "cashFromAds": 47,
+      "cashFromOrganic": 2200
+    },
+    {
+      "date": "2026-03-16",
+      "totalCash": 1100,
+      "cashFromAds": 1100,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-03-17",
+      "totalCash": 97,
+      "cashFromAds": 97,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-03-18",
+      "totalCash": 1388,
+      "cashFromAds": 291,
+      "cashFromOrganic": 1097
+    },
+    {
+      "date": "2026-03-19",
+      "totalCash": 95,
+      "cashFromAds": 95,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-03-20",
+      "totalCash": 3500,
+      "cashFromAds": 3500,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-03-21",
+      "totalCash": 1600,
+      "cashFromAds": 1600,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-03-23",
+      "totalCash": 5250,
+      "cashFromAds": 5250,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-03-25",
+      "totalCash": 4000,
+      "cashFromAds": 4000,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-03-26",
+      "totalCash": 597,
+      "cashFromAds": 597,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-03-27",
+      "totalCash": 2100,
+      "cashFromAds": 2100,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-03-30",
+      "totalCash": 2250,
+      "cashFromAds": 2250,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-03-31",
+      "totalCash": 2500,
+      "cashFromAds": 2500,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-04-01",
+      "totalCash": 400,
+      "cashFromAds": 400,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-04-02",
+      "totalCash": 3725,
+      "cashFromAds": 3525,
+      "cashFromOrganic": 200
+    },
+    {
+      "date": "2026-04-03",
+      "totalCash": 547,
+      "cashFromAds": 47,
+      "cashFromOrganic": 500
+    },
+    {
+      "date": "2026-04-04",
+      "totalCash": 12047,
+      "cashFromAds": 1297,
+      "cashFromOrganic": 10750
+    },
+    {
+      "date": "2026-04-07",
+      "totalCash": 847,
+      "cashFromAds": 347,
+      "cashFromOrganic": 500
+    },
+    {
+      "date": "2026-04-08",
+      "totalCash": 22000,
+      "cashFromAds": 22000,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-04-09",
+      "totalCash": 3300,
+      "cashFromAds": 1700,
+      "cashFromOrganic": 1600
+    },
+    {
+      "date": "2026-04-10",
+      "totalCash": 21600,
+      "cashFromAds": 150,
+      "cashFromOrganic": 21450
+    },
+    {
+      "date": "2026-04-11",
+      "totalCash": 1050,
+      "cashFromAds": 1000,
+      "cashFromOrganic": 50
+    },
+    {
+      "date": "2026-04-13",
+      "totalCash": 1097,
+      "cashFromAds": 1097,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-04-14",
+      "totalCash": 100,
+      "cashFromAds": 100,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-04-15",
+      "totalCash": 2010,
+      "cashFromAds": 1510,
+      "cashFromOrganic": 500
+    },
+    {
+      "date": "2026-04-16",
+      "totalCash": 7270,
+      "cashFromAds": 1520,
+      "cashFromOrganic": 5750
+    },
+    {
+      "date": "2026-04-17",
+      "totalCash": 20647,
+      "cashFromAds": 20647,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-04-18",
+      "totalCash": 11750,
+      "cashFromAds": 11750,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-04-19",
+      "totalCash": 197,
+      "cashFromAds": 147,
+      "cashFromOrganic": 50
+    },
+    {
+      "date": "2026-04-20",
+      "totalCash": 6950,
+      "cashFromAds": 500,
+      "cashFromOrganic": 6450
+    },
+    {
+      "date": "2026-04-21",
+      "totalCash": 10950,
+      "cashFromAds": 0,
+      "cashFromOrganic": 10950
+    },
+    {
+      "date": "2026-04-22",
+      "totalCash": 3197,
+      "cashFromAds": 3097,
+      "cashFromOrganic": 100
+    },
+    {
+      "date": "2026-04-23",
+      "totalCash": 5599,
+      "cashFromAds": 5502,
+      "cashFromOrganic": 97
+    },
+    {
+      "date": "2026-04-24",
+      "totalCash": 1000,
+      "cashFromAds": 1000,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-04-25",
+      "totalCash": 22000,
+      "cashFromAds": 22000,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-04-26",
+      "totalCash": 1144,
+      "cashFromAds": 950,
+      "cashFromOrganic": 194
+    },
+    {
+      "date": "2026-04-27",
+      "totalCash": 127,
+      "cashFromAds": 127,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-04-28",
+      "totalCash": 10194,
+      "cashFromAds": 10000,
+      "cashFromOrganic": 194
+    },
+    {
+      "date": "2026-04-29",
+      "totalCash": 5097,
+      "cashFromAds": 1000,
+      "cashFromOrganic": 4097
+    },
+    {
+      "date": "2026-04-30",
+      "totalCash": 14128,
+      "cashFromAds": 6098,
+      "cashFromOrganic": 8030
+    },
+    {
+      "date": "2026-05-01",
+      "totalCash": 1000,
+      "cashFromAds": 1000,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-05-02",
+      "totalCash": 11144,
+      "cashFromAds": 11000,
+      "cashFromOrganic": 144
+    },
+    {
+      "date": "2026-05-03",
+      "totalCash": 20900,
+      "cashFromAds": 0,
+      "cashFromOrganic": 20900
+    },
+    {
+      "date": "2026-05-04",
+      "totalCash": 100,
+      "cashFromAds": 0,
+      "cashFromOrganic": 100
+    },
+    {
+      "date": "2026-05-05",
+      "totalCash": 247,
+      "cashFromAds": 247,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-05-06",
+      "totalCash": 11044,
+      "cashFromAds": 11044,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-05-07",
+      "totalCash": 447,
+      "cashFromAds": 47,
+      "cashFromOrganic": 400
+    },
+    {
+      "date": "2026-05-08",
+      "totalCash": 10694,
+      "cashFromAds": 94,
+      "cashFromOrganic": 10600
+    },
+    {
+      "date": "2026-05-09",
+      "totalCash": 2647,
+      "cashFromAds": 2647,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-05-10",
+      "totalCash": 2744,
+      "cashFromAds": 1644,
+      "cashFromOrganic": 1100
+    },
+    {
+      "date": "2026-05-11",
+      "totalCash": 647,
+      "cashFromAds": 647,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-05-13",
+      "totalCash": 1700,
+      "cashFromAds": 1700,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-05-14",
+      "totalCash": 2091,
+      "cashFromAds": 2091,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-05-15",
+      "totalCash": 2397,
+      "cashFromAds": 1897,
+      "cashFromOrganic": 500
+    },
+    {
+      "date": "2026-05-16",
+      "totalCash": 10700,
+      "cashFromAds": 10700,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-05-17",
+      "totalCash": 194,
+      "cashFromAds": 194,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-05-18",
+      "totalCash": 1060,
+      "cashFromAds": 510,
+      "cashFromOrganic": 550
+    },
+    {
+      "date": "2026-05-19",
+      "totalCash": 1097,
+      "cashFromAds": 1097,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-05-20",
+      "totalCash": 400,
+      "cashFromAds": 400,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-05-21",
+      "totalCash": 97,
+      "cashFromAds": 0,
+      "cashFromOrganic": 97
+    },
+    {
+      "date": "2026-05-22",
+      "totalCash": 2194,
+      "cashFromAds": 2097,
+      "cashFromOrganic": 97
+    },
+    {
+      "date": "2026-05-23",
+      "totalCash": 12397,
+      "cashFromAds": 11847,
+      "cashFromOrganic": 550
+    },
+    {
+      "date": "2026-05-26",
+      "totalCash": 18597,
+      "cashFromAds": 18597,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-05-27",
+      "totalCash": 10000,
+      "cashFromAds": 10000,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-05-28",
+      "totalCash": 11000,
+      "cashFromAds": 11000,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-05-29",
+      "totalCash": 3247,
+      "cashFromAds": 2247,
+      "cashFromOrganic": 1000
+    },
+    {
+      "date": "2026-05-30",
+      "totalCash": 13094,
+      "cashFromAds": 12094,
+      "cashFromOrganic": 1000
+    },
+    {
+      "date": "2026-05-31",
+      "totalCash": 97,
+      "cashFromAds": 97,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-06-01",
+      "totalCash": 301,
+      "cashFromAds": 1,
+      "cashFromOrganic": 300
+    },
+    {
+      "date": "2026-06-02",
+      "totalCash": 11097,
+      "cashFromAds": 11097,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-06-03",
+      "totalCash": 1000,
+      "cashFromAds": 1000,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-06-04",
+      "totalCash": 11047,
+      "cashFromAds": 47,
+      "cashFromOrganic": 11000
+    },
+    {
+      "date": "2026-06-05",
+      "totalCash": 11500,
+      "cashFromAds": 0,
+      "cashFromOrganic": 11500
+    },
+    {
+      "date": "2026-06-06",
+      "totalCash": 2550,
+      "cashFromAds": 2550,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-06-07",
+      "totalCash": 1,
+      "cashFromAds": 0,
+      "cashFromOrganic": 1
+    },
+    {
+      "date": "2026-06-08",
+      "totalCash": 7390,
+      "cashFromAds": 6390,
+      "cashFromOrganic": 1000
+    },
+    {
+      "date": "2026-06-09",
+      "totalCash": 3401,
+      "cashFromAds": 2401,
+      "cashFromOrganic": 1000
+    },
+    {
+      "date": "2026-06-10",
+      "totalCash": 2597,
+      "cashFromAds": 2597,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-06-11",
+      "totalCash": 1950,
+      "cashFromAds": 950,
+      "cashFromOrganic": 1000
+    },
+    {
+      "date": "2026-06-12",
+      "totalCash": 23310,
+      "cashFromAds": 12210,
+      "cashFromOrganic": 11100
+    },
+    {
+      "date": "2026-06-13",
+      "totalCash": 13657,
+      "cashFromAds": 657,
+      "cashFromOrganic": 13000
+    },
+    {
+      "date": "2026-06-14",
+      "totalCash": 1050,
+      "cashFromAds": 550,
+      "cashFromOrganic": 500
+    },
+    {
+      "date": "2026-06-15",
+      "totalCash": 550,
+      "cashFromAds": 550,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-06-16",
+      "totalCash": 50,
+      "cashFromAds": 50,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-06-17",
+      "totalCash": 200,
+      "cashFromAds": 200,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-06-18",
+      "totalCash": 15900,
+      "cashFromAds": 15350,
+      "cashFromOrganic": 550
+    },
+    {
+      "date": "2026-06-19",
+      "totalCash": 1060,
+      "cashFromAds": 60,
+      "cashFromOrganic": 1000
+    },
+    {
+      "date": "2026-06-20",
+      "totalCash": 12244,
+      "cashFromAds": 12244,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-06-21",
+      "totalCash": 1500,
+      "cashFromAds": 500,
+      "cashFromOrganic": 1000
+    },
+    {
+      "date": "2026-06-22",
+      "totalCash": 11751,
+      "cashFromAds": 11751,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-06-23",
+      "totalCash": 12613,
+      "cashFromAds": 12063,
+      "cashFromOrganic": 550
+    },
+    {
+      "date": "2026-06-24",
+      "totalCash": 17283,
+      "cashFromAds": 6150,
+      "cashFromOrganic": 11133
+    },
+    {
+      "date": "2026-06-25",
+      "totalCash": 36,
+      "cashFromAds": 18,
+      "cashFromOrganic": 18
+    },
+    {
+      "date": "2026-06-26",
+      "totalCash": 1306,
+      "cashFromAds": 1306,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-06-27",
+      "totalCash": 126,
+      "cashFromAds": 99,
+      "cashFromOrganic": 27
+    },
+    {
+      "date": "2026-06-28",
+      "totalCash": 63,
+      "cashFromAds": 54,
+      "cashFromOrganic": 9
+    },
+    {
+      "date": "2026-06-29",
+      "totalCash": 554,
+      "cashFromAds": 545,
+      "cashFromOrganic": 9
+    },
+    {
+      "date": "2026-06-30",
+      "totalCash": 92,
+      "cashFromAds": 36,
+      "cashFromOrganic": 56
+    },
+    {
+      "date": "2026-07-01",
+      "totalCash": 1187,
+      "cashFromAds": 1187,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-07-02",
+      "totalCash": 12136,
+      "cashFromAds": 12136,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-07-03",
+      "totalCash": 886,
+      "cashFromAds": 777,
+      "cashFromOrganic": 109
+    },
+    {
+      "date": "2026-07-04",
+      "totalCash": 9,
+      "cashFromAds": 9,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-07-05",
+      "totalCash": 12009,
+      "cashFromAds": 0,
+      "cashFromOrganic": 12009
+    },
+    {
+      "date": "2026-07-06",
+      "totalCash": 350,
+      "cashFromAds": 350,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-07-07",
+      "totalCash": 11081,
+      "cashFromAds": 11081,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-07-08",
+      "totalCash": 2063,
+      "cashFromAds": 2045,
+      "cashFromOrganic": 18
+    },
+    {
+      "date": "2026-07-09",
+      "totalCash": 1050,
+      "cashFromAds": 41,
+      "cashFromOrganic": 1009
+    },
+    {
+      "date": "2026-07-10",
+      "totalCash": 1601,
+      "cashFromAds": 1592,
+      "cashFromOrganic": 9
+    },
+    {
+      "date": "2026-07-11",
+      "totalCash": 4579,
+      "cashFromAds": 239,
+      "cashFromOrganic": 4340
+    },
+    {
+      "date": "2026-07-12",
+      "totalCash": 106,
+      "cashFromAds": 106,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-07-13",
+      "totalCash": 11009,
+      "cashFromAds": 11009,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-07-14",
+      "totalCash": 11550,
+      "cashFromAds": 0,
+      "cashFromOrganic": 11550
+    },
+    {
+      "date": "2026-07-16",
+      "totalCash": 1100,
+      "cashFromAds": 1100,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-07-17",
+      "totalCash": 1020,
+      "cashFromAds": 1000,
+      "cashFromOrganic": 20
+    },
+    {
+      "date": "2026-07-18",
+      "totalCash": 550,
+      "cashFromAds": 0,
+      "cashFromOrganic": 550
+    },
+    {
+      "date": "2026-07-20",
+      "totalCash": 30,
+      "cashFromAds": 30,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-07-21",
+      "totalCash": 100,
+      "cashFromAds": 100,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-07-24",
+      "totalCash": 4840,
+      "cashFromAds": 4840,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-07-25",
+      "totalCash": 1000,
+      "cashFromAds": 1000,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-07-26",
+      "totalCash": 1950,
+      "cashFromAds": 1950,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-07-28",
+      "totalCash": 550,
+      "cashFromAds": 550,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-07-29",
+      "totalCash": 10450,
+      "cashFromAds": 10450,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-07-30",
+      "totalCash": 5000,
+      "cashFromAds": 5000,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-07-31",
+      "totalCash": 11500,
+      "cashFromAds": 11500,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-08-01",
+      "totalCash": 2666.68,
+      "cashFromAds": 2666.68,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-08-03",
+      "totalCash": 1197,
+      "cashFromAds": 1197,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-08-06",
+      "totalCash": 3294,
+      "cashFromAds": 0,
+      "cashFromOrganic": 3294
+    },
+    {
+      "date": "2026-08-07",
+      "totalCash": 22900,
+      "cashFromAds": 1500,
+      "cashFromOrganic": 21400
+    },
+    {
+      "date": "2026-08-08",
+      "totalCash": 1000,
+      "cashFromAds": 0,
+      "cashFromOrganic": 1000
+    },
+    {
+      "date": "2026-08-10",
+      "totalCash": 9533.33,
+      "cashFromAds": 3533.33,
+      "cashFromOrganic": 6000
+    },
+    {
+      "date": "2026-08-11",
+      "totalCash": 10097,
+      "cashFromAds": 97,
+      "cashFromOrganic": 10000
+    },
+    {
+      "date": "2026-08-12",
+      "totalCash": 4095.3199999999997,
+      "cashFromAds": 47,
+      "cashFromOrganic": 4048.32
+    },
+    {
+      "date": "2026-08-14",
+      "totalCash": 15900,
+      "cashFromAds": 10400,
+      "cashFromOrganic": 5500
+    },
+    {
+      "date": "2026-08-17",
+      "totalCash": 4033.33,
+      "cashFromAds": 0,
+      "cashFromOrganic": 4033.33
+    },
+    {
+      "date": "2026-08-18",
+      "totalCash": 550,
+      "cashFromAds": 0,
+      "cashFromOrganic": 550
+    },
+    {
+      "date": "2026-08-19",
+      "totalCash": 1100,
+      "cashFromAds": 1100,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-08-20",
+      "totalCash": 200,
+      "cashFromAds": 0,
+      "cashFromOrganic": 200
+    },
+    {
+      "date": "2026-08-21",
+      "totalCash": 13800,
+      "cashFromAds": 13800,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-08-26",
+      "totalCash": 1000,
+      "cashFromAds": 1000,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-08-27",
+      "totalCash": 5956.66,
+      "cashFromAds": 5956.66,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-08-30",
+      "totalCash": 950,
+      "cashFromAds": 950,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-09-01",
+      "totalCash": 100,
+      "cashFromAds": 0,
+      "cashFromOrganic": 100
+    },
+    {
+      "date": "2026-09-02",
+      "totalCash": 1000,
+      "cashFromAds": 1000,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-09-03",
+      "totalCash": 5340,
+      "cashFromAds": 5340,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-09-05",
+      "totalCash": 5500,
+      "cashFromAds": 0,
+      "cashFromOrganic": 5500
+    },
+    {
+      "date": "2026-09-06",
+      "totalCash": 1000,
+      "cashFromAds": 1000,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-09-07",
+      "totalCash": 1600,
+      "cashFromAds": 600,
+      "cashFromOrganic": 1000
+    },
+    {
+      "date": "2026-09-09",
+      "totalCash": 9900,
+      "cashFromAds": 9900,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-09-10",
+      "totalCash": 1000,
+      "cashFromAds": 1000,
+      "cashFromOrganic": 0
+    },
+    {
+      "date": "2026-09-11",
+      "totalCash": 22966.66,
+      "cashFromAds": 11966.66,
+      "cashFromOrganic": 11000
+    }
+  ],
+  "transactions": [
+    {
+      "date": "2026-09-11",
+      "name": "Krystal Hille",
+      "email": "krystal@hillehouse.org",
+      "product": "Accelerator",
+      "amount": 1416.66,
+      "source": "Paid",
+      "closer": "Stacie Skehan"
+    },
+    {
+      "date": "2026-09-11",
+      "name": "Jean-Jacques Joubert",
+      "email": "chewbacka40@gmail.com",
+      "product": "Accelerator",
+      "amount": 10000,
+      "source": "Organic",
+      "closer": "Shane Dacosta"
+    },
+    {
+      "date": "2026-09-11",
+      "name": "Tina Barac",
+      "email": "tina.barac@bigpond.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Organic",
+      "closer": "Shane Dacosta"
+    },
+    {
+      "date": "2026-09-11",
+      "name": "Sunita Mohanty",
+      "email": "sunita.mohanty@mail.com",
+      "product": "Accelerator",
+      "amount": 10000,
+      "source": "Paid",
+      "closer": "Stacie Skehan"
+    },
+    {
+      "date": "2026-09-11",
+      "name": "Timothy Collins",
+      "email": "timpriscollins@gmail.com",
+      "product": "Freedom Fighters Comm",
+      "amount": 550,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-09-10",
+      "name": "Deon Myburgh",
+      "email": "deon@webx.digital",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Sean Arthur"
+    },
+    {
+      "date": "2026-09-09",
+      "name": "Joshua Delaney",
+      "email": "joshdelaney01@hotmail.com",
+      "product": "Accelerator",
+      "amount": 9900,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Ann Lopez",
+      "email": "annielopezbeauty@gmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Organic",
+      "closer": "Brittany Cooper"
+    },
+    {
+      "date": "2026-09-07",
+      "name": "Krystal Hille",
+      "email": "krystal@hillehouse.org",
+      "product": "Accelerator",
+      "amount": 600,
+      "source": "Paid",
+      "closer": "Stacie Skehan"
+    },
+    {
+      "date": "2026-09-06",
+      "name": "David Knight",
+      "email": "davidknight289@gmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Brittany Cooper"
+    },
+    {
+      "date": "2026-09-05",
+      "name": "Jennet Johnson",
+      "email": "jennetjohnson71@gmail.com",
+      "product": "Accelerator",
+      "amount": 5500,
+      "source": "Organic",
+      "closer": "Nelson Lopera"
+    },
+    {
+      "date": "2026-09-03",
+      "name": "Sunita Mohanty",
+      "email": "sunita.mohanty@mail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Stacie Skehan"
+    },
+    {
+      "date": "2026-09-03",
+      "name": "Alan Bezzina",
+      "email": "alanbezzina3@gmail.com",
+      "product": "",
+      "amount": 4340,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-09-02",
+      "name": "Shak Chandrasekar",
+      "email": "shaq.dream2win@gmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-09-01",
+      "name": "Jean-Jacques Joubert",
+      "email": "chewbacka40@gmail.com",
+      "product": "Accelerator",
+      "amount": 100,
+      "source": "Organic",
+      "closer": "Shane Dacosta"
+    },
+    {
+      "date": "2026-08-30",
+      "name": "Timothy Collins",
+      "email": "timpriscollins@gmail.com",
+      "product": "Accelerator",
+      "amount": 950,
+      "source": "Paid",
+      "closer": "Kymberley Peters"
+    },
+    {
+      "date": "2026-08-27",
+      "name": "NICHOLAS FIFITA",
+      "email": "prioritydisplays@outlook.com",
+      "product": "",
+      "amount": 200,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-08-27",
+      "name": "Brad Hutcheson",
+      "email": "bradhutch12@gmail.com",
+      "product": "Accelerator",
+      "amount": 916.66,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-08-27",
+      "name": "Cassandra Scopelliti",
+      "email": "cassiescare1@gmail.com",
+      "product": "Accelerator",
+      "amount": 4840,
+      "source": "Paid",
+      "closer": "Natalie Khoury"
+    },
+    {
+      "date": "2026-08-26",
+      "name": "Aukje Vermaat",
+      "email": "aukjevermaat@gmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Nelson Lopera"
+    },
+    {
+      "date": "2026-08-21",
+      "name": "Russell Jones",
+      "email": "jeepc1@outlook.com",
+      "product": "Accelerator",
+      "amount": 9900,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-08-21",
+      "name": "Russell Jones",
+      "email": "jeepc1@outlook.com",
+      "product": "Accelerator",
+      "amount": 1100,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-08-21",
+      "name": "Joshua Delaney",
+      "email": "joshdelaney01@hotmail.com",
+      "product": "Accelerator",
+      "amount": 1100,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-08-21",
+      "name": "Felix Yatich",
+      "email": "felixkiprono47@gmail.com",
+      "product": "Accelerator",
+      "amount": 100,
+      "source": "Paid",
+      "closer": "Shane Dacosta"
+    },
+    {
+      "date": "2026-08-21",
+      "name": "Georgina Morgan",
+      "email": "g.morgan52@yahoo.com",
+      "product": "Accelerator",
+      "amount": 1600,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-08-20",
+      "name": "Ben McLean",
+      "email": "bennymac2019@gmail.com",
+      "product": "",
+      "amount": 200,
+      "source": "Organic",
+      "closer": "Shane Dacosta"
+    },
+    {
+      "date": "2026-08-19",
+      "name": "Brad Hutcheson",
+      "email": "bradhutch12@gmail.com",
+      "product": "Accelerator",
+      "amount": 1100,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-08-18",
+      "name": "Uale Rea",
+      "email": "ualerea@yahoo.com.au",
+      "product": "Freedom Fighters Comm",
+      "amount": 550,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-08-17",
+      "name": "Gene Isaac",
+      "email": "gisaacs01@hotmail.com",
+      "product": "Accelerator",
+      "amount": 4033.33,
+      "source": "Organic",
+      "closer": "Stacie Skehan"
+    },
+    {
+      "date": "2026-08-14",
+      "name": "Simone Cameron",
+      "email": "simonerubycameron@gmail.com",
+      "product": "Accelerator",
+      "amount": 9900,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-08-14",
+      "name": "Michelle Miller",
+      "email": "deshell7@protonmail.com",
+      "product": "Accelerator",
+      "amount": 5500,
+      "source": "Organic",
+      "closer": "Shane Dacosta"
+    },
+    {
+      "date": "2026-08-14",
+      "name": "Shak Chandrasekar",
+      "email": "shaq.dream2win@gmail.com",
+      "product": "Accelerator",
+      "amount": 500,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-08-12",
+      "name": "Michel De La Chaise",
+      "email": "michel_delachaise@yahoo.com.au",
+      "product": "Accelerator",
+      "amount": 2016.66,
+      "source": "Organic",
+      "closer": "Shane Dacosta"
+    },
+    {
+      "date": "2026-08-12",
+      "name": "Brett Purcell",
+      "email": "brett7166@gmail.com",
+      "product": "Accelerator",
+      "amount": 47,
+      "source": "Paid",
+      "closer": "Shane Dacosta"
+    },
+    {
+      "date": "2026-08-12",
+      "name": "Sally Bailey",
+      "email": "sallysafm@gmail.com",
+      "product": "Accelerator",
+      "amount": 2031.66,
+      "source": "Organic",
+      "closer": "Stacie Skehan"
+    },
+    {
+      "date": "2026-08-11",
+      "name": "Catherine Plank",
+      "email": "catherinevdh50@icloud.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-08-11",
+      "name": "Lynne Alexander",
+      "email": "alexanderlynne12@gmail.com",
+      "product": "Accelerator",
+      "amount": 10000,
+      "source": "Organic",
+      "closer": "Stacie Skehan"
+    },
+    {
+      "date": "2026-08-10",
+      "name": "Ben Miners",
+      "email": "glenminers@gmail.com",
+      "product": "Accelerator",
+      "amount": 3533.33,
+      "source": "Paid",
+      "closer": "Stacie Skehan"
+    },
+    {
+      "date": "2026-08-10",
+      "name": "Kerin Finch",
+      "email": "finc82@hotmail.com",
+      "product": "Accelerator",
+      "amount": 5000,
+      "source": "Organic",
+      "closer": "Shane Dacosta"
+    },
+    {
+      "date": "2026-08-10",
+      "name": "Lynne Alexander",
+      "email": "alexanderlynne12@gmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Organic",
+      "closer": "Stacie Skehan"
+    },
+    {
+      "date": "2026-08-08",
+      "name": "Ann Lopez",
+      "email": "annielopezbeauty@gmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Organic",
+      "closer": "Brittany Cooper"
+    },
+    {
+      "date": "2026-08-07",
+      "name": "Michelle Miller",
+      "email": "deshell7@protonmail.com",
+      "product": "Accelerator",
+      "amount": 5500,
+      "source": "Organic",
+      "closer": "Shane Dacosta"
+    },
+    {
+      "date": "2026-08-07",
+      "name": "Jenny Marwick",
+      "email": "jennymarwick3011@live.com",
+      "product": "Accelerator",
+      "amount": 9900,
+      "source": "Organic",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-08-07",
+      "name": "Sylvia Iskander",
+      "email": "sylviaisky@gmail.com",
+      "product": "Accelerator",
+      "amount": 500,
+      "source": "Paid",
+      "closer": "Nelson Lopera"
+    },
+    {
+      "date": "2026-08-07",
+      "name": "David Knight",
+      "email": "davidknight289@gmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Brittany Cooper"
+    },
+    {
+      "date": "2026-08-07",
+      "name": "Ben Miners",
+      "email": "bennyam4646@gmail.com",
+      "product": "Accelerator",
+      "amount": 500,
+      "source": "Organic",
+      "closer": "Stacie Skehan"
+    },
+    {
+      "date": "2026-08-07",
+      "name": "JJ (Jennet) Johnson",
+      "email": "jennetjohnson71@gmail.com",
+      "product": "Accelerator",
+      "amount": 5500,
+      "source": "Organic",
+      "closer": "Nelson Lopera"
+    },
+    {
+      "date": "2026-08-06",
+      "name": "Lyle Mckechnie",
+      "email": "mckechnielyle@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 97,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-08-06",
+      "name": "Jenny Marwick",
+      "email": "jennymarwick3011@live.com",
+      "product": "Accelerator",
+      "amount": 1100,
+      "source": "Organic",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-08-06",
+      "name": "Maia Culina",
+      "email": "maia2007@icloud.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 97,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-08-06",
+      "name": "Liezel | Mark Van Der Merwe",
+      "email": "liezelvdm@hotmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Organic",
+      "closer": "Shane Dacosta"
+    },
+    {
+      "date": "2026-08-06",
+      "name": "Alexandra Minutello",
+      "email": "sasha_djor05@hotmail.com",
+      "product": "",
+      "amount": 1000,
+      "source": "Organic",
+      "closer": "Shane Dacosta"
+    },
+    {
+      "date": "2026-08-03",
+      "name": "Simone Cameron",
+      "email": "simonerubycameron@gmail.com",
+      "product": "Accelerator",
+      "amount": 1100,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-08-03",
+      "name": "Teaghan Powell",
+      "email": "teaghanpowell408@gmail.com",
+      "product": "",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-08-01",
+      "name": "Nathaniel Jarnicki ",
+      "email": "nathanieljarnicki@icloud.com",
+      "product": "Accelerator",
+      "amount": 2666.68,
+      "source": "Paid",
+      "closer": "Natalie Khoury"
+    },
+    {
+      "date": "2026-07-31",
+      "name": "Bruce Notman",
+      "email": "bruce.notman@bigpond.com",
+      "product": "Accelerator",
+      "amount": 5000,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-07-31",
+      "name": "Bruce Notman",
+      "email": "bruce.notman@bigpond.com",
+      "product": "Accelerator",
+      "amount": 6000,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-07-31",
+      "name": "Rob Daminato",
+      "email": "robdaminato@gmail.com",
+      "product": "Accelerator",
+      "amount": 500,
+      "source": "Paid",
+      "closer": "Stacie Skehan"
+    },
+    {
+      "date": "2026-07-30",
+      "name": "Georgina Morgan",
+      "email": "g.morgan52@yahoo.com",
+      "product": "Accelerator",
+      "amount": 5000,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-07-29",
+      "name": "Scott Burgess",
+      "email": "scottfrancisburgess@gmail.com",
+      "product": "Accelerator",
+      "amount": 10450,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-07-28",
+      "name": "Scott Burgess",
+      "email": "scottfrancisburgess@gmail.com",
+      "product": "Accelerator",
+      "amount": 550,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-07-26",
+      "name": "Aukje Vermaat",
+      "email": "aukjevermaat@gmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Nelson Lopera"
+    },
+    {
+      "date": "2026-07-26",
+      "name": "Tim Collins",
+      "email": "timpriscollins@gmail.com",
+      "product": "Accelerator",
+      "amount": 950,
+      "source": "Paid",
+      "closer": "Kymberley Peters"
+    },
+    {
+      "date": "2026-07-25",
+      "name": "Rheuben Ariki Boutet-Manning",
+      "email": "aukjevermaat@gmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Nelson Lopera"
+    },
+    {
+      "date": "2026-07-24",
+      "name": "Cassandra Scopelliti",
+      "email": "cassiescare1@gmail.com",
+      "product": "Accelerator",
+      "amount": 4840,
+      "source": "Paid",
+      "closer": "Natalie Khoury"
+    },
+    {
+      "date": "2026-07-21",
+      "name": "Johan Erasmus",
+      "email": "aukjevermaat@gmail.com",
+      "product": "Accelerator",
+      "amount": 100,
+      "source": "Paid",
+      "closer": "Nelson Lopera"
+    },
+    {
+      "date": "2026-07-20",
+      "name": "Ally Tarr",
+      "email": "allytarr1985@gmail.com",
+      "product": "Accelerator",
+      "amount": 30,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-07-18",
+      "name": "Uale Rea",
+      "email": "ualerea@yahoo.com.au",
+      "product": "Freedom Fighters Comm",
+      "amount": 550,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-17",
+      "name": "Teressa Gealy",
+      "email": "teressasteinhardt@rocketmail.com",
+      "product": "Accelerator",
+      "amount": 20,
+      "source": "Organic",
+      "closer": "Stacie Skehan"
+    },
+    {
+      "date": "2026-07-17",
+      "name": "Nathaniel Jarnicki",
+      "email": "nathanieljarnicki@icloud.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Natalie Khoury"
+    },
+    {
+      "date": "2026-07-16",
+      "name": "MARK BRIODY",
+      "email": "mcfsystem@gmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-07-16",
+      "name": "Vish Patel",
+      "email": "vishtaspa.patel@iinet.net.au",
+      "product": "Accelerator",
+      "amount": 100,
+      "source": "Paid",
+      "closer": "Stacie Skehan"
+    },
+    {
+      "date": "2026-07-14",
+      "name": "Myra Brun",
+      "email": "lushdesign@bugpond.com",
+      "product": "Accelerator",
+      "amount": 300,
+      "source": "Organic",
+      "closer": "Stacie Skehan"
+    },
+    {
+      "date": "2026-07-14",
+      "name": "Jack Shannon",
+      "email": "shannonjack60@gmail.com",
+      "product": "Freedom Fighters Comm",
+      "amount": 550,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-14",
+      "name": "Myra Brun",
+      "email": "lushdesign@bugpond.com",
+      "product": "Accelerator",
+      "amount": 10700,
+      "source": "Organic",
+      "closer": "Stacie Skehan"
+    },
+    {
+      "date": "2026-07-13",
+      "name": "",
+      "email": "lleatuavao@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-13",
+      "name": "John Flanigan",
+      "email": "john.flano@hotmail.com",
+      "product": "Accelerator",
+      "amount": 200,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-07-13",
+      "name": "John Flanigan",
+      "email": "john.flano@hotmail.com",
+      "product": "Accelerator",
+      "amount": 10800,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-07-12",
+      "name": "",
+      "email": "michelleroff1982@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-12",
+      "name": "",
+      "email": "michelleroff1982@gmail.com",
+      "product": "Live Closing Accelerator",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-11",
+      "name": "",
+      "email": "stellarforce.smith@gmail.com",
+      "product": "Live Closing Accelerator",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-11",
+      "name": "",
+      "email": "wparr9@gmail.com",
+      "product": "Live Closing Accelerator",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-11",
+      "name": "",
+      "email": "scottm.bailey@outlook.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-11",
+      "name": "",
+      "email": "stellarforce.smith@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-11",
+      "name": "",
+      "email": "tapiwa70@icloud.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-11",
+      "name": "",
+      "email": "paulacharmainekamo@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-11",
+      "name": "Alan Bezzina",
+      "email": "alan.bezzina72@gmail.com",
+      "product": "",
+      "amount": 4340,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-11",
+      "name": "",
+      "email": "wparr9@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-10",
+      "name": "",
+      "email": "joshuataylor1433@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-10",
+      "name": "",
+      "email": "hissaan@yahoo.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-10",
+      "name": "Brendan Wenke",
+      "email": "brendanwenke@gmail.com",
+      "product": "",
+      "amount": 1500,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-10",
+      "name": "",
+      "email": "oscillateme@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-10",
+      "name": "",
+      "email": "skaru06@icloud.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-10",
+      "name": "",
+      "email": "victoria@ebsentrepreneur.com",
+      "product": "Live Closing Accelerator",
+      "amount": 47,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-10",
+      "name": "",
+      "email": "victoria@ebsentrepreneur.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-10",
+      "name": "",
+      "email": "manalkarrar01@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-09",
+      "name": "",
+      "email": "vishtaspa.patel@iinet.net.au",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-09",
+      "name": "Michael Kluczniak",
+      "email": "m.kluczniak1@gmail.com",
+      "product": "",
+      "amount": 5,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-09",
+      "name": "",
+      "email": "santhosh2192010@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-09",
+      "name": "",
+      "email": "ebathan@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-09",
+      "name": "",
+      "email": "procrewplumbing@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-09",
+      "name": "Ann Lopez",
+      "email": "annielopezbeauty@gmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Organic",
+      "closer": "Brittany Cooper"
+    },
+    {
+      "date": "2026-07-09",
+      "name": "",
+      "email": "liamnewman282005@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-08",
+      "name": "Alexandra Minutello",
+      "email": "alexandra_djordjevic_2017@yahoo.com",
+      "product": "",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-08",
+      "name": "",
+      "email": "kentconf@gmx.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-08",
+      "name": "",
+      "email": "jhard254@eq.edu.au",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-08",
+      "name": "",
+      "email": "monisay@hotmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-08",
+      "name": "",
+      "email": "david.gemeri1@bigpond.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-08",
+      "name": "",
+      "email": "rubengeros@yahoo.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-08",
+      "name": "",
+      "email": "tljanette@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-08",
+      "name": "",
+      "email": "shelleyacooper@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-08",
+      "name": "David Knight",
+      "email": "davidknight289@gmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Brittany Cooper"
+    },
+    {
+      "date": "2026-07-07",
+      "name": "",
+      "email": "georgiabartlett97@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-07",
+      "name": "Benjamin Hext",
+      "email": "bhhext1979@gmail.com",
+      "product": "Accelerator",
+      "amount": 11000,
+      "source": "Paid",
+      "closer": "Stacie Skehan"
+    },
+    {
+      "date": "2026-07-07",
+      "name": "",
+      "email": "ethanheyward@outlook.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-07",
+      "name": "",
+      "email": "jamila.dlala@dhl.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-07",
+      "name": "",
+      "email": "paijeminchin@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-07",
+      "name": "",
+      "email": "2terumo2@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-07",
+      "name": "",
+      "email": "joeyhadad09@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-07",
+      "name": "",
+      "email": "charlieheaton7@yahoo.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-07",
+      "name": "",
+      "email": "kelstanic@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-07",
+      "name": "",
+      "email": "geebee77777@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-06",
+      "name": "Zoe Heffernan",
+      "email": "zcl073@gmail.com",
+      "product": "",
+      "amount": 50,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-06",
+      "name": "Wayne Abraham",
+      "email": "waynesabraham@gmail.com",
+      "product": "",
+      "amount": 300,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-05",
+      "name": "Mirtha Meza",
+      "email": "mirtuca@hotmail.com",
+      "product": "Accelerator",
+      "amount": 4000,
+      "source": "Organic",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-07-05",
+      "name": "Mirtha Meza",
+      "email": "mirtuca@hotmail.com",
+      "product": "Accelerator",
+      "amount": 8000,
+      "source": "Organic",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-07-05",
+      "name": "Shelley Jack",
+      "email": "flistle@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-04",
+      "name": "Di Uzo",
+      "email": "learning.by.dee@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-03",
+      "name": "Yani Kantzakis",
+      "email": "yanikantzakis728@gmail.com",
+      "product": "",
+      "amount": 250,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-03",
+      "name": "Isaac hure",
+      "email": "isaachure19@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-03",
+      "name": "Alexander Jones",
+      "email": "akrj198634@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-03",
+      "name": "Mirtha Meza",
+      "email": "mirtuca@hotmail.com",
+      "product": "Accelerator",
+      "amount": 100,
+      "source": "Organic",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-07-03",
+      "name": "Cenly Wong",
+      "email": "cenlyw@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-03",
+      "name": "Anne Mwangi",
+      "email": "annehuine8@gmail.com",
+      "product": "Accelerator",
+      "amount": 500,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-07-03",
+      "name": "Nathaniel Jarnicki",
+      "email": "nathanieljarnicki@icloud.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-02",
+      "name": "Marianne Olk",
+      "email": "muzza88@yahoo.com.au",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-02",
+      "name": "Samantha pulford",
+      "email": "samantha.pulford2@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-02",
+      "name": "Karam Pandher",
+      "email": "k.pandher@ymail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-02",
+      "name": "Hamdi Gure",
+      "email": "hamdigure101@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-02",
+      "name": "Mieke Boer",
+      "email": "mieke.boer@icloud.com",
+      "product": "Accelerator",
+      "amount": 12100,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-07-01",
+      "name": "Zulfiqar Hussaini",
+      "email": "swolefy@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-01",
+      "name": "Jalesh Dakshina Murthy",
+      "email": "jaleshmurthy@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-01",
+      "name": "Alan Horne",
+      "email": "alanwhorne@hotmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-01",
+      "name": "Anthony Joseph Magri",
+      "email": "magriaj998@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-01",
+      "name": "Cameron Maclean",
+      "email": "cameron@harpersrealty.com.au",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-01",
+      "name": "Nathan Jones",
+      "email": "nategingerjones@gmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "James Wellington"
+    },
+    {
+      "date": "2026-07-01",
+      "name": "Alan Horne",
+      "email": "alanwhorne@hotmail.com",
+      "product": "Live Closing Accelerator",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-01",
+      "name": "Jack Thompson",
+      "email": "jakpot25@icloud.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-01",
+      "name": "Cooper Lester",
+      "email": "surfingcooper@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-01",
+      "name": "Mitchell Thompson",
+      "email": "brickit.constructions@outlook.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-01",
+      "name": "Sylvia Rogowska",
+      "email": "silije83@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-07-01",
+      "name": "Jandri Coetzee",
+      "email": "jan3coetzee@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-30",
+      "name": "Teressa Gealy",
+      "email": "teressasteinhardt@rocketmail.com",
+      "product": "Live Closing Accelerator",
+      "amount": 47,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-30",
+      "name": "Myles Davis-Schiele",
+      "email": "mylesschiele2010@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-30",
+      "name": "Teressa Gealy",
+      "email": "teressasteinhardt@rocketmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-30",
+      "name": "Thushika Kularathne",
+      "email": "thushika.kularathne@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-30",
+      "name": "Mattie N",
+      "email": "matlatsisky@yahoo.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-30",
+      "name": "Ronan Kingsbury",
+      "email": "ronankingsbury073@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-29",
+      "name": "Andre Yalda",
+      "email": "carmen_a4@yahoo.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-29",
+      "name": "La W",
+      "email": "larissa.sydney@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-29",
+      "name": "Marc Niemes",
+      "email": "marc@niemes.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-29",
+      "name": "Bridie Chandegra",
+      "email": "bridgetherrigan@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-29",
+      "name": "Steve Watson",
+      "email": "info@wattoswondrouscreations.com.au",
+      "product": "Accelerator",
+      "amount": 500,
+      "source": "Paid",
+      "closer": "Natalie Khoury"
+    },
+    {
+      "date": "2026-06-29",
+      "name": "Louise Jeffees",
+      "email": "louise.jeffees@freedomacademy.com.au",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-29",
+      "name": "Bonnie Keegan",
+      "email": "bkcongreve@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-28",
+      "name": "JOSHUA CLAYTON",
+      "email": "josh@advancedlifestyletraining.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-28",
+      "name": "Belinda Fleay",
+      "email": "belindajfleay@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-28",
+      "name": "Alyce maddocks",
+      "email": "mzalycerene@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-28",
+      "name": "Antonin Matuska",
+      "email": "overtones56@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-28",
+      "name": "Chris Nolder",
+      "email": "cnolder@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-28",
+      "name": "Jess Tabb",
+      "email": "jesstabb002@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-28",
+      "name": "Toby geddes",
+      "email": "t.geddes7@icloud.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-27",
+      "name": "Lucelia Ribeiro Elder",
+      "email": "lucy.rib@hotmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-27",
+      "name": "Silgia Thalappillil",
+      "email": "silthalap@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-27",
+      "name": "Nick Hale",
+      "email": "nickthale1976@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-27",
+      "name": "Lorena Pal",
+      "email": "pallorena2005@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-27",
+      "name": "Jude Hiri",
+      "email": "judehiri@hotmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-27",
+      "name": "Domenic virgara",
+      "email": "domenicvirgara08@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-27",
+      "name": "Jacob Lemusu",
+      "email": "jakobe_1@icloud.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-27",
+      "name": "Riley brownlie",
+      "email": "rileybrownlie11@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-27",
+      "name": "Pep Sharma",
+      "email": "pep@iinform.com.au",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-27",
+      "name": "Jordan carlson",
+      "email": "jordancarlson859@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-27",
+      "name": "Marc Murray",
+      "email": "marc8772@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-27",
+      "name": "Mieke Boer",
+      "email": "mieke.boer@icloud.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-27",
+      "name": "Josephine Bushell",
+      "email": "josephinebushell@hotmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-27",
+      "name": "Jacinta Harris",
+      "email": "jacintah@bigpond.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-26",
+      "name": "Bruce Notman",
+      "email": "bruce.notman@bigpond.com",
+      "product": "Live Closing Accelerator",
+      "amount": 47,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-26",
+      "name": "Timothy Collins",
+      "email": "timpriscollins@gmail.com",
+      "product": "Accelerator",
+      "amount": 950,
+      "source": "Paid",
+      "closer": "Kymberley Peters"
+    },
+    {
+      "date": "2026-06-26",
+      "name": "Bruce Notman",
+      "email": "bruce.notman@bigpond.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-26",
+      "name": "Matt Bathie",
+      "email": "mattbathie@gmail.com",
+      "product": "Accelerator",
+      "amount": 300,
+      "source": "Paid",
+      "closer": "Stacie Skehan"
+    },
+    {
+      "date": "2026-06-25",
+      "name": "Jerrad Allen",
+      "email": "jerrad@allenspsw.com.au",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-25",
+      "name": "Fabian D'Amore",
+      "email": "yellowlunarsun1@proton.me",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-25",
+      "name": "Scott tragis",
+      "email": "tragisscott@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-25",
+      "name": "Sarah Brookes",
+      "email": "sarah.brookes00@gmail.com.au",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-24",
+      "name": "John Lornel Villanueva",
+      "email": "johnlornel_p_villanueva@yahoo.com.au",
+      "product": "Live Closing Accelerator",
+      "amount": 47,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-24",
+      "name": "Mirtha Meza",
+      "email": "mirtuca@hotmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-24",
+      "name": "Sheron Ndaba",
+      "email": "sheronndaba@outlook.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-24",
+      "name": "Mirtha Meza",
+      "email": "mirtuca@hotmail.com",
+      "product": "Live Closing Accelerator",
+      "amount": 97,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-24",
+      "name": "Felicity N",
+      "email": "wadzinyamz@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-24",
+      "name": "Andrew Boutros",
+      "email": "andrewboutros66@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-24",
+      "name": "Marvi Joyce",
+      "email": "marvi_j@hotmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-24",
+      "name": "Kial Richards",
+      "email": "kial-richards@hotmail.com",
+      "product": "Accelerator",
+      "amount": 11000,
+      "source": "Organic",
+      "closer": "Stacie Skehan"
+    },
+    {
+      "date": "2026-06-24",
+      "name": "Joshua Lawrence Paulo-Smith",
+      "email": "joshuapaulosmith@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-24",
+      "name": "Elina Vesma",
+      "email": "elinavesma@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-24",
+      "name": "Cassandra Scopelliti",
+      "email": "cassiescare1@gmail.com",
+      "product": "Accelerator",
+      "amount": 4840,
+      "source": "Paid",
+      "closer": "Natalie Khoury"
+    },
+    {
+      "date": "2026-06-24",
+      "name": "Cooper Wilson",
+      "email": "cooper.wilson15508@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-24",
+      "name": "Aukje Vermaat",
+      "email": "aukjevermaat@gmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Nelson Lopera"
+    },
+    {
+      "date": "2026-06-24",
+      "name": "Mesbaul Fahim",
+      "email": "fahimusany@gmail.com",
+      "product": "Accelerator",
+      "amount": 200,
+      "source": "Paid",
+      "closer": "Natalie Khoury"
+    },
+    {
+      "date": "2026-06-24",
+      "name": "John Lornel Villanueva",
+      "email": "johnlornel_p_villanueva@yahoo.com.au",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-24",
+      "name": "Carlo Natoli",
+      "email": "carlo.natoli86@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-24",
+      "name": "Leanne Wilson",
+      "email": "leannewilson80@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-23",
+      "name": "Madi Wockner",
+      "email": "mwockner15@hotmail.com",
+      "product": "Accelerator",
+      "amount": 11000,
+      "source": "Paid",
+      "closer": "Vanessa Caruso"
+    },
+    {
+      "date": "2026-06-23",
+      "name": "Jack Shannon",
+      "email": "shannonjack60@gmail.com",
+      "product": "Freedom Fighters Comm",
+      "amount": 550,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-23",
+      "name": "Dane Robertson",
+      "email": "danesept73@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-23",
+      "name": "Ishaq Wekulo",
+      "email": "shamirishaq@yahoo.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-23",
+      "name": "Iyli Beto",
+      "email": "iyli.beto@hotmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "James Wellington"
+    },
+    {
+      "date": "2026-06-23",
+      "name": "Kadi Sankoh",
+      "email": "ksankoh129@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-23",
+      "name": "Inoka Imiya-Hamilage",
+      "email": "shyamila_i@icloud.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-23",
+      "name": "Jay Houston",
+      "email": "solarsolutions007@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-23",
+      "name": "Bronson Stowers",
+      "email": "bronson.stowers@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-23",
+      "name": "Grace Leeming",
+      "email": "graceleeming4@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 9,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-22",
+      "name": "Elli Disisto",
+      "email": "ellidisisto2@gmail.com",
+      "product": "Accelerator",
+      "amount": 50,
+      "source": "Paid",
+      "closer": "Vanessa Caruso"
+    },
+    {
+      "date": "2026-06-22",
+      "name": "Nikky McClelland-Neylon",
+      "email": "niktrjz@hotmail.com",
+      "product": "Accelerator",
+      "amount": 200,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-22",
+      "name": "Zoe Iredell",
+      "email": "zoeiredell@outlook.com",
+      "product": "Accelerator",
+      "amount": 1,
+      "source": "Paid",
+      "closer": "Vanessa Caruso"
+    },
+    {
+      "date": "2026-06-22",
+      "name": "Julie Meek / Judy S",
+      "email": "littlelyo48@gmail.com",
+      "product": "Accelerator",
+      "amount": 11500,
+      "source": "Paid",
+      "closer": "Stacie Skehan"
+    },
+    {
+      "date": "2026-06-21",
+      "name": "Julie Meek",
+      "email": "littlelyo48@gmail.com",
+      "product": "Accelerator",
+      "amount": 500,
+      "source": "Paid",
+      "closer": "Stacie Skehan"
+    },
+    {
+      "date": "2026-06-21",
+      "name": "Kial Richards",
+      "email": "kial-richards@hotmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Organic",
+      "closer": "Stacie Skehan"
+    },
+    {
+      "date": "2026-06-20",
+      "name": "Andrea Fallon",
+      "email": "andreafallon83@gmail.com",
+      "product": "Accelerator",
+      "amount": 50,
+      "source": "Paid",
+      "closer": "Stacie Skehan"
+    },
+    {
+      "date": "2026-06-20",
+      "name": "Anne Mwangi",
+      "email": "annehuine8@gmail.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-20",
+      "name": "Cecil Johansson",
+      "email": "ceciliaj29@gmail.com",
+      "product": "Accelerator",
+      "amount": 12000,
+      "source": "Paid",
+      "closer": "Shane Dacosta"
+    },
+    {
+      "date": "2026-06-20",
+      "name": "Alexei Ilin",
+      "email": "alexei.ilinykh@outlook.com",
+      "product": "3D HT Closer Challenge",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-19",
+      "name": "Alvin Hawkins ",
+      "email": "alvin.hawkins@windowslive.com",
+      "product": "Accelerator",
+      "amount": 10,
+      "source": "Paid",
+      "closer": "Vanessa Caruso"
+    },
+    {
+      "date": "2026-06-19",
+      "name": "Ria Ilano | Mary",
+      "email": "rrilano@icloud.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Organic",
+      "closer": "Stacie Skehan"
+    },
+    {
+      "date": "2026-06-19",
+      "name": "Jacqueline Smith",
+      "email": "invoicendis@gmail.com",
+      "product": "Accelerator",
+      "amount": 50,
+      "source": "Paid",
+      "closer": "Vanessa Caruso"
+    },
+    {
+      "date": "2026-06-18",
+      "name": "Liridona Calaki",
+      "email": "dona.calaki@outlook.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Shane Dacosta"
+    },
+    {
+      "date": "2026-06-18",
+      "name": "MARK BRIODY",
+      "email": "mcfsystem@gmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-06-18",
+      "name": "Mylee Schneider",
+      "email": "myleeschneider33@gmail.com",
+      "product": "Accelerator",
+      "amount": 11800,
+      "source": "Paid",
+      "closer": "Vanessa Caruso"
+    },
+    {
+      "date": "2026-06-18",
+      "name": "David Thorpe",
+      "email": "david.thorpe@talkingwithnumbers.com",
+      "product": "Freedom Fighters Comm",
+      "amount": 550,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-18",
+      "name": "Liridona Calaki",
+      "email": "dona.calaki@outlook.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Shane Dacosta"
+    },
+    {
+      "date": "2026-06-18",
+      "name": "Uale Rea",
+      "email": "ualerea@yahoo.com.au",
+      "product": "Freedom Fighters Comm",
+      "amount": 550,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-17",
+      "name": "Mylee Schneider",
+      "email": "myleeschneider33@gmail.com",
+      "product": "Accelerator",
+      "amount": 200,
+      "source": "Paid",
+      "closer": "Vanessa Caruso"
+    },
+    {
+      "date": "2026-06-16",
+      "name": "Dante Matakino",
+      "email": "dantesip24@gmail.com",
+      "product": "",
+      "amount": 50,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-15",
+      "name": "Warren Lee",
+      "email": "warrenleeau@gmail.com",
+      "product": "Accelerator",
+      "amount": 250,
+      "source": "Paid",
+      "closer": "Stacie Skehan"
+    },
+    {
+      "date": "2026-06-15",
+      "name": "Tayne Riley",
+      "email": "tayneriley3@gmail.com",
+      "product": "Accelerator",
+      "amount": 300,
+      "source": "Paid",
+      "closer": "Vanessa Caruso"
+    },
+    {
+      "date": "2026-06-14",
+      "name": "Jason Martin",
+      "email": "jason.martin0482@gmail.com",
+      "product": "Freedom Fighters Comm",
+      "amount": 550,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-14",
+      "name": "Charbe Said",
+      "email": "ccssaid7979@gmail.com",
+      "product": "Accelerator",
+      "amount": 500,
+      "source": "Organic",
+      "closer": "Vanessa Caruso"
+    },
+    {
+      "date": "2026-06-13",
+      "name": "Charbe Said",
+      "email": "ccssaid7979@gmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Organic",
+      "closer": "Vanessa Caruso"
+    },
+    {
+      "date": "2026-06-13",
+      "name": "Gregory McAuliffe",
+      "email": "gmcauliffe08@outlook.com",
+      "product": "Accelerator",
+      "amount": 100,
+      "source": "Paid",
+      "closer": "Vanessa Caruso"
+    },
+    {
+      "date": "2026-06-13",
+      "name": "Carolyn McMahon",
+      "email": "cazkyeshae@yahoo.com",
+      "product": "Accelerator",
+      "amount": 300,
+      "source": "Organic",
+      "closer": "Vanessa Caruso"
+    },
+    {
+      "date": "2026-06-13",
+      "name": "James Clark",
+      "email": "j.g.clark0001@gmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 47,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-13",
+      "name": "Cass Tobias",
+      "email": "cassandratobias3@gmail.com",
+      "product": "",
+      "amount": 100,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-13",
+      "name": "Yani Kantzakis",
+      "email": "yanikantzakis728@gmail.com",
+      "product": "Accelerator",
+      "amount": 400,
+      "source": "Paid",
+      "closer": "Vanessa Caruso"
+    },
+    {
+      "date": "2026-06-13",
+      "name": "Steph Phillips",
+      "email": "steph.willison@gmail.com",
+      "product": "",
+      "amount": 10,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-13",
+      "name": "Carolyn McMahon",
+      "email": "cazkyeshae@yahoo.com",
+      "product": "Accelerator",
+      "amount": 11700,
+      "source": "Organic",
+      "closer": "Vanessa Caruso"
+    },
+    {
+      "date": "2026-06-12",
+      "name": "Lynn Griffiths",
+      "email": "hello.artside.studio@gmail.com",
+      "product": "Accelerator",
+      "amount": 11000,
+      "source": "Organic",
+      "closer": "Vanessa Caruso"
+    },
+    {
+      "date": "2026-06-12",
+      "name": "Melissa Andres",
+      "email": "melissajoysandres@yahoo.com",
+      "product": "Accelerator",
+      "amount": 11000,
+      "source": "Paid",
+      "closer": "Stacie Skehan"
+    },
+    {
+      "date": "2026-06-12",
+      "name": "Isabel Wrayde ",
+      "email": "isabelwrayde1@gmail.com",
+      "product": "Accelerator",
+      "amount": 100,
+      "source": "Organic",
+      "closer": "Natalie Khoury"
+    },
+    {
+      "date": "2026-06-12",
+      "name": "Deon Myburgh",
+      "email": "deon@webx.digital",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Sean Arthur"
+    },
+    {
+      "date": "2026-06-12",
+      "name": "Toby Geddes",
+      "email": "t.geddes7@icloud.com",
+      "product": "",
+      "amount": 10,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-12",
+      "name": "Rachel Coffey",
+      "email": "rachelcoffey171@gmail.com",
+      "product": "Accelerator",
+      "amount": 200,
+      "source": "Paid",
+      "closer": "Vanessa Caruso"
+    },
+    {
+      "date": "2026-06-11",
+      "name": "Lyn Griffiths",
+      "email": "hello.artside.studio@gmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Organic",
+      "closer": "Vanessa Caruso"
+    },
+    {
+      "date": "2026-06-11",
+      "name": "Dylan Smouha",
+      "email": "dylansmouha@gmail.com",
+      "product": "",
+      "amount": 550,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-11",
+      "name": "Gloria Edwards",
+      "email": "gedwards11@gmail.com",
+      "product": "Accelerator",
+      "amount": 400,
+      "source": "Paid",
+      "closer": "Shane Dacosta"
+    },
+    {
+      "date": "2026-06-10",
+      "name": "Brendan Wenke",
+      "email": "brendanwenke@gmail.com",
+      "product": "",
+      "amount": 1500,
+      "source": "Paid",
+      "closer": "James Wellington"
+    },
+    {
+      "date": "2026-06-10",
+      "name": "Lila Kelly",
+      "email": "lilakelly7@icloud.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Shane Dacosta"
+    },
+    {
+      "date": "2026-06-10",
+      "name": "Gregory McAuliffe",
+      "email": "gmcauliffe08@outlook.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-09",
+      "name": "Ann Lopez",
+      "email": "annielopezbeauty@gmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Organic",
+      "closer": "Brittany Cooper"
+    },
+    {
+      "date": "2026-06-09",
+      "name": "Melissa Andres",
+      "email": "melissajoysandres@yahoo.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Stacie Skehan"
+    },
+    {
+      "date": "2026-06-09",
+      "name": "Joshua Isaac Graham Hemopo",
+      "email": "hemopojosh@outlook.com",
+      "product": "",
+      "amount": 400,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-09",
+      "name": "Madison Wocnker",
+      "email": "mwockner15@hotmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Vanessa Caruso"
+    },
+    {
+      "date": "2026-06-09",
+      "name": "Lisamarie Giuffrida",
+      "email": "lisamariegiuffrida2025@outlook.com",
+      "product": "Accelerator",
+      "amount": 1,
+      "source": "Paid",
+      "closer": "Vanessa Caruso"
+    },
+    {
+      "date": "2026-06-08",
+      "name": "Ahmad Makari",
+      "email": "azzas_empire@hotmail.com",
+      "product": "",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-08",
+      "name": "Jason Besters",
+      "email": "jasonbesters@gmail.com",
+      "product": "Freedom Fighters Comm",
+      "amount": 550,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-08",
+      "name": "Alan Bezzina",
+      "email": "alanbezzina72@gmail.com",
+      "product": "Accelerator",
+      "amount": 4840,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-08",
+      "name": "Alan Bezzina",
+      "email": "alan.bezzina72@gmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-07",
+      "name": "Nick Gioskos",
+      "email": "nick.gioskos@hotmail.com",
+      "product": "Accelerator",
+      "amount": 1,
+      "source": "Organic",
+      "closer": "Stacie Skehan"
+    },
+    {
+      "date": "2026-06-06",
+      "name": "Joshua Isaac Graham Hemopo",
+      "email": "hemopojosh@outlook.com",
+      "product": "",
+      "amount": 500,
+      "source": "Paid",
+      "closer": "Daniel Henderson"
+    },
+    {
+      "date": "2026-06-06",
+      "name": "Iyli Beto",
+      "email": "iyli.beto@hotmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "James Wellington"
+    },
+    {
+      "date": "2026-06-06",
+      "name": "Sameer Imran",
+      "email": "sameerimrvn0@gmail.com",
+      "product": "Accelerator",
+      "amount": 50,
+      "source": "Paid",
+      "closer": "Stacie Skehan"
+    },
+    {
+      "date": "2026-06-06",
+      "name": "Tam Nguyen",
+      "email": "mtam2812@yahoo.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Shane Dacosta"
+    },
+    {
+      "date": "2026-06-05",
+      "name": "Alexandra Minutello",
+      "email": "sasha_djor05@hotmail.com",
+      "product": "",
+      "amount": 500,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-05",
+      "name": "Swati Nampally",
+      "email": "swati.nampallys@gmail.com",
+      "product": "Accelerator",
+      "amount": 11000,
+      "source": "Organic",
+      "closer": "Shane Dacosta"
+    },
+    {
+      "date": "2026-06-04",
+      "name": "Anna Nilsson",
+      "email": "anna05purple@gmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 47,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-04",
+      "name": "Vance Johnny Ripi",
+      "email": "vance_ripi@hotmail.com",
+      "product": "Accelerator",
+      "amount": 11000,
+      "source": "Organic",
+      "closer": "Nelson Lopera"
+    },
+    {
+      "date": "2026-06-03",
+      "name": "Craig Tucker",
+      "email": "craigytuck@gmail.com",
+      "product": "",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-02",
+      "name": "Daniel Keat",
+      "email": "danielkeat8f@gmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-06-02",
+      "name": "Andile Mbano",
+      "email": "mbanoandile04@gmail.com",
+      "product": "Accelerator",
+      "amount": 11000,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-06-01",
+      "name": "David Matthews",
+      "email": "ausdav77@hotmail.com",
+      "product": "Accelerator",
+      "amount": 300,
+      "source": "Organic",
+      "closer": "Stacie Skehan"
+    },
+    {
+      "date": "2026-06-01",
+      "name": "Daniel Barwick",
+      "email": "danielbarwick5@gmail.com",
+      "product": "Accelerator",
+      "amount": 1,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-05-31",
+      "name": "Aaron Faaoso",
+      "email": "aaron@lonestargroup.com.au",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-05-30",
+      "name": "Peter Roberts",
+      "email": "pete.jm.roberts@gmail.com",
+      "product": "Accelerator",
+      "amount": 10900,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-05-30",
+      "name": "Aaron Faaoso",
+      "email": "aaron@lonestargroup.com.au",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-05-30",
+      "name": "Aaron Faaoso",
+      "email": "aaron@lonestargroup.com.au",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-05-30",
+      "name": "Aukje Vermaat",
+      "email": "aukjevermaat@gmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Nelson Lopera"
+    },
+    {
+      "date": "2026-05-30",
+      "name": "Swati Nampally",
+      "email": "swati.awakenedsoul@gmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Organic",
+      "closer": "Shane Dacosta"
+    },
+    {
+      "date": "2026-05-29",
+      "name": "Timothy Asimus",
+      "email": "tim.asimus@gmail.com",
+      "product": "Accelerator",
+      "amount": 500,
+      "source": "Paid",
+      "closer": "Shane Dacosta"
+    },
+    {
+      "date": "2026-05-29",
+      "name": "Matthew Healey",
+      "email": "mattezio@hotmail.com",
+      "product": "Accelerator",
+      "amount": 500,
+      "source": "Paid",
+      "closer": "Shane Dacosta"
+    },
+    {
+      "date": "2026-05-29",
+      "name": "CATHERINE RIDGE",
+      "email": "catindeep@outlook.com",
+      "product": "Accelerator",
+      "amount": 200,
+      "source": "Paid",
+      "closer": "Shane Dacosta"
+    },
+    {
+      "date": "2026-05-29",
+      "name": "Sebastian Bannister",
+      "email": "sebastianbannister@yahoo.com.au",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Shane Dacosta"
+    },
+    {
+      "date": "2026-05-29",
+      "name": "Vance Ripi",
+      "email": "vance_ripi@hotmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Organic",
+      "closer": "Nelson Lopera"
+    },
+    {
+      "date": "2026-05-29",
+      "name": "Clint Mihala",
+      "email": "mihalafam@gmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 47,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-05-28",
+      "name": "Matt Sheehy",
+      "email": "sheehymatt164@gmail.com",
+      "product": "Accelerator",
+      "amount": 11000,
+      "source": "Paid",
+      "closer": "Shane Dacosta"
+    },
+    {
+      "date": "2026-05-27",
+      "name": "Mamta Kochhar",
+      "email": "mkochhar2010@hotmail.com",
+      "product": "Accelerator",
+      "amount": 10000,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-05-26",
+      "name": "Deepika Coelho",
+      "email": "dee783@icloud.com",
+      "product": "Accelerator",
+      "amount": 4500,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-05-26",
+      "name": "Tim Collins",
+      "email": "timpriscollins@gmail.com",
+      "product": "Accelerator",
+      "amount": 950,
+      "source": "Paid",
+      "closer": "Kymberley Peters"
+    },
+    {
+      "date": "2026-05-26",
+      "name": "Deepika Coelho",
+      "email": "dee783@icloud.com",
+      "product": "Accelerator",
+      "amount": 1550,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-05-26",
+      "name": "Andile Mbano",
+      "email": "mbanoandile04@gmail.com",
+      "product": "Accelerator",
+      "amount": 500,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-05-26",
+      "name": "CATHERINE RIDGE",
+      "email": "catindeep@outlook.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-05-26",
+      "name": "Wendy Somerville",
+      "email": "wendy.somer@live.com",
+      "product": "Accelerator",
+      "amount": 11000,
+      "source": "Paid",
+      "closer": "Shane Dacosta"
+    },
+    {
+      "date": "2026-05-23",
+      "name": "Erin Lukjanov",
+      "email": "erinlukjanov@hotmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 47,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-05-23",
+      "name": "Jack Shannon",
+      "email": "shannonjack60@gmail.com",
+      "product": "Freedom Fighters Comm",
+      "amount": 550,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-05-23",
+      "name": "Jesse Hupping",
+      "email": "jessehupping@gmail.com",
+      "product": "Accelerator",
+      "amount": 11800,
+      "source": "Paid",
+      "closer": "Shane Dacosta"
+    },
+    {
+      "date": "2026-05-22",
+      "name": "Swati Nampally",
+      "email": "swati.awakenedsoul@gmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-05-22",
+      "name": "David Thorpe",
+      "email": "david.thorpe@talkingwithnumbers.com",
+      "product": "Freedom Fighters Comm",
+      "amount": 550,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-05-22",
+      "name": "Matt Sheehy",
+      "email": "sheehymatt164@gmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Shane Dacosta"
+    },
+    {
+      "date": "2026-05-22",
+      "name": "Andile Mbano",
+      "email": "mbanoandile04@gmail.com",
+      "product": "Accelerator",
+      "amount": 500,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-05-22",
+      "name": "Antoinette Grootemaat",
+      "email": "fabsweety@icloud.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 47,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-05-21",
+      "name": "Vance Ripi",
+      "email": "vance_ripi@hotmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-05-20",
+      "name": "Lesley Dawson",
+      "email": "mlmn2829@gmail.com",
+      "product": "Accelerator",
+      "amount": 100,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-05-20",
+      "name": "Jesse Hupping",
+      "email": "jessehupping@gmail.com",
+      "product": "Accelerator",
+      "amount": 200,
+      "source": "Paid",
+      "closer": "Shane Dacosta"
+    },
+    {
+      "date": "2026-05-20",
+      "name": "Peter Roberts",
+      "email": "pete.jm.roberts@gmail.com",
+      "product": "Accelerator",
+      "amount": 100,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-05-19",
+      "name": "Corrrie Du Plooy",
+      "email": "corrie.duplooy1@gmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-05-19",
+      "name": "Wendy Somerville",
+      "email": "wendy.somer@live.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Shane Dacosta"
+    },
+    {
+      "date": "2026-05-18",
+      "name": "Uale Rea",
+      "email": "ualerea@yahoo.com.au",
+      "product": "Freedom Fighters Comm",
+      "amount": 550,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-05-18",
+      "name": "Suzanne Etheridge",
+      "email": "sfrncs89@gmail.com",
+      "product": "Accelerator",
+      "amount": 10,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-05-18",
+      "name": "Rigelle Estacio",
+      "email": "rigelle7@gmail.com",
+      "product": "Accelerator",
+      "amount": 500,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-05-17",
+      "name": "Hero Opon",
+      "email": "scropoi@outlook.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-05-17",
+      "name": "Jesse Hupping",
+      "email": "jessehupping@gmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-05-16",
+      "name": "Cameron Arthur",
+      "email": "cameron.arthur001@gmail.com",
+      "product": "Accelerator",
+      "amount": 10700,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-05-15",
+      "name": "Cameron Arthur",
+      "email": "cameron.arthur001@gmail.com",
+      "product": "Accelerator",
+      "amount": 300,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-05-15",
+      "name": "Alexandra Minutello",
+      "email": "alexandra_djordjevic_2017@yahoo.com",
+      "product": "",
+      "amount": 500,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-05-15",
+      "name": "Abraham Halabe",
+      "email": "abe.halabe@hotmail.com",
+      "product": "Accelerator",
+      "amount": 500,
+      "source": "Paid",
+      "closer": "Shane Dacosta"
+    },
+    {
+      "date": "2026-05-15",
+      "name": "Malcolm Rose",
+      "email": "amanandhisbucket@gmail.com",
+      "product": "Accelerator",
+      "amount": 500,
+      "source": "Organic",
+      "closer": "Shane Dacosta"
+    },
+    {
+      "date": "2026-05-15",
+      "name": "Jimmy Sisouk",
+      "email": "jimmysisouk01@gmail.com",
+      "product": "Accelerator",
+      "amount": 500,
+      "source": "Paid",
+      "closer": "Shane Dacosta"
+    },
+    {
+      "date": "2026-05-15",
+      "name": "Benjamin Knight",
+      "email": "bigbenpaintdecorate@gmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-05-14",
+      "name": "Bailey Newell",
+      "email": "baileynewell09@icloud.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-05-14",
+      "name": "Aaron Shedlock",
+      "email": "support@aaronshedlock.com.au",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-05-14",
+      "name": "MARK BRIODY",
+      "email": "mcfsystem@gmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-05-14",
+      "name": "Alison Bennett",
+      "email": "alisonbennett_is@hotmail.com",
+      "product": "Accelerator",
+      "amount": 250,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-05-14",
+      "name": "Alexandra Minutello",
+      "email": "alexandra_djordjevic_2017@yahoo.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-05-14",
+      "name": "Jason Martin",
+      "email": "jason.martin0482@gmail.com",
+      "product": "Freedom Fighters Comm",
+      "amount": 550,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-05-13",
+      "name": "Ambrose Abbott",
+      "email": "ambrose0708ar@gmail.com",
+      "product": "Accelerator",
+      "amount": 200,
+      "source": "Paid",
+      "closer": "Shane Dacosta"
+    },
+    {
+      "date": "2026-05-13",
+      "name": "Moussa Nasour",
+      "email": "moussanasour05@gmail.com",
+      "product": "Accelerator",
+      "amount": 500,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-05-13",
+      "name": "Deon Myburgh",
+      "email": "deon@webx.digital",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Sean Arthur"
+    },
+    {
+      "date": "2026-05-11",
+      "name": "Dylan Smouha",
+      "email": "dylansmouha@gmail.com",
+      "product": "",
+      "amount": 550,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-05-11",
+      "name": "Moussa Nasour",
+      "email": "moussanasour05@gmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-05-10",
+      "name": "Brendan Wenke",
+      "email": "brendanwenke@gmail.com",
+      "product": "Deposit",
+      "amount": 1500,
+      "source": "Paid",
+      "closer": "James Wellington"
+    },
+    {
+      "date": "2026-05-10",
+      "name": "Ann Lopez",
+      "email": "annielopezbeauty@gmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Organic",
+      "closer": "Brittany Cooper"
+    },
+    {
+      "date": "2026-05-10",
+      "name": "Charles Sanders",
+      "email": "justinsandersss95@gmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 47,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-05-10",
+      "name": "Jimmy Sisouk",
+      "email": "jimmysisouk01@gmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-05-10",
+      "name": "Mary Kersnovske",
+      "email": "kennymaryk1@bigpind.com",
+      "product": "Accelerator",
+      "amount": 100,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-05-09",
+      "name": "Rebecca Carter",
+      "email": "rebecca@cartercorp.co",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-05-09",
+      "name": "Jason Besters",
+      "email": "jasonbesters@gmail.com",
+      "product": "Freedom Fighters Comm",
+      "amount": 550,
+      "source": "Paid",
+      "closer": "Lloyd Drill"
+    },
+    {
+      "date": "2026-05-09",
+      "name": "David Knight",
+      "email": "davidknight289@gmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Brittany Cooper"
+    },
+    {
+      "date": "2026-05-09",
+      "name": "Nathan Bridge",
+      "email": "botwa2003@gmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-05-08",
+      "name": "Cameron Arthur",
+      "email": "cameron.arthur001@gmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 47,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-05-08",
+      "name": "Edith Pau",
+      "email": "tmpau@bigpond.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 47,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-05-08",
+      "name": "Farid Nazari",
+      "email": "faridnazari055@gmail.com",
+      "product": "Accelerator",
+      "amount": 10600,
+      "source": "Organic",
+      "closer": "Brittany Cooper"
+    },
+    {
+      "date": "2026-05-07",
+      "name": "Lillian Nettlefold",
+      "email": "lilliannettlefold@icloud.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 47,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-05-07",
+      "name": "Farid Nazari",
+      "email": "faridnazari055@gmail.com",
+      "product": "Accelerator",
+      "amount": 400,
+      "source": "Organic",
+      "closer": "Brittany Cooper"
+    },
+    {
+      "date": "2026-05-06",
+      "name": "Ryan Steele",
+      "email": "steeleryan5297@gmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-05-06",
+      "name": "Naomi Faraimo-Faivalu",
+      "email": "nfaivalu@hotmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-05-06",
+      "name": "Emma Polinelli",
+      "email": "emmapolinelli@gmail.com",
+      "product": "Accelerator",
+      "amount": 10850,
+      "source": "Paid",
+      "closer": "Sean Arthur"
+    },
+    {
+      "date": "2026-05-05",
+      "name": "Farid Nazari",
+      "email": "jamesburot0@gmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-05-05",
+      "name": "Emma Polinelli",
+      "email": "emmapolinelli@gmail.com",
+      "product": "Accelerator",
+      "amount": 150,
+      "source": "Paid",
+      "closer": "Sean Arthur"
+    },
+    {
+      "date": "2026-05-04",
+      "name": "Rosie Amphone",
+      "email": "rosie.amphone@gmail.com",
+      "product": "Accelerator",
+      "amount": 100,
+      "source": "Organic",
+      "closer": "Sean Arthur"
+    },
+    {
+      "date": "2026-05-03",
+      "name": "Sanjay Soni",
+      "email": "sanjaysoni2k1@gmail.com",
+      "product": "Accelerator",
+      "amount": 10000,
+      "source": "Organic",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-05-03",
+      "name": "Seymone Doyle",
+      "email": "seymonedoyle@yahoo.com.au",
+      "product": "Accelerator",
+      "amount": 10900,
+      "source": "Organic",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-05-02",
+      "name": "Sarah Barsoum",
+      "email": "sarahbarsoum@live.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 47,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-05-02",
+      "name": "Rosie Amphone",
+      "email": "rosie.amphone@gmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-05-02",
+      "name": "Rebecca Carter",
+      "email": "rebecca@cartercorp.co",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-05-02",
+      "name": "Timothy Essington-Wilson",
+      "email": "gettimesso@gmail.com",
+      "product": "Accelerator",
+      "amount": 10000,
+      "source": "Paid",
+      "closer": "Sean Arthur"
+    },
+    {
+      "date": "2026-05-01",
+      "name": "Jason Mercer",
+      "email": "jasonllbw@gmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Brittany Cooper"
+    },
+    {
+      "date": "2026-04-30",
+      "name": "Sanjay Soni",
+      "email": "sanjaysoni2k1@gmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Organic",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-04-30",
+      "name": "Nick Jones",
+      "email": "nick.b.jones@hotmail.com",
+      "product": "Deposit",
+      "amount": 30,
+      "source": "Organic",
+      "closer": "Sean Arthur"
+    },
+    {
+      "date": "2026-04-30",
+      "name": "Marvi Joyce",
+      "email": "marvi_j@hotmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-04-30",
+      "name": "Matthew Burns",
+      "email": "mattburns86@hotmail.com",
+      "product": "Accelerator",
+      "amount": 7000,
+      "source": "Organic",
+      "closer": "James Wellington"
+    },
+    {
+      "date": "2026-04-30",
+      "name": "Michael Lewis Tate",
+      "email": "4051mt@gmail.com",
+      "product": "Accelerator",
+      "amount": 5001,
+      "source": "Paid",
+      "closer": "James Wellington"
+    },
+    {
+      "date": "2026-04-30",
+      "name": "Mamta Kochhar",
+      "email": "mkochhar2010@hotmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-04-29",
+      "name": "Stewart Carolan",
+      "email": "stewartcarolan@gmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-04-29",
+      "name": "Matthew Burns",
+      "email": "mattburns86@hotmail.com",
+      "product": "Accelerator",
+      "amount": 4000,
+      "source": "Organic",
+      "closer": "James Wellington"
+    },
+    {
+      "date": "2026-04-29",
+      "name": "Timothy Essington-Wilson",
+      "email": "gettimesso@gmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Sean Arthur"
+    },
+    {
+      "date": "2026-04-28",
+      "name": "Sanjay Soni",
+      "email": "sanjaysoni2k1@gmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-04-28",
+      "name": "Matthew Burns",
+      "email": "mattburns86@hotmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-04-28",
+      "name": "Daniel C Elder",
+      "email": "kristi.elder82@gmail.com",
+      "product": "Accelerator",
+      "amount": 10000,
+      "source": "Paid",
+      "closer": "Brittany Cooper"
+    },
+    {
+      "date": "2026-04-27",
+      "name": "Matt Walter",
+      "email": "sixwalters6@gmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 47,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-04-27",
+      "name": "Jenny Learmouth",
+      "email": "kingstongroup3@gmail.com",
+      "product": "Deposit",
+      "amount": 80,
+      "source": "Paid",
+      "closer": "John Mikhail"
+    },
+    {
+      "date": "2026-04-26",
+      "name": "Javon Fisher",
+      "email": "vonfis88@gmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-04-26",
+      "name": "Tim Collins",
+      "email": "timpriscollins@gmail.com",
+      "product": "Accelerator",
+      "amount": 950,
+      "source": "Paid",
+      "closer": "Kymberley Peters"
+    },
+    {
+      "date": "2026-04-26",
+      "name": "Mark Nematalla",
+      "email": "nemesisfitness72@gmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-04-25",
+      "name": "Yvonne Kong",
+      "email": "kongxiaobao1002@hotmail.com",
+      "product": "Accelerator",
+      "amount": 11000,
+      "source": "Paid",
+      "closer": "Dylan Smouha"
+    },
+    {
+      "date": "2026-04-25",
+      "name": "Rebecca Carter",
+      "email": "rebecca@cartercorp.co",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-04-25",
+      "name": "Paul William Browne",
+      "email": "pb00345@gmail.com",
+      "product": "Accelerator",
+      "amount": 10000,
+      "source": "Paid",
+      "closer": "Brittany Cooper"
+    },
+    {
+      "date": "2026-04-24",
+      "name": "Michael Tate",
+      "email": "4051mt@gmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "James Wellington"
+    },
+    {
+      "date": "2026-04-23",
+      "name": "Jerome Brown",
+      "email": "romeryder@icloud.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-04-23",
+      "name": "Nick Jones",
+      "email": "nick.b.jones@hotmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-04-23",
+      "name": "Kirsten Silva",
+      "email": "kirstensilva2012@gmail.com",
+      "product": "",
+      "amount": 100,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-04-23",
+      "name": "Jonico Hardwicj",
+      "email": "jonicohardwck@yahoo.com",
+      "product": "",
+      "amount": 255,
+      "source": "Paid",
+      "closer": "John Mikhail"
+    },
+    {
+      "date": "2026-04-23",
+      "name": "Kristi Elder",
+      "email": "kristi.elder82@gmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Brittany Cooper"
+    },
+    {
+      "date": "2026-04-23",
+      "name": "Deepika Coelho",
+      "email": "dee783@icloud.com",
+      "product": "Accelerator",
+      "amount": 4050,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-04-22",
+      "name": "Davina Maasi",
+      "email": "davinamaasi@gmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-04-22",
+      "name": "Seymone Doyle",
+      "email": "seymonedoyle@gmail.com",
+      "product": "",
+      "amount": 100,
+      "source": "Organic",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-04-22",
+      "name": "Paul Browne",
+      "email": "pb00345@gmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Brittany Cooper"
+    },
+    {
+      "date": "2026-04-22",
+      "name": "Deepika Coelho",
+      "email": "dee783@icloud.com",
+      "product": "Accelerator",
+      "amount": 2000,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-04-21",
+      "name": "Hua Trung Le",
+      "email": "trunungles@gmail.com",
+      "product": "Accelerator",
+      "amount": 10950,
+      "source": "Organic",
+      "closer": "Nemanja Gnjidic"
+    },
+    {
+      "date": "2026-04-20",
+      "name": "Stephanii Ngaloni",
+      "email": "ngalonistephanii@gmail.com",
+      "product": "Accelerator",
+      "amount": 950,
+      "source": "Organic",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-04-20",
+      "name": "Michael Forsyth",
+      "email": "michael.forsyth01@gmail.com",
+      "product": "",
+      "amount": 500,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-04-20",
+      "name": "Caleb Sinniah",
+      "email": "sinniahcaleb@gmail.com",
+      "product": "Accelerator",
+      "amount": 5500,
+      "source": "Organic",
+      "closer": "Brittany Cooper"
+    },
+    {
+      "date": "2026-04-19",
+      "name": "Paul Browne",
+      "email": "pb00345@gmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-04-19",
+      "name": "Alice S Autufuga",
+      "email": "monkee21toes@hotmail.com",
+      "product": "",
+      "amount": 50,
+      "source": "Paid",
+      "closer": "John Mikhail"
+    },
+    {
+      "date": "2026-04-19",
+      "name": "Trung Le",
+      "email": "trunungles@gmail.com",
+      "product": "Accelerator",
+      "amount": 50,
+      "source": "Organic",
+      "closer": "Nemanja Gnjidic"
+    },
+    {
+      "date": "2026-04-18",
+      "name": "Rebecca Carter",
+      "email": "rebecca@cartercorp.co",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-04-18",
+      "name": "Harli Fama",
+      "email": "hblaze44@gmail.com",
+      "product": "",
+      "amount": 250,
+      "source": "Paid",
+      "closer": "Sean Arthur"
+    },
+    {
+      "date": "2026-04-18",
+      "name": "Paramjit Multani",
+      "email": "psmultani69@gmail.com",
+      "product": "Accelerator",
+      "amount": 10500,
+      "source": "Paid",
+      "closer": "John Mikhail"
+    },
+    {
+      "date": "2026-04-17",
+      "name": "Paramjit Multani",
+      "email": "psmultani69@gmail.com",
+      "product": "Accelerator",
+      "amount": 500,
+      "source": "Paid",
+      "closer": "John Mikhail"
+    },
+    {
+      "date": "2026-04-17",
+      "name": "Pama Lavea",
+      "email": "lavea.pama@hotmail.com",
+      "product": "",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Nemanja Gnjidic"
+    },
+    {
+      "date": "2026-04-17",
+      "name": "Roz Clark",
+      "email": "rozzie196499@gmail.com",
+      "product": "",
+      "amount": 50,
+      "source": "Paid",
+      "closer": "Sean Arthur"
+    },
+    {
+      "date": "2026-04-17",
+      "name": "Deepika Coelho",
+      "email": "dee783@icloud.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-04-17",
+      "name": "Craig Ronald Whitney",
+      "email": "craig.whitney1985@gmail.com",
+      "product": "Accelerator",
+      "amount": 9000,
+      "source": "Paid",
+      "closer": "Brittany Cooper"
+    },
+    {
+      "date": "2026-04-17",
+      "name": "Juan Osorno Molina",
+      "email": "camilo.osorno@gmail.com",
+      "product": "Accelerator",
+      "amount": 10000,
+      "source": "Paid",
+      "closer": "Sean Arthur"
+    },
+    {
+      "date": "2026-04-16",
+      "name": "Craig Rutherford",
+      "email": "craig.j.rutherford@outlook.com",
+      "product": "",
+      "amount": 500,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-04-16",
+      "name": "Theo Panay",
+      "email": "theo.panay@gmail.com",
+      "product": "",
+      "amount": 50,
+      "source": "Organic",
+      "closer": "John Mikhail"
+    },
+    {
+      "date": "2026-04-16",
+      "name": "Amber Panay",
+      "email": "amber.hazelpanay@gmail.com",
+      "product": "",
+      "amount": 200,
+      "source": "Organic",
+      "closer": "John Mikhail"
+    },
+    {
+      "date": "2026-04-16",
+      "name": "John Harris",
+      "email": "mrkaosofficial2025@hotmail.com",
+      "product": "",
+      "amount": 20,
+      "source": "Paid",
+      "closer": "Tom Ferguson"
+    },
+    {
+      "date": "2026-04-16",
+      "name": "Camilo Osorno",
+      "email": "camilo.osorno@gmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Sean Arthur"
+    },
+    {
+      "date": "2026-04-16",
+      "name": "Caleb Sinniah",
+      "email": "sinniahcaleb@gmail.com",
+      "product": "Accelerator",
+      "amount": 5500,
+      "source": "Organic",
+      "closer": "Brittany Cooper"
+    },
+    {
+      "date": "2026-04-15",
+      "name": "Stefan Bozic",
+      "email": "stefanbozic1212@gmail.com",
+      "product": "",
+      "amount": 10,
+      "source": "Paid",
+      "closer": "Sean Arthur"
+    },
+    {
+      "date": "2026-04-15",
+      "name": "Natasha Stone",
+      "email": "natasha_stone@outlook.com",
+      "product": "Accelerator",
+      "amount": 1500,
+      "source": "Paid",
+      "closer": "John Mikhail"
+    },
+    {
+      "date": "2026-04-15",
+      "name": "Kay Lazzaroni",
+      "email": "kaylaz@live.com.au",
+      "product": "",
+      "amount": 500,
+      "source": "Organic",
+      "closer": "Sean Arthur"
+    },
+    {
+      "date": "2026-04-14",
+      "name": "Rory Mills",
+      "email": "rorym744@gmail.com",
+      "product": "",
+      "amount": 100,
+      "source": "Paid",
+      "closer": "Brittany Cooper"
+    },
+    {
+      "date": "2026-04-13",
+      "name": "Deon Myburgh",
+      "email": "deon@webx.digital",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Sean Arthur"
+    },
+    {
+      "date": "2026-04-13",
+      "name": "Deon Myburgh",
+      "email": "deon@webx.digital",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-04-11",
+      "name": "Jonico Hardwick",
+      "email": "jonicohardwick@yahoo.com",
+      "product": "",
+      "amount": 50,
+      "source": "Organic",
+      "closer": "John Mikhail"
+    },
+    {
+      "date": "2026-04-11",
+      "name": "Rebecca Carter",
+      "email": "rebecca@cartercorp.co",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-04-10",
+      "name": "Ann Lopez",
+      "email": "annielopezbeauty@gmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Organic",
+      "closer": "Brittany Cooper"
+    },
+    {
+      "date": "2026-04-10",
+      "name": "Samuel Basheer",
+      "email": "accounts@samwell.co",
+      "product": "Accelerator",
+      "amount": 9900,
+      "source": "Organic",
+      "closer": "John Mikhail"
+    },
+    {
+      "date": "2026-04-10",
+      "name": "John Faafiu",
+      "email": "johnfaafiu87@gmail.com",
+      "product": "",
+      "amount": 50,
+      "source": "Paid",
+      "closer": "Tom Ferguson"
+    },
+    {
+      "date": "2026-04-10",
+      "name": "Clayton Scoby- Smith ",
+      "email": "unihld@gmail.com",
+      "product": "",
+      "amount": 50,
+      "source": "Organic",
+      "closer": "Sean Arthur"
+    },
+    {
+      "date": "2026-04-10",
+      "name": "Dr Ibrahim Gharaibeh",
+      "email": "drgharibeh@icloud.com",
+      "product": "",
+      "amount": 100,
+      "source": "Paid",
+      "closer": "John Mikhail"
+    },
+    {
+      "date": "2026-04-10",
+      "name": "Paulette Lee Hansen",
+      "email": "defi.with.paulette@gmail.com",
+      "product": "Accelerator",
+      "amount": 10500,
+      "source": "Organic",
+      "closer": "Tom Ferguson"
+    },
+    {
+      "date": "2026-04-09",
+      "name": "Andrew Baker",
+      "email": "andrewbakerno1@gmail.com",
+      "product": "",
+      "amount": 100,
+      "source": "Paid",
+      "closer": "John Mikhail"
+    },
+    {
+      "date": "2026-04-09",
+      "name": "David Knight",
+      "email": "davidknight289@gmail.com",
+      "product": "Accelerator",
+      "amount": 500,
+      "source": "Paid",
+      "closer": "Brittany Cooper"
+    },
+    {
+      "date": "2026-04-09",
+      "name": "Paulette Hansen",
+      "email": "defi.with.paulette@gmail.com",
+      "product": "",
+      "amount": 500,
+      "source": "Organic",
+      "closer": "Tom Ferguson"
+    },
+    {
+      "date": "2026-04-09",
+      "name": "Sam Basheer",
+      "email": "subs@samwell.co",
+      "product": "Accelerator",
+      "amount": 1100,
+      "source": "Organic",
+      "closer": "John Mikhail"
+    },
+    {
+      "date": "2026-04-09",
+      "name": "Iyli Beto",
+      "email": "iyli.beto@hotmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "James Wellington"
+    },
+    {
+      "date": "2026-04-09",
+      "name": "Alan Tyter",
+      "email": "alantyter@outlook.com",
+      "product": "",
+      "amount": 100,
+      "source": "Paid",
+      "closer": "Brittany Cooper"
+    },
+    {
+      "date": "2026-04-08",
+      "name": "Gineen Whiunui",
+      "email": "workwithgineen@gmail.com",
+      "product": "",
+      "amount": 500,
+      "source": "Paid",
+      "closer": "John Mikhail"
+    },
+    {
+      "date": "2026-04-08",
+      "name": "Lawrence Harvey Scamaton",
+      "email": "larry0310@outlook.com",
+      "product": "Accelerator",
+      "amount": 10500,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-04-08",
+      "name": "Jeremie Bradshaw",
+      "email": "jeremie@jrco.com.au",
+      "product": "Accelerator",
+      "amount": 11000,
+      "source": "Paid",
+      "closer": "James Wellington"
+    },
+    {
+      "date": "2026-04-07",
+      "name": "Louise Chapman",
+      "email": "louisemiekochapman@gmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-04-07",
+      "name": "Tasna Forbes-Gittens",
+      "email": "tasnaforbesgittens8@gmail.com",
+      "product": "",
+      "amount": 500,
+      "source": "Organic",
+      "closer": "Shane Dacosta"
+    },
+    {
+      "date": "2026-04-07",
+      "name": "Joshua Isaac Graham Hemopo",
+      "email": "hemopojosh@outlook.com",
+      "product": "Accelerator",
+      "amount": 250,
+      "source": "Paid",
+      "closer": "Daniel Henderson"
+    },
+    {
+      "date": "2026-04-04",
+      "name": "Rebecca Carter",
+      "email": "rebecca@cartercorp.co",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-04-04",
+      "name": "Marko Ilic",
+      "email": "m.ilic@ctisupplies.com.au",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-04-04",
+      "name": "Dgeevan Ouchache",
+      "email": "naveegd@hotmail.com",
+      "product": "Accelerator",
+      "amount": 10750,
+      "source": "Organic",
+      "closer": "Brittany Cooper"
+    },
+    {
+      "date": "2026-04-04",
+      "name": "Joshua Isaac Graham Hemopo",
+      "email": "hemopojosh@outlook.com",
+      "product": "Accelerator",
+      "amount": 200,
+      "source": "Paid",
+      "closer": "Daniel Henderson"
+    },
+    {
+      "date": "2026-04-03",
+      "name": "Syed Furqan Hussain Rizvi",
+      "email": "furqan.mak@gmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 47,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-04-03",
+      "name": "Tara Wagner",
+      "email": "tara_wagner@outlook.com",
+      "product": "Freedom Fighters Comm",
+      "amount": 500,
+      "source": "Organic",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-04-02",
+      "name": "Dr Ibrahim Gharaibeh",
+      "email": "drgharibeh@icloud.com",
+      "product": "",
+      "amount": 100,
+      "source": "Paid",
+      "closer": "John Mikhail"
+    },
+    {
+      "date": "2026-04-02",
+      "name": "John Lornel Villanueva",
+      "email": "johnlornel_p_villanueva@yahoo.com.au",
+      "product": "",
+      "amount": 100,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-04-02",
+      "name": "",
+      "email": "riandi@gmail.com",
+      "product": "",
+      "amount": 200,
+      "source": "Organic",
+      "closer": "James Wellington"
+    },
+    {
+      "date": "2026-04-02",
+      "name": "Larry Scamaton",
+      "email": "Larry0310@outlook.com",
+      "product": "",
+      "amount": 500,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-04-02",
+      "name": "Lu Yates",
+      "email": "misslaurenyates@gmail.com",
+      "product": "Accelerator",
+      "amount": 2500,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-04-02",
+      "name": "LESLIE GAGAU",
+      "email": "lesliegagau101@gmail.com",
+      "product": "Accelerator",
+      "amount": 225,
+      "source": "Paid",
+      "closer": "Kymberley Peters"
+    },
+    {
+      "date": "2026-04-02",
+      "name": "Hossam Hamida",
+      "email": "hossam23@hotmail.com",
+      "product": "Accelerator",
+      "amount": 100,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-04-01",
+      "name": "Joshua Isaac Graham Hemopo",
+      "email": "hemopojosh@outlook.com",
+      "product": "",
+      "amount": 300,
+      "source": "Paid",
+      "closer": "Daniel Henderson"
+    },
+    {
+      "date": "2026-04-01",
+      "name": "Lahn Wright",
+      "email": "lahnwright@gmail.com",
+      "product": "",
+      "amount": 100,
+      "source": "Paid",
+      "closer": "Tom Ferguson"
+    },
+    {
+      "date": "2026-03-31",
+      "name": "Nathan Jones",
+      "email": "nategingerjones@gmail.com",
+      "product": "Accelerator",
+      "amount": 2500,
+      "source": "Paid",
+      "closer": "James Wellington"
+    },
+    {
+      "date": "2026-03-30",
+      "name": "Craig Whitney",
+      "email": "craig.whitney1985@gmail.com",
+      "product": "Accelerator",
+      "amount": 2000,
+      "source": "Paid",
+      "closer": "Brittany Cooper"
+    },
+    {
+      "date": "2026-03-30",
+      "name": "Joshua Isaac Graham Hemopo",
+      "email": "hemopojosh@outlook.com",
+      "product": "",
+      "amount": 250,
+      "source": "Paid",
+      "closer": "Daniel Henderson"
+    },
+    {
+      "date": "2026-03-27",
+      "name": "Rebecca Carter",
+      "email": "rebecca@cartercorp.co",
+      "product": "Accelerator",
+      "amount": 1100,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-03-27",
+      "name": "Simone Aquilina",
+      "email": "symi87@hotmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "James Wellington"
+    },
+    {
+      "date": "2026-03-26",
+      "name": "Joshua Isaac Graham Hemopo",
+      "email": "hemopojosh@outlook.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-03-26",
+      "name": "Evan Galerakis",
+      "email": "eevakis95@hotmail.com",
+      "product": "Accelerator",
+      "amount": 500,
+      "source": "Paid",
+      "closer": "Daniel Henderson"
+    },
+    {
+      "date": "2026-03-25",
+      "name": "Alysha McKenna",
+      "email": "aly.mac@outlook.com",
+      "product": "Accelerator",
+      "amount": 4000,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-03-23",
+      "name": "Ester Taylor",
+      "email": "ester.taylor77@yahoo.com",
+      "product": "",
+      "amount": 500,
+      "source": "Paid",
+      "closer": "Brittany Cooper"
+    },
+    {
+      "date": "2026-03-23",
+      "name": "Dgeevan Ouchache",
+      "email": "dsm.co@outlook.com",
+      "product": "",
+      "amount": 250,
+      "source": "Paid",
+      "closer": "Brittany Cooper"
+    },
+    {
+      "date": "2026-03-23",
+      "name": "Alysha McKenna",
+      "email": "aly.mac@outlook.com",
+      "product": "Accelerator",
+      "amount": 4500,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-03-21",
+      "name": "David Knight",
+      "email": "davidknight289@gmail.com",
+      "product": "Accelerator",
+      "amount": 500,
+      "source": "Paid",
+      "closer": "Brittany Cooper"
+    },
+    {
+      "date": "2026-03-21",
+      "name": "LESLIE GAGAU",
+      "email": "lesliegagau101@gmail.com",
+      "product": "Accelerator",
+      "amount": 100,
+      "source": "Paid",
+      "closer": "Kymberley Peters"
+    },
+    {
+      "date": "2026-03-21",
+      "name": "John Cratchley",
+      "email": "jcratchley@hotmail.com",
+      "product": "Accelerator",
+      "amount": 500,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-03-21",
+      "name": "John Cratchley",
+      "email": "jcratchley@hotmail.com",
+      "product": "Accelerator",
+      "amount": 500,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-03-20",
+      "name": "Danuel Bootland",
+      "email": "danuelbootland@icloud.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Paid",
+      "closer": "James Wellington"
+    },
+    {
+      "date": "2026-03-20",
+      "name": "Alysha McKenna",
+      "email": "aly.mac@outlook.com",
+      "product": "Accelerator",
+      "amount": 2500,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-03-19",
+      "name": "Leslie Gagau",
+      "email": "lesliegagau101@gmail.com",
+      "product": "",
+      "amount": 1,
+      "source": "Paid",
+      "closer": "Kymberley Peters"
+    },
+    {
+      "date": "2026-03-19",
+      "name": "George Lazarus",
+      "email": "george@lglaz.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 47,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-03-19",
+      "name": "David Gooden",
+      "email": "davegooden0@gmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 47,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-03-18",
+      "name": "Leoni Visser",
+      "email": "leonivee88@gmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-03-18",
+      "name": "John Cratchley",
+      "email": "jcratchley@hotmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-03-18",
+      "name": "Brendan Wenke",
+      "email": "bjwspecialprojects@gmail.com",
+      "product": "Accelerator",
+      "amount": 1000,
+      "source": "Organic",
+      "closer": "James Wellington"
+    },
+    {
+      "date": "2026-03-18",
+      "name": "David Knight",
+      "email": "davidknight289@gmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-03-18",
+      "name": "Sarah Wilkinson",
+      "email": "sarahwilkinson485@gmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Organic",
+      "closer": ""
+    },
+    {
+      "date": "2026-03-17",
+      "name": "Danuel Bootland",
+      "email": "danuelbootland@icloud.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-03-16",
+      "name": "Rebecca Carter",
+      "email": "rebecca@cartercorp.co",
+      "product": "Accelerator",
+      "amount": 1100,
+      "source": "Paid",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-03-13",
+      "name": "Rebecca Carter",
+      "email": "rebecca@cartercorp.co",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 47,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-03-13",
+      "name": "Jazz Dalbard",
+      "email": "feralnomads@gmail.com",
+      "product": "",
+      "amount": 200,
+      "source": "Organic",
+      "closer": "James Wellington"
+    },
+    {
+      "date": "2026-03-13",
+      "name": "Sarah Haoda",
+      "email": "shaodatodd@gmail.com",
+      "product": "Accelerator",
+      "amount": 2000,
+      "source": "Organic",
+      "closer": "Kymberley Peters"
+    },
+    {
+      "date": "2026-03-12",
+      "name": "Sam Leota",
+      "email": "sleota1185@outlook.com",
+      "product": "",
+      "amount": 100,
+      "source": "Organic",
+      "closer": "Laura Fillmann"
+    },
+    {
+      "date": "2026-03-11",
+      "name": "JACQUILYN WONG",
+      "email": "jacquilynwong@gmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Paid",
+      "closer": ""
+    },
+    {
+      "date": "2026-03-11",
+      "name": "Jazz Dalbard",
+      "email": "dogmom194@gmail.com",
+      "product": "FDR Masterclass VIP Upgrade",
+      "amount": 97,
+      "source": "Organic",
+      "closer": ""
+    }
+  ]
+}

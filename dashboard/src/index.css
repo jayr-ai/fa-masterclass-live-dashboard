@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, "Segoe UI", Roboto, sans-serif;
+
+  /*
+   * Real Freedom Academy brand palette — pulled from the live
+   * freedomacademy.azdigitalph.com/sales-dashboard/ CSS custom properties
+   * (--plane/--surface/--raised/--ink/--accent/--neon/--critical etc.),
+   * not assumed. Dark green base, pale-mint accent, lime highlight — no orange.
+   */
+  --color-fa-bg: #0f1710; /* --plane */
+  --color-fa-surface: #172114; /* --surface */
+  --color-fa-surface-2: #1c2a24; /* --raised */
+  --color-fa-border: rgba(237, 237, 238, 0.1); /* --line */
+  --color-fa-accent: #b9dacd; /* --accent — primary UI accent, positive deltas */
+  --color-fa-accent-dim: #4e6b5c; /* --accent-dim */
+  --color-fa-mint: #6f9280; /* --mint */
+  --color-fa-neon: #c6f24e; /* --neon — highlight dot / hero numbers */
+  --color-fa-neon-ink: #12200f; /* --neon-ink — text on neon/accent fills */
+  --color-fa-text: #ededee; /* --ink */
+  --color-fa-text-dim: #a9b6a4; /* --ink-2 */
+  --color-fa-text-faint: #8a9887; /* --muted */
+  --color-fa-red: #f87171; /* --critical */
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background: var(--color-fa-bg);
+  color: var(--color-fa-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-fa-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-fa-border);
+  border-radius: 8px;
+}

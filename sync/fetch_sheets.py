@@ -1,0 +1,177 @@
+#!/usr/bin/env python3
+"""
+Pulls the two Google Sheets that feed this dashboard, straight to JSON — no
+BigQuery, no Apps Script, no auth (both sheets are link-viewable, pulled via
+the gviz CSV export endpoint, same no-credential pattern already used in
+../../terraslate-ceo-dashboard/scripts/fetch_data.py).
+
+This script only touches the two Google Sheets. Meta Ads and GHL data are
+pulled separately by Claude via the Meta MCP / GHL MCP tools inside the
+sync-fa-masterclass-live skill — those aren't callable from a standalone
+script, only from within a Claude Code session — so this file limits itself
+to the one data source that genuinely needs no session-bound credential.
+
+Usage:
+    python3 fetch_sheets.py registrations   # -> prints masterclass-registrations.json shape
+    python3 fetch_sheets.py transactions    # -> prints raw CONSOLIDATED rows needing attribution
+"""
+
+from __future__ import annotations
+
+import csv
+import io
+import json
+import re
+import sys
+import urllib.request
+from collections import defaultdict
+from datetime import datetime
+from pathlib import Path
+
+REGISTRATIONS_SHEET_ID = "1g4h0IHwz0_BZ90nslU7NNKwIsENJw9hzgbk3A52dcQo"  # FA | Webinar Lead Tracker
+REGISTRATIONS_TAB = "X - AUTO"
+
+REVENUE_SHEET_ID = "1LKIwjIpzn1jNSaIzzLAWLkkiODJUuKReKkw3QUT9c8A"  # FA revenue tracker
+REVENUE_TAB = "CONSOLIDATED"
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+CACHE_PATH = REPO_ROOT / "sync" / "attribution_cache.json"
+
+
+def fetch_csv_rows(sheet_id: str, tab: str) -> list[dict[str, str]]:
+    url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={urllib.parse.quote(tab)}"
+    with urllib.request.urlopen(url, timeout=30) as resp:
+        raw = resp.read().decode("utf-8")
+    reader = csv.DictReader(io.StringIO(raw))
+    # Sheet headers/values often carry stray whitespace (e.g. "Name ", " Amount ")
+    rows = []
+    for row in reader:
+        rows.append({(k or "").strip(): (v or "").strip() for k, v in row.items()})
+    return rows
+
+
+def parse_webinar_date(raw: str, today: datetime | None = None) -> str | None:
+    """Mirrors apps-script-masterclass-sync.gs's parseWebinarDate: sheet values
+    like "Tue Sep 1" carry no year, so the current year is assumed (same
+    behavior as JS `new Date("Tue Sep 1")`, which is what production does)."""
+    raw = (raw or "").strip()
+    if not raw:
+        return None
+    if re.match(r"^\d{4}-\d{2}-\d{2}$", raw):
+        return raw
+    today = today or datetime.now()
+    for year in (today.year, today.year + 1, today.year - 1):
+        try:
+            dt = datetime.strptime(f"{raw} {year}", "%a %b %d %Y")
+            return dt.strftime("%Y-%m-%d")
+        except ValueError:
+            continue
+    return None
+
+
+def build_registrations() -> dict:
+    rows = fetch_csv_rows(REGISTRATIONS_SHEET_ID, REGISTRATIONS_TAB)
+    by_date: dict[str, set[str]] = defaultdict(set)
+    for row in rows:
+        email = (row.get("Email Address") or "").strip().lower()
+        webinar_date = parse_webinar_date(row.get("Webinar Date", ""))
+        if not email or not webinar_date:
+            continue
+        by_date[webinar_date].add(email)
+
+    runs = []
+    for date, emails in sorted(by_date.items()):
+        dt = datetime.strptime(date, "%Y-%m-%d")
+        runs.append({
+            "date": date,
+            "label": dt.strftime("%d %b %Y"),
+            "registered": len(emails),
+        })
+    runs.sort(key=lambda r: r["date"], reverse=True)
+
+    return {
+        "meta": {
+            "generatedAt": datetime.utcnow().isoformat() + "Z",
+            "source": "Google Sheet 'FA | Webinar Lead Tracker' (X - AUTO tab, direct pull)",
+            "dataWindow": f"{runs[-1]['date']} to {runs[0]['date']}" if runs else "no data",
+            "totalRegistrations": sum(r["registered"] for r in runs),
+        },
+        "masterclassRegistrations": runs,
+    }
+
+
+MODE_VALUES = {"Stripe", "Finance", "EFT"}
+
+
+def parse_amount(raw: str) -> float | None:
+    cleaned = re.sub(r"[^0-9.\-]", "", raw or "")
+    if not cleaned:
+        return None
+    try:
+        return round(float(cleaned), 2)
+    except ValueError:
+        return None
+
+
+def parse_transaction_date(raw: str) -> str | None:
+    raw = (raw or "").strip()
+    if not raw:
+        return None
+    for fmt in ("%b-%d-%Y", "%Y-%m-%d", "%d-%b-%Y", "%m/%d/%Y"):
+        try:
+            return datetime.strptime(raw, fmt).strftime("%Y-%m-%d")
+        except ValueError:
+            continue
+    return None
+
+
+def build_transactions() -> list[dict]:
+    """Raw CONSOLIDATED rows, parsed but NOT yet attribution-classified —
+    the sync skill cross-references sync/attribution_cache.json and calls
+    GHL MCP for any email not already cached before writing cash-attribution.json."""
+    rows = fetch_csv_rows(REVENUE_SHEET_ID, REVENUE_TAB)
+    out = []
+    for row in rows:
+        date = parse_transaction_date(row.get("Date", ""))
+        amount = parse_amount(row.get("Amount", ""))
+        email = (row.get("Email") or "").strip().lower()
+        if not date or amount is None or amount == 0 or not email:
+            continue
+        out.append({
+            "date": date,
+            "name": (row.get("Name") or "").strip(),
+            "email": email,
+            "product": (row.get("Product") or "").strip(),
+            "amount": amount,
+            "closer": (row.get("Closer") or "").strip(),
+            "mode": (row.get("Mode") or "").strip() if row.get("Mode") in MODE_VALUES else "",
+        })
+    return out
+
+
+def load_attribution_cache() -> dict[str, str]:
+    if CACHE_PATH.exists():
+        return json.loads(CACHE_PATH.read_text())
+    return {}
+
+
+def main():
+    if len(sys.argv) < 2 or sys.argv[1] not in ("registrations", "transactions", "unclassified-emails"):
+        print(__doc__)
+        sys.exit(1)
+
+    cmd = sys.argv[1]
+    if cmd == "registrations":
+        print(json.dumps(build_registrations(), indent=2))
+    elif cmd == "transactions":
+        print(json.dumps(build_transactions(), indent=2))
+    elif cmd == "unclassified-emails":
+        cache = load_attribution_cache()
+        txns = build_transactions()
+        emails = sorted({t["email"] for t in txns if t["email"] not in cache})
+        print(json.dumps(emails, indent=2))
+
+
+if __name__ == "__main__":
+    import urllib.parse
+    main()
