@@ -1,4 +1,14 @@
-import { generateWeeks, generateMonths, monthRange, formatISO, type WeekOption, type MonthOption } from '../utils/dateRanges'
+import {
+  generateWeeks,
+  generateMonths,
+  monthRange,
+  formatISO,
+  sydneyTodayISO,
+  addDaysISO,
+  daysBetweenISO,
+  type WeekOption,
+  type MonthOption,
+} from '../utils/dateRanges'
 
 // The picker lists Weekly/Monthly options across this fixed span (matches the
 // original build's documented range) — every period in it is selectable
@@ -14,6 +24,10 @@ export type PeriodValue =
   | { mode: 'custom'; from: string; to: string }
 
 export interface ResolvedPeriod {
+  /** YYYY-MM-DD, inclusive — the only fields that should drive data filtering. */
+  fromStr: string
+  toStr: string
+  /** Local Date equivalents of fromStr/toStr, for display/chart use only. */
   from: Date
   to: Date
   label: string
@@ -36,15 +50,17 @@ function findMonth(monthKey: string): MonthOption {
   return ALL_MONTHS.find((m) => m.key === monthKey) ?? ALL_MONTHS[ALL_MONTHS.length - 1]
 }
 
+// "Today" is always Sydney's calendar date (AEST/AEDT), never the viewer's
+// own browser timezone — ad spend and revenue are recorded against Sydney
+// business dates, so defaults and boundaries must match that clock.
 function todayWeekKey(): string {
-  const today = new Date()
-  const containing = ALL_WEEKS.find((w) => today >= w.start && today <= endOfDay(w.end))
+  const today = sydneyTodayISO()
+  const containing = ALL_WEEKS.find((w) => formatISO(w.start) <= today && today <= formatISO(w.end))
   return (containing ?? ALL_WEEKS[ALL_WEEKS.length - 1]).key
 }
 
 function todayMonthKey(): string {
-  const today = new Date()
-  const key = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}`
+  const key = sydneyTodayISO().slice(0, 7)
   return ALL_MONTHS.some((m) => m.key === key) ? key : ALL_MONTHS[ALL_MONTHS.length - 1].key
 }
 
@@ -53,36 +69,38 @@ export const defaultPeriodValue: PeriodValue = { mode: 'monthly', monthKey: toda
 export function resolvePeriod(period: PeriodValue): ResolvedPeriod {
   if (period.mode === 'weekly') {
     const week = findWeek(period.weekKey)
-    return { from: week.start, to: endOfDay(week.end), label: week.label }
+    return { fromStr: formatISO(week.start), toStr: formatISO(week.end), from: week.start, to: endOfDay(week.end), label: week.label }
   }
   if (period.mode === 'monthly') {
     const month = findMonth(period.monthKey)
     const { start, end } = monthRange(month)
-    return { from: start, to: end, label: month.label }
+    return { fromStr: formatISO(start), toStr: formatISO(end), from: start, to: end, label: month.label }
   }
   const from = new Date(`${period.from}T00:00:00`)
   const to = endOfDay(new Date(`${period.to}T00:00:00`))
-  return { from, to, label: `${period.from} → ${period.to}` }
+  return { fromStr: period.from, toStr: period.to, from, to, label: period.from === period.to ? period.from : `${period.from} → ${period.to}` }
 }
 
 export function resolvePreviousPeriod(period: PeriodValue): ResolvedPeriod {
   if (period.mode === 'weekly') {
     const idx = ALL_WEEKS.findIndex((w) => w.key === period.weekKey)
     const prev = ALL_WEEKS[Math.max(0, idx - 1)]
-    return { from: prev.start, to: endOfDay(prev.end), label: prev.label }
+    return { fromStr: formatISO(prev.start), toStr: formatISO(prev.end), from: prev.start, to: endOfDay(prev.end), label: prev.label }
   }
   if (period.mode === 'monthly') {
     const idx = ALL_MONTHS.findIndex((m) => m.key === period.monthKey)
     const prev = ALL_MONTHS[Math.max(0, idx - 1)]
     const { start, end } = monthRange(prev)
-    return { from: start, to: end, label: prev.label }
+    return { fromStr: formatISO(start), toStr: formatISO(end), from: start, to: end, label: prev.label }
   }
-  const from = new Date(`${period.from}T00:00:00`)
-  const to = new Date(`${period.to}T00:00:00`)
-  const spanMs = to.getTime() - from.getTime()
-  const prevTo = new Date(from.getTime() - 86400000)
-  const prevFrom = new Date(prevTo.getTime() - spanMs)
-  return { from: prevFrom, to: endOfDay(prevTo), label: `${formatISO(prevFrom)} → ${formatISO(prevTo)}` }
+  // Custom: previous period is the same-length span immediately preceding —
+  // pure calendar-string arithmetic, no Date-object/UTC involved.
+  const spanDays = daysBetweenISO(period.from, period.to)
+  const prevTo = addDaysISO(period.from, -1)
+  const prevFrom = addDaysISO(prevTo, -(spanDays - 1))
+  const from = new Date(`${prevFrom}T00:00:00`)
+  const to = endOfDay(new Date(`${prevTo}T00:00:00`))
+  return { fromStr: prevFrom, toStr: prevTo, from, to, label: prevFrom === prevTo ? prevFrom : `${prevFrom} → ${prevTo}` }
 }
 
 function shiftWeek(weekKey: string, dir: 1 | -1): string {
@@ -112,7 +130,7 @@ export function PeriodPicker({ value, onChange }: { value: PeriodValue; onChange
     if (mode === 'weekly') onChange({ mode: 'weekly', weekKey: todayWeekKey() })
     else if (mode === 'monthly') onChange({ mode: 'monthly', monthKey: todayMonthKey() })
     else {
-      const today = formatISO(new Date())
+      const today = sydneyTodayISO()
       onChange({ mode: 'custom', from: today, to: today })
     }
   }

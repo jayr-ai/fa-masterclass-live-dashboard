@@ -1,10 +1,10 @@
 {
   "meta": {
-    "generatedAt": "2026-09-14T05:13:51.043500Z",
+    "generatedAt": "2026-09-15T00:15:38.898444Z",
     "source": "Composite of marketing-performance.json / funnel-stages.json / masterclass-registrations.json / masterclass-attendance.json / cash-attribution.json (all direct-pulled, no BigQuery)",
     "dataWindow": "Jan 2026 - Sep 14 2026",
     "cacheStatus": "Direct sync via Meta MCP + GHL MCP + Google Sheets CSV export",
-    "syncedAt": "2026-09-14T05:13:51.043500Z"
+    "syncedAt": "2026-09-15T00:15:38.898444Z"
   },
   "funnelSnapshot": {
     "generatedAt": "2026-09-14T05:12:08.133633Z",
@@ -1981,916 +1981,1216 @@
   ],
   "cashAttributionDaily": [
     {
+      "date": "2025-11-06",
+      "totalCash": 9700.0,
+      "cashFromAds": 0.0,
+      "cashFromOrganic": 9700.0
+    },
+    {
+      "date": "2025-11-15",
+      "totalCash": 9997.0,
+      "cashFromAds": 0.0,
+      "cashFromOrganic": 9997.0
+    },
+    {
+      "date": "2026-01-02",
+      "totalCash": 1000.0,
+      "cashFromAds": 0.0,
+      "cashFromOrganic": 1000.0
+    },
+    {
+      "date": "2026-01-12",
+      "totalCash": 165.0,
+      "cashFromAds": 111.0,
+      "cashFromOrganic": 54.0
+    },
+    {
+      "date": "2026-01-13",
+      "totalCash": 174.0,
+      "cashFromAds": 167.0,
+      "cashFromOrganic": 7.0
+    },
+    {
+      "date": "2026-01-14",
+      "totalCash": 21.0,
+      "cashFromAds": 21.0,
+      "cashFromOrganic": 0.0
+    },
+    {
+      "date": "2026-01-15",
+      "totalCash": 563.0,
+      "cashFromAds": 549.0,
+      "cashFromOrganic": 14.0
+    },
+    {
+      "date": "2026-01-16",
+      "totalCash": 243.0,
+      "cashFromAds": 243.0,
+      "cashFromOrganic": 0.0
+    },
+    {
+      "date": "2026-01-17",
+      "totalCash": 160.0,
+      "cashFromAds": 160.0,
+      "cashFromOrganic": 0.0
+    },
+    {
+      "date": "2026-01-18",
+      "totalCash": 319.0,
+      "cashFromAds": 312.0,
+      "cashFromOrganic": 7.0
+    },
+    {
+      "date": "2026-01-19",
+      "totalCash": 143.0,
+      "cashFromAds": 143.0,
+      "cashFromOrganic": 0.0
+    },
+    {
+      "date": "2026-01-20",
+      "totalCash": 35.0,
+      "cashFromAds": 35.0,
+      "cashFromOrganic": 0.0
+    },
+    {
+      "date": "2026-01-21",
+      "totalCash": 214.0,
+      "cashFromAds": 207.0,
+      "cashFromOrganic": 7.0
+    },
+    {
+      "date": "2026-01-22",
+      "totalCash": 124.0,
+      "cashFromAds": 117.0,
+      "cashFromOrganic": 7.0
+    },
+    {
+      "date": "2026-01-23",
+      "totalCash": 264.0,
+      "cashFromAds": 264.0,
+      "cashFromOrganic": 0.0
+    },
+    {
+      "date": "2026-01-24",
+      "totalCash": 243.0,
+      "cashFromAds": 139.0,
+      "cashFromOrganic": 104.0
+    },
+    {
+      "date": "2026-01-25",
+      "totalCash": 276.0,
+      "cashFromAds": 172.0,
+      "cashFromOrganic": 104.0
+    },
+    {
+      "date": "2026-01-26",
+      "totalCash": 283.0,
+      "cashFromAds": 276.0,
+      "cashFromOrganic": 7.0
+    },
+    {
+      "date": "2026-01-27",
+      "totalCash": 132.0,
+      "cashFromAds": 132.0,
+      "cashFromOrganic": 0.0
+    },
+    {
+      "date": "2026-01-28",
+      "totalCash": 236.0,
+      "cashFromAds": 236.0,
+      "cashFromOrganic": 0.0
+    },
+    {
+      "date": "2026-01-29",
+      "totalCash": 401.0,
+      "cashFromAds": 186.0,
+      "cashFromOrganic": 215.0
+    },
+    {
+      "date": "2026-01-30",
+      "totalCash": 132.0,
+      "cashFromAds": 125.0,
+      "cashFromOrganic": 7.0
+    },
+    {
+      "date": "2026-01-31",
+      "totalCash": 236.0,
+      "cashFromAds": 229.0,
+      "cashFromOrganic": 7.0
+    },
+    {
+      "date": "2026-02-01",
+      "totalCash": 118.0,
+      "cashFromAds": 21.0,
+      "cashFromOrganic": 97.0
+    },
+    {
+      "date": "2026-02-02",
+      "totalCash": 54.0,
+      "cashFromAds": 54.0,
+      "cashFromOrganic": 0.0
+    },
+    {
+      "date": "2026-02-06",
+      "totalCash": 3500.0,
+      "cashFromAds": 2500.0,
+      "cashFromOrganic": 1000.0
+    },
+    {
+      "date": "2026-02-07",
+      "totalCash": 31500.0,
+      "cashFromAds": 25500.0,
+      "cashFromOrganic": 6000.0
+    },
+    {
+      "date": "2026-02-08",
+      "totalCash": 500.0,
+      "cashFromAds": 500.0,
+      "cashFromOrganic": 0.0
+    },
+    {
+      "date": "2026-02-09",
+      "totalCash": 11050.0,
+      "cashFromAds": 11050.0,
+      "cashFromOrganic": 0.0
+    },
+    {
+      "date": "2026-02-10",
+      "totalCash": 8250.0,
+      "cashFromAds": 8000.0,
+      "cashFromOrganic": 250.0
+    },
+    {
+      "date": "2026-02-12",
+      "totalCash": 7000.0,
+      "cashFromAds": 7000.0,
+      "cashFromOrganic": 0.0
+    },
+    {
+      "date": "2026-02-13",
+      "totalCash": 500.0,
+      "cashFromAds": 500.0,
+      "cashFromOrganic": 0.0
+    },
+    {
+      "date": "2026-02-14",
+      "totalCash": 8000.0,
+      "cashFromAds": 0.0,
+      "cashFromOrganic": 8000.0
+    },
+    {
+      "date": "2026-02-15",
+      "totalCash": 500.0,
+      "cashFromAds": 500.0,
+      "cashFromOrganic": 0.0
+    },
+    {
+      "date": "2026-02-20",
+      "totalCash": 197.0,
+      "cashFromAds": 50.0,
+      "cashFromOrganic": 147.0
+    },
+    {
+      "date": "2026-02-21",
+      "totalCash": 97.0,
+      "cashFromAds": 97.0,
+      "cashFromOrganic": 0.0
+    },
+    {
+      "date": "2026-02-22",
+      "totalCash": 194.0,
+      "cashFromAds": 194.0,
+      "cashFromOrganic": 0.0
+    },
+    {
+      "date": "2026-02-23",
+      "totalCash": 438.0,
+      "cashFromAds": 147.0,
+      "cashFromOrganic": 291.0
+    },
+    {
+      "date": "2026-02-24",
+      "totalCash": 47.0,
+      "cashFromAds": 0.0,
+      "cashFromOrganic": 47.0
+    },
+    {
+      "date": "2026-02-25",
+      "totalCash": 250.0,
+      "cashFromAds": 250.0,
+      "cashFromOrganic": 0.0
+    },
+    {
+      "date": "2026-02-26",
+      "totalCash": 250.0,
+      "cashFromAds": 0.0,
+      "cashFromOrganic": 250.0
+    },
+    {
+      "date": "2026-02-28",
+      "totalCash": 97.0,
+      "cashFromAds": 97.0,
+      "cashFromOrganic": 0.0
+    },
+    {
+      "date": "2026-03-01",
+      "totalCash": 694.0,
+      "cashFromAds": 597.0,
+      "cashFromOrganic": 97.0
+    },
+    {
+      "date": "2026-03-02",
+      "totalCash": 550.0,
+      "cashFromAds": 0.0,
+      "cashFromOrganic": 550.0
+    },
+    {
+      "date": "2026-03-04",
+      "totalCash": 150.0,
+      "cashFromAds": 0.0,
+      "cashFromOrganic": 150.0
+    },
+    {
+      "date": "2026-03-05",
+      "totalCash": 144.0,
+      "cashFromAds": 144.0,
+      "cashFromOrganic": 0.0
+    },
+    {
+      "date": "2026-03-06",
+      "totalCash": 344.0,
+      "cashFromAds": 344.0,
+      "cashFromOrganic": 0.0
+    },
+    {
+      "date": "2026-03-07",
+      "totalCash": 3000.0,
+      "cashFromAds": 3000.0,
+      "cashFromOrganic": 0.0
+    },
+    {
+      "date": "2026-03-08",
+      "totalCash": 47.0,
+      "cashFromAds": 47.0,
+      "cashFromOrganic": 0.0
+    },
+    {
+      "date": "2026-03-10",
+      "totalCash": 597.0,
+      "cashFromAds": 597.0,
+      "cashFromOrganic": 0.0
+    },
+    {
       "date": "2026-03-11",
-      "totalCash": 194,
-      "cashFromAds": 97,
-      "cashFromOrganic": 97
+      "totalCash": 194.0,
+      "cashFromAds": 97.0,
+      "cashFromOrganic": 97.0
     },
     {
       "date": "2026-03-12",
-      "totalCash": 100,
-      "cashFromAds": 0,
-      "cashFromOrganic": 100
+      "totalCash": 100.0,
+      "cashFromAds": 0.0,
+      "cashFromOrganic": 100.0
     },
     {
       "date": "2026-03-13",
-      "totalCash": 2247,
-      "cashFromAds": 47,
-      "cashFromOrganic": 2200
+      "totalCash": 2247.0,
+      "cashFromAds": 47.0,
+      "cashFromOrganic": 2200.0
     },
     {
       "date": "2026-03-16",
-      "totalCash": 1100,
-      "cashFromAds": 1100,
-      "cashFromOrganic": 0
+      "totalCash": 1100.0,
+      "cashFromAds": 1100.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-03-17",
-      "totalCash": 97,
-      "cashFromAds": 97,
-      "cashFromOrganic": 0
+      "totalCash": 97.0,
+      "cashFromAds": 97.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-03-18",
-      "totalCash": 1388,
-      "cashFromAds": 291,
-      "cashFromOrganic": 1097
+      "totalCash": 1388.0,
+      "cashFromAds": 291.0,
+      "cashFromOrganic": 1097.0
     },
     {
       "date": "2026-03-19",
-      "totalCash": 95,
-      "cashFromAds": 95,
-      "cashFromOrganic": 0
+      "totalCash": 95.0,
+      "cashFromAds": 95.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-03-20",
-      "totalCash": 3500,
-      "cashFromAds": 3500,
-      "cashFromOrganic": 0
+      "totalCash": 3500.0,
+      "cashFromAds": 3500.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-03-21",
-      "totalCash": 1600,
-      "cashFromAds": 1600,
-      "cashFromOrganic": 0
+      "totalCash": 1600.0,
+      "cashFromAds": 1600.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-03-23",
-      "totalCash": 5250,
-      "cashFromAds": 5250,
-      "cashFromOrganic": 0
+      "totalCash": 5250.0,
+      "cashFromAds": 5250.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-03-25",
-      "totalCash": 4000,
-      "cashFromAds": 4000,
-      "cashFromOrganic": 0
+      "totalCash": 4000.0,
+      "cashFromAds": 4000.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-03-26",
-      "totalCash": 597,
-      "cashFromAds": 597,
-      "cashFromOrganic": 0
+      "totalCash": 597.0,
+      "cashFromAds": 597.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-03-27",
-      "totalCash": 2100,
-      "cashFromAds": 2100,
-      "cashFromOrganic": 0
+      "totalCash": 2100.0,
+      "cashFromAds": 2100.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-03-30",
-      "totalCash": 2250,
-      "cashFromAds": 2250,
-      "cashFromOrganic": 0
+      "totalCash": 2250.0,
+      "cashFromAds": 2250.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-03-31",
-      "totalCash": 2500,
-      "cashFromAds": 2500,
-      "cashFromOrganic": 0
+      "totalCash": 2500.0,
+      "cashFromAds": 2500.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-04-01",
-      "totalCash": 400,
-      "cashFromAds": 400,
-      "cashFromOrganic": 0
+      "totalCash": 400.0,
+      "cashFromAds": 400.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-04-02",
-      "totalCash": 3725,
-      "cashFromAds": 3525,
-      "cashFromOrganic": 200
+      "totalCash": 3725.0,
+      "cashFromAds": 3525.0,
+      "cashFromOrganic": 200.0
     },
     {
       "date": "2026-04-03",
-      "totalCash": 547,
-      "cashFromAds": 47,
-      "cashFromOrganic": 500
+      "totalCash": 547.0,
+      "cashFromAds": 47.0,
+      "cashFromOrganic": 500.0
     },
     {
       "date": "2026-04-04",
-      "totalCash": 12047,
-      "cashFromAds": 1297,
-      "cashFromOrganic": 10750
+      "totalCash": 12047.0,
+      "cashFromAds": 1297.0,
+      "cashFromOrganic": 10750.0
     },
     {
       "date": "2026-04-07",
-      "totalCash": 847,
-      "cashFromAds": 347,
-      "cashFromOrganic": 500
+      "totalCash": 847.0,
+      "cashFromAds": 347.0,
+      "cashFromOrganic": 500.0
     },
     {
       "date": "2026-04-08",
-      "totalCash": 22000,
-      "cashFromAds": 22000,
-      "cashFromOrganic": 0
+      "totalCash": 22000.0,
+      "cashFromAds": 22000.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-04-09",
-      "totalCash": 3300,
-      "cashFromAds": 1700,
-      "cashFromOrganic": 1600
+      "totalCash": 3300.0,
+      "cashFromAds": 1700.0,
+      "cashFromOrganic": 1600.0
     },
     {
       "date": "2026-04-10",
-      "totalCash": 21600,
-      "cashFromAds": 150,
-      "cashFromOrganic": 21450
+      "totalCash": 21600.0,
+      "cashFromAds": 150.0,
+      "cashFromOrganic": 21450.0
     },
     {
       "date": "2026-04-11",
-      "totalCash": 1050,
-      "cashFromAds": 1000,
-      "cashFromOrganic": 50
+      "totalCash": 1050.0,
+      "cashFromAds": 1000.0,
+      "cashFromOrganic": 50.0
     },
     {
       "date": "2026-04-13",
-      "totalCash": 1097,
-      "cashFromAds": 1097,
-      "cashFromOrganic": 0
+      "totalCash": 1097.0,
+      "cashFromAds": 1097.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-04-14",
-      "totalCash": 100,
-      "cashFromAds": 100,
-      "cashFromOrganic": 0
+      "totalCash": 100.0,
+      "cashFromAds": 100.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-04-15",
-      "totalCash": 2010,
-      "cashFromAds": 1510,
-      "cashFromOrganic": 500
+      "totalCash": 2010.0,
+      "cashFromAds": 1510.0,
+      "cashFromOrganic": 500.0
     },
     {
       "date": "2026-04-16",
-      "totalCash": 7270,
-      "cashFromAds": 1520,
-      "cashFromOrganic": 5750
+      "totalCash": 7270.0,
+      "cashFromAds": 1520.0,
+      "cashFromOrganic": 5750.0
     },
     {
       "date": "2026-04-17",
-      "totalCash": 20647,
-      "cashFromAds": 20647,
-      "cashFromOrganic": 0
+      "totalCash": 20647.0,
+      "cashFromAds": 20647.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-04-18",
-      "totalCash": 11750,
-      "cashFromAds": 11750,
-      "cashFromOrganic": 0
+      "totalCash": 11750.0,
+      "cashFromAds": 11750.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-04-19",
-      "totalCash": 197,
-      "cashFromAds": 147,
-      "cashFromOrganic": 50
+      "totalCash": 197.0,
+      "cashFromAds": 147.0,
+      "cashFromOrganic": 50.0
     },
     {
       "date": "2026-04-20",
-      "totalCash": 6950,
-      "cashFromAds": 500,
-      "cashFromOrganic": 6450
+      "totalCash": 6950.0,
+      "cashFromAds": 500.0,
+      "cashFromOrganic": 6450.0
     },
     {
       "date": "2026-04-21",
-      "totalCash": 10950,
-      "cashFromAds": 0,
-      "cashFromOrganic": 10950
+      "totalCash": 10950.0,
+      "cashFromAds": 0.0,
+      "cashFromOrganic": 10950.0
     },
     {
       "date": "2026-04-22",
-      "totalCash": 3197,
-      "cashFromAds": 3097,
-      "cashFromOrganic": 100
+      "totalCash": 3197.0,
+      "cashFromAds": 3097.0,
+      "cashFromOrganic": 100.0
     },
     {
       "date": "2026-04-23",
-      "totalCash": 5599,
-      "cashFromAds": 5502,
-      "cashFromOrganic": 97
+      "totalCash": 5599.0,
+      "cashFromAds": 5502.0,
+      "cashFromOrganic": 97.0
     },
     {
       "date": "2026-04-24",
-      "totalCash": 1000,
-      "cashFromAds": 1000,
-      "cashFromOrganic": 0
+      "totalCash": 1000.0,
+      "cashFromAds": 1000.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-04-25",
-      "totalCash": 22000,
-      "cashFromAds": 22000,
-      "cashFromOrganic": 0
+      "totalCash": 22000.0,
+      "cashFromAds": 22000.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-04-26",
-      "totalCash": 1144,
-      "cashFromAds": 950,
-      "cashFromOrganic": 194
+      "totalCash": 1144.0,
+      "cashFromAds": 950.0,
+      "cashFromOrganic": 194.0
     },
     {
       "date": "2026-04-27",
-      "totalCash": 127,
-      "cashFromAds": 127,
-      "cashFromOrganic": 0
+      "totalCash": 127.0,
+      "cashFromAds": 127.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-04-28",
-      "totalCash": 10194,
-      "cashFromAds": 10000,
-      "cashFromOrganic": 194
+      "totalCash": 10194.0,
+      "cashFromAds": 10000.0,
+      "cashFromOrganic": 194.0
     },
     {
       "date": "2026-04-29",
-      "totalCash": 5097,
-      "cashFromAds": 1000,
-      "cashFromOrganic": 4097
+      "totalCash": 5097.0,
+      "cashFromAds": 1000.0,
+      "cashFromOrganic": 4097.0
     },
     {
       "date": "2026-04-30",
-      "totalCash": 14128,
-      "cashFromAds": 6098,
-      "cashFromOrganic": 8030
+      "totalCash": 14128.0,
+      "cashFromAds": 6098.0,
+      "cashFromOrganic": 8030.0
     },
     {
       "date": "2026-05-01",
-      "totalCash": 1000,
-      "cashFromAds": 1000,
-      "cashFromOrganic": 0
+      "totalCash": 1000.0,
+      "cashFromAds": 1000.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-05-02",
-      "totalCash": 11144,
-      "cashFromAds": 11000,
-      "cashFromOrganic": 144
+      "totalCash": 11144.0,
+      "cashFromAds": 11000.0,
+      "cashFromOrganic": 144.0
     },
     {
       "date": "2026-05-03",
-      "totalCash": 20900,
-      "cashFromAds": 0,
-      "cashFromOrganic": 20900
+      "totalCash": 20900.0,
+      "cashFromAds": 0.0,
+      "cashFromOrganic": 20900.0
     },
     {
       "date": "2026-05-04",
-      "totalCash": 100,
-      "cashFromAds": 0,
-      "cashFromOrganic": 100
+      "totalCash": 100.0,
+      "cashFromAds": 0.0,
+      "cashFromOrganic": 100.0
     },
     {
       "date": "2026-05-05",
-      "totalCash": 247,
-      "cashFromAds": 247,
-      "cashFromOrganic": 0
+      "totalCash": 247.0,
+      "cashFromAds": 247.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-05-06",
-      "totalCash": 11044,
-      "cashFromAds": 11044,
-      "cashFromOrganic": 0
+      "totalCash": 11044.0,
+      "cashFromAds": 11044.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-05-07",
-      "totalCash": 447,
-      "cashFromAds": 47,
-      "cashFromOrganic": 400
+      "totalCash": 447.0,
+      "cashFromAds": 47.0,
+      "cashFromOrganic": 400.0
     },
     {
       "date": "2026-05-08",
-      "totalCash": 10694,
-      "cashFromAds": 94,
-      "cashFromOrganic": 10600
+      "totalCash": 10694.0,
+      "cashFromAds": 94.0,
+      "cashFromOrganic": 10600.0
     },
     {
       "date": "2026-05-09",
-      "totalCash": 2647,
-      "cashFromAds": 2647,
-      "cashFromOrganic": 0
+      "totalCash": 2647.0,
+      "cashFromAds": 2647.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-05-10",
-      "totalCash": 2744,
-      "cashFromAds": 1644,
-      "cashFromOrganic": 1100
+      "totalCash": 2744.0,
+      "cashFromAds": 1644.0,
+      "cashFromOrganic": 1100.0
     },
     {
       "date": "2026-05-11",
-      "totalCash": 647,
-      "cashFromAds": 647,
-      "cashFromOrganic": 0
+      "totalCash": 647.0,
+      "cashFromAds": 647.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-05-13",
-      "totalCash": 1700,
-      "cashFromAds": 1700,
-      "cashFromOrganic": 0
+      "totalCash": 1700.0,
+      "cashFromAds": 1700.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-05-14",
-      "totalCash": 2091,
-      "cashFromAds": 2091,
-      "cashFromOrganic": 0
+      "totalCash": 2091.0,
+      "cashFromAds": 2091.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-05-15",
-      "totalCash": 2397,
-      "cashFromAds": 1897,
-      "cashFromOrganic": 500
+      "totalCash": 2397.0,
+      "cashFromAds": 1897.0,
+      "cashFromOrganic": 500.0
     },
     {
       "date": "2026-05-16",
-      "totalCash": 10700,
-      "cashFromAds": 10700,
-      "cashFromOrganic": 0
+      "totalCash": 10700.0,
+      "cashFromAds": 10700.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-05-17",
-      "totalCash": 194,
-      "cashFromAds": 194,
-      "cashFromOrganic": 0
+      "totalCash": 194.0,
+      "cashFromAds": 194.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-05-18",
-      "totalCash": 1060,
-      "cashFromAds": 510,
-      "cashFromOrganic": 550
+      "totalCash": 1060.0,
+      "cashFromAds": 510.0,
+      "cashFromOrganic": 550.0
     },
     {
       "date": "2026-05-19",
-      "totalCash": 1097,
-      "cashFromAds": 1097,
-      "cashFromOrganic": 0
+      "totalCash": 1097.0,
+      "cashFromAds": 1097.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-05-20",
-      "totalCash": 400,
-      "cashFromAds": 400,
-      "cashFromOrganic": 0
+      "totalCash": 400.0,
+      "cashFromAds": 400.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-05-21",
-      "totalCash": 97,
-      "cashFromAds": 0,
-      "cashFromOrganic": 97
+      "totalCash": 97.0,
+      "cashFromAds": 0.0,
+      "cashFromOrganic": 97.0
     },
     {
       "date": "2026-05-22",
-      "totalCash": 2194,
-      "cashFromAds": 2097,
-      "cashFromOrganic": 97
+      "totalCash": 2194.0,
+      "cashFromAds": 2097.0,
+      "cashFromOrganic": 97.0
     },
     {
       "date": "2026-05-23",
-      "totalCash": 12397,
-      "cashFromAds": 11847,
-      "cashFromOrganic": 550
+      "totalCash": 12397.0,
+      "cashFromAds": 11847.0,
+      "cashFromOrganic": 550.0
     },
     {
       "date": "2026-05-26",
-      "totalCash": 18597,
-      "cashFromAds": 18597,
-      "cashFromOrganic": 0
+      "totalCash": 18597.0,
+      "cashFromAds": 18597.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-05-27",
-      "totalCash": 10000,
-      "cashFromAds": 10000,
-      "cashFromOrganic": 0
+      "totalCash": 10000.0,
+      "cashFromAds": 10000.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-05-28",
-      "totalCash": 11000,
-      "cashFromAds": 11000,
-      "cashFromOrganic": 0
+      "totalCash": 11000.0,
+      "cashFromAds": 11000.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-05-29",
-      "totalCash": 3247,
-      "cashFromAds": 2247,
-      "cashFromOrganic": 1000
+      "totalCash": 3247.0,
+      "cashFromAds": 2247.0,
+      "cashFromOrganic": 1000.0
     },
     {
       "date": "2026-05-30",
-      "totalCash": 13094,
-      "cashFromAds": 12094,
-      "cashFromOrganic": 1000
+      "totalCash": 13094.0,
+      "cashFromAds": 12094.0,
+      "cashFromOrganic": 1000.0
     },
     {
       "date": "2026-05-31",
-      "totalCash": 97,
-      "cashFromAds": 97,
-      "cashFromOrganic": 0
+      "totalCash": 97.0,
+      "cashFromAds": 97.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-06-01",
-      "totalCash": 301,
-      "cashFromAds": 1,
-      "cashFromOrganic": 300
+      "totalCash": 301.0,
+      "cashFromAds": 1.0,
+      "cashFromOrganic": 300.0
     },
     {
       "date": "2026-06-02",
-      "totalCash": 11097,
-      "cashFromAds": 11097,
-      "cashFromOrganic": 0
+      "totalCash": 11097.0,
+      "cashFromAds": 11097.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-06-03",
-      "totalCash": 1000,
-      "cashFromAds": 1000,
-      "cashFromOrganic": 0
+      "totalCash": 1000.0,
+      "cashFromAds": 1000.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-06-04",
-      "totalCash": 11047,
-      "cashFromAds": 47,
-      "cashFromOrganic": 11000
+      "totalCash": 11047.0,
+      "cashFromAds": 47.0,
+      "cashFromOrganic": 11000.0
     },
     {
       "date": "2026-06-05",
-      "totalCash": 11500,
-      "cashFromAds": 0,
-      "cashFromOrganic": 11500
+      "totalCash": 11500.0,
+      "cashFromAds": 0.0,
+      "cashFromOrganic": 11500.0
     },
     {
       "date": "2026-06-06",
-      "totalCash": 2550,
-      "cashFromAds": 2550,
-      "cashFromOrganic": 0
+      "totalCash": 2550.0,
+      "cashFromAds": 2550.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-06-07",
-      "totalCash": 1,
-      "cashFromAds": 0,
-      "cashFromOrganic": 1
+      "totalCash": 1.0,
+      "cashFromAds": 0.0,
+      "cashFromOrganic": 1.0
     },
     {
       "date": "2026-06-08",
-      "totalCash": 7390,
-      "cashFromAds": 6390,
-      "cashFromOrganic": 1000
+      "totalCash": 7390.0,
+      "cashFromAds": 6390.0,
+      "cashFromOrganic": 1000.0
     },
     {
       "date": "2026-06-09",
-      "totalCash": 3401,
-      "cashFromAds": 2401,
-      "cashFromOrganic": 1000
+      "totalCash": 3401.0,
+      "cashFromAds": 2401.0,
+      "cashFromOrganic": 1000.0
     },
     {
       "date": "2026-06-10",
-      "totalCash": 2597,
-      "cashFromAds": 2597,
-      "cashFromOrganic": 0
+      "totalCash": 2597.0,
+      "cashFromAds": 2597.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-06-11",
-      "totalCash": 1950,
-      "cashFromAds": 950,
-      "cashFromOrganic": 1000
+      "totalCash": 1950.0,
+      "cashFromAds": 950.0,
+      "cashFromOrganic": 1000.0
     },
     {
       "date": "2026-06-12",
-      "totalCash": 23310,
-      "cashFromAds": 12210,
-      "cashFromOrganic": 11100
+      "totalCash": 23310.0,
+      "cashFromAds": 12210.0,
+      "cashFromOrganic": 11100.0
     },
     {
       "date": "2026-06-13",
-      "totalCash": 13657,
-      "cashFromAds": 657,
-      "cashFromOrganic": 13000
+      "totalCash": 13657.0,
+      "cashFromAds": 657.0,
+      "cashFromOrganic": 13000.0
     },
     {
       "date": "2026-06-14",
-      "totalCash": 1050,
-      "cashFromAds": 550,
-      "cashFromOrganic": 500
+      "totalCash": 1050.0,
+      "cashFromAds": 550.0,
+      "cashFromOrganic": 500.0
     },
     {
       "date": "2026-06-15",
-      "totalCash": 550,
-      "cashFromAds": 550,
-      "cashFromOrganic": 0
+      "totalCash": 550.0,
+      "cashFromAds": 550.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-06-16",
-      "totalCash": 50,
-      "cashFromAds": 50,
-      "cashFromOrganic": 0
+      "totalCash": 50.0,
+      "cashFromAds": 50.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-06-17",
-      "totalCash": 200,
-      "cashFromAds": 200,
-      "cashFromOrganic": 0
+      "totalCash": 200.0,
+      "cashFromAds": 200.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-06-18",
-      "totalCash": 15900,
-      "cashFromAds": 15350,
-      "cashFromOrganic": 550
+      "totalCash": 15900.0,
+      "cashFromAds": 15350.0,
+      "cashFromOrganic": 550.0
     },
     {
       "date": "2026-06-19",
-      "totalCash": 1060,
-      "cashFromAds": 60,
-      "cashFromOrganic": 1000
+      "totalCash": 1060.0,
+      "cashFromAds": 60.0,
+      "cashFromOrganic": 1000.0
     },
     {
       "date": "2026-06-20",
-      "totalCash": 12244,
-      "cashFromAds": 12244,
-      "cashFromOrganic": 0
+      "totalCash": 12244.0,
+      "cashFromAds": 12244.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-06-21",
-      "totalCash": 1500,
-      "cashFromAds": 500,
-      "cashFromOrganic": 1000
+      "totalCash": 1500.0,
+      "cashFromAds": 500.0,
+      "cashFromOrganic": 1000.0
     },
     {
       "date": "2026-06-22",
-      "totalCash": 11751,
-      "cashFromAds": 11751,
-      "cashFromOrganic": 0
+      "totalCash": 11751.0,
+      "cashFromAds": 11751.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-06-23",
-      "totalCash": 12613,
-      "cashFromAds": 12063,
-      "cashFromOrganic": 550
+      "totalCash": 12613.0,
+      "cashFromAds": 12063.0,
+      "cashFromOrganic": 550.0
     },
     {
       "date": "2026-06-24",
-      "totalCash": 17283,
-      "cashFromAds": 6150,
-      "cashFromOrganic": 11133
+      "totalCash": 17283.0,
+      "cashFromAds": 6150.0,
+      "cashFromOrganic": 11133.0
     },
     {
       "date": "2026-06-25",
-      "totalCash": 36,
-      "cashFromAds": 18,
-      "cashFromOrganic": 18
+      "totalCash": 36.0,
+      "cashFromAds": 18.0,
+      "cashFromOrganic": 18.0
     },
     {
       "date": "2026-06-26",
-      "totalCash": 1306,
-      "cashFromAds": 1306,
-      "cashFromOrganic": 0
+      "totalCash": 1306.0,
+      "cashFromAds": 1306.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-06-27",
-      "totalCash": 126,
-      "cashFromAds": 99,
-      "cashFromOrganic": 27
+      "totalCash": 126.0,
+      "cashFromAds": 99.0,
+      "cashFromOrganic": 27.0
     },
     {
       "date": "2026-06-28",
-      "totalCash": 63,
-      "cashFromAds": 54,
-      "cashFromOrganic": 9
+      "totalCash": 63.0,
+      "cashFromAds": 54.0,
+      "cashFromOrganic": 9.0
     },
     {
       "date": "2026-06-29",
-      "totalCash": 554,
-      "cashFromAds": 545,
-      "cashFromOrganic": 9
+      "totalCash": 554.0,
+      "cashFromAds": 545.0,
+      "cashFromOrganic": 9.0
     },
     {
       "date": "2026-06-30",
-      "totalCash": 92,
-      "cashFromAds": 36,
-      "cashFromOrganic": 56
+      "totalCash": 92.0,
+      "cashFromAds": 36.0,
+      "cashFromOrganic": 56.0
     },
     {
       "date": "2026-07-01",
-      "totalCash": 1187,
-      "cashFromAds": 1187,
-      "cashFromOrganic": 0
+      "totalCash": 1187.0,
+      "cashFromAds": 1187.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-07-02",
-      "totalCash": 12136,
-      "cashFromAds": 12136,
-      "cashFromOrganic": 0
+      "totalCash": 12136.0,
+      "cashFromAds": 12136.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-07-03",
-      "totalCash": 886,
-      "cashFromAds": 777,
-      "cashFromOrganic": 109
+      "totalCash": 886.0,
+      "cashFromAds": 777.0,
+      "cashFromOrganic": 109.0
     },
     {
       "date": "2026-07-04",
-      "totalCash": 9,
-      "cashFromAds": 9,
-      "cashFromOrganic": 0
+      "totalCash": 9.0,
+      "cashFromAds": 9.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-07-05",
-      "totalCash": 12009,
-      "cashFromAds": 0,
-      "cashFromOrganic": 12009
+      "totalCash": 12009.0,
+      "cashFromAds": 0.0,
+      "cashFromOrganic": 12009.0
     },
     {
       "date": "2026-07-06",
-      "totalCash": 350,
-      "cashFromAds": 350,
-      "cashFromOrganic": 0
+      "totalCash": 350.0,
+      "cashFromAds": 350.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-07-07",
-      "totalCash": 11081,
-      "cashFromAds": 11081,
-      "cashFromOrganic": 0
+      "totalCash": 11081.0,
+      "cashFromAds": 11081.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-07-08",
-      "totalCash": 2063,
-      "cashFromAds": 2045,
-      "cashFromOrganic": 18
+      "totalCash": 2063.0,
+      "cashFromAds": 2045.0,
+      "cashFromOrganic": 18.0
     },
     {
       "date": "2026-07-09",
-      "totalCash": 1050,
-      "cashFromAds": 41,
-      "cashFromOrganic": 1009
+      "totalCash": 1050.0,
+      "cashFromAds": 41.0,
+      "cashFromOrganic": 1009.0
     },
     {
       "date": "2026-07-10",
-      "totalCash": 1601,
-      "cashFromAds": 1592,
-      "cashFromOrganic": 9
+      "totalCash": 1601.0,
+      "cashFromAds": 1592.0,
+      "cashFromOrganic": 9.0
     },
     {
       "date": "2026-07-11",
-      "totalCash": 4579,
-      "cashFromAds": 239,
-      "cashFromOrganic": 4340
+      "totalCash": 4579.0,
+      "cashFromAds": 239.0,
+      "cashFromOrganic": 4340.0
     },
     {
       "date": "2026-07-12",
-      "totalCash": 106,
-      "cashFromAds": 106,
-      "cashFromOrganic": 0
+      "totalCash": 106.0,
+      "cashFromAds": 106.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-07-13",
-      "totalCash": 11009,
-      "cashFromAds": 11009,
-      "cashFromOrganic": 0
+      "totalCash": 11009.0,
+      "cashFromAds": 11009.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-07-14",
-      "totalCash": 11550,
-      "cashFromAds": 0,
-      "cashFromOrganic": 11550
+      "totalCash": 11550.0,
+      "cashFromAds": 0.0,
+      "cashFromOrganic": 11550.0
     },
     {
       "date": "2026-07-16",
-      "totalCash": 1100,
-      "cashFromAds": 1100,
-      "cashFromOrganic": 0
+      "totalCash": 1100.0,
+      "cashFromAds": 1100.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-07-17",
-      "totalCash": 1020,
-      "cashFromAds": 1000,
-      "cashFromOrganic": 20
+      "totalCash": 1020.0,
+      "cashFromAds": 1000.0,
+      "cashFromOrganic": 20.0
     },
     {
       "date": "2026-07-18",
-      "totalCash": 550,
-      "cashFromAds": 0,
-      "cashFromOrganic": 550
+      "totalCash": 550.0,
+      "cashFromAds": 0.0,
+      "cashFromOrganic": 550.0
     },
     {
       "date": "2026-07-20",
-      "totalCash": 30,
-      "cashFromAds": 30,
-      "cashFromOrganic": 0
+      "totalCash": 30.0,
+      "cashFromAds": 30.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-07-21",
-      "totalCash": 100,
-      "cashFromAds": 100,
-      "cashFromOrganic": 0
+      "totalCash": 100.0,
+      "cashFromAds": 100.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-07-24",
-      "totalCash": 4840,
-      "cashFromAds": 4840,
-      "cashFromOrganic": 0
+      "totalCash": 4840.0,
+      "cashFromAds": 4840.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-07-25",
-      "totalCash": 1000,
-      "cashFromAds": 1000,
-      "cashFromOrganic": 0
+      "totalCash": 1000.0,
+      "cashFromAds": 1000.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-07-26",
-      "totalCash": 1950,
-      "cashFromAds": 1950,
-      "cashFromOrganic": 0
+      "totalCash": 1950.0,
+      "cashFromAds": 1950.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-07-28",
-      "totalCash": 550,
-      "cashFromAds": 550,
-      "cashFromOrganic": 0
+      "totalCash": 550.0,
+      "cashFromAds": 550.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-07-29",
-      "totalCash": 10450,
-      "cashFromAds": 10450,
-      "cashFromOrganic": 0
+      "totalCash": 10450.0,
+      "cashFromAds": 10450.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-07-30",
-      "totalCash": 5000,
-      "cashFromAds": 5000,
-      "cashFromOrganic": 0
+      "totalCash": 5000.0,
+      "cashFromAds": 5000.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-07-31",
-      "totalCash": 11500,
-      "cashFromAds": 11500,
-      "cashFromOrganic": 0
+      "totalCash": 11500.0,
+      "cashFromAds": 11500.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-08-01",
-      "totalCash": 2666.68,
-      "cashFromAds": 2666.68,
-      "cashFromOrganic": 0
+      "totalCash": 2667.0,
+      "cashFromAds": 2667.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-08-03",
-      "totalCash": 1197,
-      "cashFromAds": 1197,
-      "cashFromOrganic": 0
+      "totalCash": 1197.0,
+      "cashFromAds": 1197.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-08-06",
-      "totalCash": 3294,
-      "cashFromAds": 0,
-      "cashFromOrganic": 3294
+      "totalCash": 3294.0,
+      "cashFromAds": 0.0,
+      "cashFromOrganic": 3294.0
     },
     {
       "date": "2026-08-07",
-      "totalCash": 22900,
-      "cashFromAds": 1500,
-      "cashFromOrganic": 21400
+      "totalCash": 22900.0,
+      "cashFromAds": 1500.0,
+      "cashFromOrganic": 21400.0
     },
     {
       "date": "2026-08-08",
-      "totalCash": 1000,
-      "cashFromAds": 0,
-      "cashFromOrganic": 1000
+      "totalCash": 1000.0,
+      "cashFromAds": 0.0,
+      "cashFromOrganic": 1000.0
     },
     {
       "date": "2026-08-10",
-      "totalCash": 9533.33,
-      "cashFromAds": 3533.33,
-      "cashFromOrganic": 6000
+      "totalCash": 9533.0,
+      "cashFromAds": 3533.0,
+      "cashFromOrganic": 6000.0
     },
     {
       "date": "2026-08-11",
-      "totalCash": 10097,
-      "cashFromAds": 97,
-      "cashFromOrganic": 10000
+      "totalCash": 10097.0,
+      "cashFromAds": 97.0,
+      "cashFromOrganic": 10000.0
     },
     {
       "date": "2026-08-12",
-      "totalCash": 4095.3199999999997,
-      "cashFromAds": 47,
-      "cashFromOrganic": 4048.32
+      "totalCash": 4096.0,
+      "cashFromAds": 47.0,
+      "cashFromOrganic": 4049.0
     },
     {
       "date": "2026-08-14",
-      "totalCash": 15900,
-      "cashFromAds": 10400,
-      "cashFromOrganic": 5500
+      "totalCash": 15900.0,
+      "cashFromAds": 10400.0,
+      "cashFromOrganic": 5500.0
     },
     {
       "date": "2026-08-17",
-      "totalCash": 4033.33,
-      "cashFromAds": 0,
-      "cashFromOrganic": 4033.33
+      "totalCash": 4033.0,
+      "cashFromAds": 0.0,
+      "cashFromOrganic": 4033.0
     },
     {
       "date": "2026-08-18",
-      "totalCash": 550,
-      "cashFromAds": 0,
-      "cashFromOrganic": 550
+      "totalCash": 550.0,
+      "cashFromAds": 0.0,
+      "cashFromOrganic": 550.0
     },
     {
       "date": "2026-08-19",
-      "totalCash": 1100,
-      "cashFromAds": 1100,
-      "cashFromOrganic": 0
+      "totalCash": 1100.0,
+      "cashFromAds": 1100.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-08-20",
-      "totalCash": 200,
-      "cashFromAds": 0,
-      "cashFromOrganic": 200
+      "totalCash": 200.0,
+      "cashFromAds": 0.0,
+      "cashFromOrganic": 200.0
     },
     {
       "date": "2026-08-21",
-      "totalCash": 13800,
-      "cashFromAds": 13800,
-      "cashFromOrganic": 0
+      "totalCash": 13800.0,
+      "cashFromAds": 13800.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-08-26",
-      "totalCash": 1000,
-      "cashFromAds": 1000,
-      "cashFromOrganic": 0
+      "totalCash": 1000.0,
+      "cashFromAds": 1000.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-08-27",
-      "totalCash": 5956.66,
-      "cashFromAds": 5956.66,
-      "cashFromOrganic": 0
+      "totalCash": 5957.0,
+      "cashFromAds": 5957.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-08-30",
-      "totalCash": 950,
-      "cashFromAds": 950,
-      "cashFromOrganic": 0
+      "totalCash": 950.0,
+      "cashFromAds": 950.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-09-01",
-      "totalCash": 100,
-      "cashFromAds": 0,
-      "cashFromOrganic": 100
+      "totalCash": 100.0,
+      "cashFromAds": 0.0,
+      "cashFromOrganic": 100.0
     },
     {
       "date": "2026-09-02",
-      "totalCash": 1000,
-      "cashFromAds": 1000,
-      "cashFromOrganic": 0
+      "totalCash": 1000.0,
+      "cashFromAds": 1000.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-09-03",
-      "totalCash": 5340,
-      "cashFromAds": 5340,
-      "cashFromOrganic": 0
+      "totalCash": 5340.0,
+      "cashFromAds": 5340.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-09-05",
-      "totalCash": 5500,
-      "cashFromAds": 0,
-      "cashFromOrganic": 5500
+      "totalCash": 5500.0,
+      "cashFromAds": 0.0,
+      "cashFromOrganic": 5500.0
     },
     {
       "date": "2026-09-06",
-      "totalCash": 1000,
-      "cashFromAds": 1000,
-      "cashFromOrganic": 0
+      "totalCash": 1000.0,
+      "cashFromAds": 1000.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-09-07",
-      "totalCash": 1600,
-      "cashFromAds": 600,
-      "cashFromOrganic": 1000
+      "totalCash": 1600.0,
+      "cashFromAds": 600.0,
+      "cashFromOrganic": 1000.0
     },
     {
       "date": "2026-09-09",
-      "totalCash": 9900,
-      "cashFromAds": 9900,
-      "cashFromOrganic": 0
+      "totalCash": 9900.0,
+      "cashFromAds": 9900.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-09-10",
-      "totalCash": 1000,
-      "cashFromAds": 1000,
-      "cashFromOrganic": 0
+      "totalCash": 1000.0,
+      "cashFromAds": 1000.0,
+      "cashFromOrganic": 0.0
     },
     {
       "date": "2026-09-11",
-      "totalCash": 22966.66,
-      "cashFromAds": 11966.66,
-      "cashFromOrganic": 11000
+      "totalCash": 22967.0,
+      "cashFromAds": 11967.0,
+      "cashFromOrganic": 11000.0
     }
   ],
   "oneOffEvents": []

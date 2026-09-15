@@ -11,6 +11,13 @@ Pulls Meta Ads, GHL pipeline/attendance, and the two Google Sheets straight into
 pipeline/stage IDs, same Meta ad account — but every step writes the final
 JSON directly instead of upserting to a warehouse table first.
 
+**All period math (Weekly/Monthly/Custom on the Marketing page) is anchored
+to Sydney's calendar date, not the viewer's browser timezone** —
+`src/utils/dateRanges.ts`'s `sydneyTodayISO()` — and all data filtering
+compares plain `YYYY-MM-DD` strings, never Date-object/UTC arithmetic. Keep
+any future date-range code in that same string-comparison style; it's the
+one thing that has caused real bugs in this user's other dashboards.
+
 ## Usage
 
 ```bash
@@ -47,16 +54,16 @@ Options:
    step 3. Same merge-not-overwrite rule as registrations, into
    `masterclass-attendance.json`.
 5. **Revenue / attribution** (Google Sheet `1LKIwjIpzn1jNSaIzzLAWLkkiODJUuKReKkw3QUT9c8A`,
-   tab `CONSOLIDATED`) — pull via `sync/fetch_sheets.py transactions`, keep
-   only rows with a **closer assigned** (unassigned rows are low-ticket
-   funnel steps, not masterclass-attributed sales). Diff against
-   `sync/attribution_cache.json` (email → Paid/Organic); for emails not yet
-   cached, classify via GHL MCP `search-contacts-advanced` reading
-   `attributionSource` (PAID if `utmMedium` is `paid`/`paid_social`, or
-   `fbclid`/`fbc` present, or `sessionSource` is `Paid Social`; else
-   ORGANIC — batch ~15 emails/call). Append newly-classified rows to
-   `cash-attribution.json`'s `transactions`, update the cache, recompute
-   `dailyBreakdown`/`monthlySummary`.
+   tab `CONSOLIDATED`) — pull via `sync/fetch_sheets.py transactions`. The
+   sheet gained its own **`Attribution` column** (`PAID`/`ORGANIC`) on
+   2026-09-15 — read it directly, no GHL cross-reference or cache needed any
+   more (the old `sync/attribution_cache.json` approach is gone). Every row
+   with a valid date/amount/email/attribution is included — no closer-assigned
+   filter, per the "PROPER MAPPING/WIRING" spec doc: the Cash Attribution
+   cards are a straight sync of the sheet, not a filtered subset. Overwrite
+   `cash-attribution.json`'s `transactions`/`dailyBreakdown`/`monthlySummary`
+   wholesale from the fresh pull each time (the sheet itself is the durable
+   store here, unlike the registrations tab — no merge-on-top needed).
 6. **Composite** — regenerate `marketing-data.json` from the five files above
    (funnelSnapshot, masterclassRuns, adSpendDaily, cashAttributionDaily,
    oneOffEvents: []) — the frontend fetches this one first and errors if it's

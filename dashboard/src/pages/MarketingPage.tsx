@@ -31,8 +31,9 @@ export function MarketingPage() {
     })
   }, [])
 
+  const previousPeriod = resolvePreviousPeriod(period)
   const live = sumAdSpendInRange(adSpendDaily, resolved.from, resolved.to)
-  const previous = sumAdSpendInRange(adSpendDaily, resolvePreviousPeriod(period).from, resolvePreviousPeriod(period).to)
+  const previous = sumAdSpendInRange(adSpendDaily, previousPeriod.from, previousPeriod.to)
 
   const totalAdSpend = live ? live.spend : null
   const impressions = live ? live.impressions : 0
@@ -64,16 +65,12 @@ export function MarketingPage() {
   const cplPrevious = previous && previous.leads > 0 ? previous.spend / previous.leads : 0
   const cplTrend = cplPrevious > 0 ? ((cpl - cplPrevious) / cplPrevious) * 100 : null
 
-  // Previous period for trend comparison (always use previous calendar month)
-  const currentMonth = new Date(resolved.from)
-  const previousMonth = new Date(currentMonth.getFullYear(), currentMonth.getMonth() - 1, 1)
-  const previousMonthEnd = new Date(currentMonth.getFullYear(), currentMonth.getMonth(), 0)
-  const previousResolved = { from: previousMonth, to: previousMonthEnd }
-
-  // Individual transactions from BigQuery in selected period, filtered by source
+  // Individual transactions from the CONSOLIDATED sheet in the selected
+  // period, filtered by source. Plain YYYY-MM-DD string comparison — no
+  // Date-object/timezone conversion, since both the period bounds and the
+  // transaction dates are already Sydney-calendar-date strings.
   const transactionsInPeriod = transactions.filter((transaction) => {
-    const txDate = new Date(transaction.date + 'T00:00:00Z')
-    const inPeriod = txDate >= resolved.from && txDate <= resolved.to
+    const inPeriod = transaction.date >= resolved.fromStr && transaction.date <= resolved.toStr
     if (!inPeriod) return false
     if (sourceFilter === 'all') return true
     const txSource = transaction.source === 'Paid' ? 'paid' : 'organic'
@@ -90,11 +87,10 @@ export function MarketingPage() {
     .filter(tx => tx.source === 'Organic')
     .reduce((sum, tx) => sum + tx.amount, 0)
 
-  // Calculate previous period cash for trends
+  // Calculate previous period cash for trends — same period mode (weekly/
+  // monthly/custom) as the selected one, not always "previous month".
   const transactionsInPreviousPeriod = transactions.filter((transaction) => {
-    const txDate = new Date(transaction.date + 'T00:00:00Z')
-    const inPreviousPeriod = txDate >= previousResolved.from && txDate <= previousResolved.to
-    return inPreviousPeriod
+    return transaction.date >= previousPeriod.fromStr && transaction.date <= previousPeriod.toStr
   })
   const previousCashFromAds = transactionsInPreviousPeriod
     .filter(tx => tx.source === 'Paid')
@@ -103,8 +99,7 @@ export function MarketingPage() {
     .filter(tx => tx.source === 'Organic')
     .reduce((sum, tx) => sum + tx.amount, 0)
   const previousTotalCash = previousCashFromAds + previousCashFromOrganic
-  const previousAdSpendData = sumAdSpendInRange(adSpendDaily, previousResolved.from, previousResolved.to)
-  const previousTotalAdSpend = previousAdSpendData?.spend ?? 0
+  const previousTotalAdSpend = previous?.spend ?? 0
   const previousROAS = previousTotalAdSpend > 0 ? previousTotalCash / previousTotalAdSpend : 0
 
   // Cash Attribution trends

@@ -87,13 +87,53 @@ export function generateMonths(from: Date, to: Date): MonthOption[] {
   return months
 }
 
+// Local constructor throughout (no 'Z'/UTC anchor) — mirrors mondayOf's
+// approach. A UTC-anchored Date here would silently shift a day for any
+// viewer west of UTC once read back through local getters (the same bug
+// class documented in terraslate-ceo-dashboard and the FA/Heart Smart
+// revenue dashboards' weekly-filter fixes).
 export function monthRange(m: MonthOption): { start: Date; end: Date } {
-  const start = new Date(`${m.year}-${String(m.month + 1).padStart(2, '0')}-01T00:00:00Z`)
-  const endDate = new Date(m.year, m.month + 1, 0)
-  const end = new Date(`${m.year}-${String(m.month + 1).padStart(2, '0')}-${String(endDate.getDate()).padStart(2, '0')}T23:59:59Z`)
+  const start = new Date(m.year, m.month, 1)
+  start.setHours(0, 0, 0, 0)
+  const end = new Date(m.year, m.month + 1, 0)
+  end.setHours(23, 59, 59, 999)
   return { start, end }
 }
 
 export function formatISO(d: Date): string {
   return toISODate(d)
+}
+
+/**
+ * Today's calendar date in Sydney (AEST/AEDT), as YYYY-MM-DD — independent
+ * of the viewer's own browser timezone. Ad spend and revenue are recorded
+ * against Sydney business dates, so "today"/"this week"/"this month" must
+ * be resolved against Sydney's clock, not wherever the dashboard is opened
+ * from. Uses Intl so daylight saving transitions are handled by the
+ * platform's tz database rather than a hardcoded UTC+10/+11 offset.
+ */
+export function sydneyTodayISO(): string {
+  return new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Australia/Sydney',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).format(new Date())
+}
+
+/** Add `days` (may be negative) to a YYYY-MM-DD string, pure calendar arithmetic. */
+export function addDaysISO(iso: string, days: number): string {
+  const [y, m, d] = iso.split('-').map(Number)
+  const dt = new Date(y, m - 1, d)
+  dt.setDate(dt.getDate() + days)
+  return formatISO(dt)
+}
+
+/** Inclusive day count between two YYYY-MM-DD strings (to - from + 1). */
+export function daysBetweenISO(fromIso: string, toIso: string): number {
+  const [fy, fm, fd] = fromIso.split('-').map(Number)
+  const [ty, tm, td] = toIso.split('-').map(Number)
+  const from = new Date(fy, fm - 1, fd)
+  const to = new Date(ty, tm - 1, td)
+  return Math.round((to.getTime() - from.getTime()) / 86400000) + 1
 }

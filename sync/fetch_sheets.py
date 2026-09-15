@@ -5,15 +5,16 @@ BigQuery, no Apps Script, no auth (both sheets are link-viewable, pulled via
 the gviz CSV export endpoint, same no-credential pattern already used in
 ../../terraslate-ceo-dashboard/scripts/fetch_data.py).
 
-This script only touches the two Google Sheets. Meta Ads and GHL data are
-pulled separately by Claude via the Meta MCP / GHL MCP tools inside the
-sync-fa-masterclass-live skill — those aren't callable from a standalone
-script, only from within a Claude Code session — so this file limits itself
-to the one data source that genuinely needs no session-bound credential.
+This script only touches the two Google Sheets. Meta Ads and GHL data (funnel
+stages, attendance) are pulled separately by Claude via the Meta MCP / GHL
+MCP tools inside the sync-fa-masterclass-live skill — those aren't callable
+from a standalone script, only from within a Claude Code session. Revenue
+attribution (Paid/Organic) comes straight from the CONSOLIDATED sheet's own
+'Attribution' column now — no GHL cross-reference needed for that any more.
 
 Usage:
     python3 fetch_sheets.py registrations   # -> prints masterclass-registrations.json shape
-    python3 fetch_sheets.py transactions    # -> prints raw CONSOLIDATED rows needing attribution
+    python3 fetch_sheets.py transactions    # -> prints CONSOLIDATED rows with source attribution
 """
 
 from __future__ import annotations
@@ -23,6 +24,7 @@ import io
 import json
 import re
 import sys
+import urllib.parse
 import urllib.request
 from collections import defaultdict
 from datetime import datetime
@@ -33,9 +35,6 @@ REGISTRATIONS_TAB = "X - AUTO"
 
 REVENUE_SHEET_ID = "1LKIwjIpzn1jNSaIzzLAWLkkiODJUuKReKkw3QUT9c8A"  # FA revenue tracker
 REVENUE_TAB = "CONSOLIDATED"
-
-REPO_ROOT = Path(__file__).resolve().parent.parent
-CACHE_PATH = REPO_ROOT / "sync" / "attribution_cache.json"
 
 
 def fetch_csv_rows(sheet_id: str, tab: str) -> list[dict[str, str]]:
@@ -125,17 +124,23 @@ def parse_transaction_date(raw: str) -> str | None:
     return None
 
 
+ATTRIBUTION_MAP = {"PAID": "Paid", "ORGANIC": "Organic"}
+
+
 def build_transactions() -> list[dict]:
-    """Raw CONSOLIDATED rows, parsed but NOT yet attribution-classified —
-    the sync skill cross-references sync/attribution_cache.json and calls
-    GHL MCP for any email not already cached before writing cash-attribution.json."""
+    """Raw CONSOLIDATED rows, source-attributed straight from the sheet's own
+    'Attribution' column (PAID/ORGANIC) — added to the sheet 2026-09-15, no
+    GHL cross-reference needed any more. Every row with a valid amount is
+    included; there is no closer-assigned filter (per the mapping doc, the
+    Cash Attribution cards are a straight sync of the sheet, not a subset)."""
     rows = fetch_csv_rows(REVENUE_SHEET_ID, REVENUE_TAB)
     out = []
     for row in rows:
         date = parse_transaction_date(row.get("Date", ""))
         amount = parse_amount(row.get("Amount", ""))
         email = (row.get("Email") or "").strip().lower()
-        if not date or amount is None or amount == 0 or not email:
+        attribution = ATTRIBUTION_MAP.get((row.get("Attribution") or "").strip().upper())
+        if not date or amount is None or amount == 0 or not email or not attribution:
             continue
         out.append({
             "date": date,
@@ -145,18 +150,13 @@ def build_transactions() -> list[dict]:
             "amount": amount,
             "closer": (row.get("Closer") or "").strip(),
             "mode": (row.get("Mode") or "").strip() if row.get("Mode") in MODE_VALUES else "",
+            "source": attribution,
         })
     return out
 
 
-def load_attribution_cache() -> dict[str, str]:
-    if CACHE_PATH.exists():
-        return json.loads(CACHE_PATH.read_text())
-    return {}
-
-
 def main():
-    if len(sys.argv) < 2 or sys.argv[1] not in ("registrations", "transactions", "unclassified-emails"):
+    if len(sys.argv) < 2 or sys.argv[1] not in ("registrations", "transactions"):
         print(__doc__)
         sys.exit(1)
 
@@ -165,13 +165,7 @@ def main():
         print(json.dumps(build_registrations(), indent=2))
     elif cmd == "transactions":
         print(json.dumps(build_transactions(), indent=2))
-    elif cmd == "unclassified-emails":
-        cache = load_attribution_cache()
-        txns = build_transactions()
-        emails = sorted({t["email"] for t in txns if t["email"] not in cache})
-        print(json.dumps(emails, indent=2))
 
 
 if __name__ == "__main__":
-    import urllib.parse
     main()

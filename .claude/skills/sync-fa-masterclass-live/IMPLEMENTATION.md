@@ -91,26 +91,15 @@ Same merge-onto-existing rule as Phase 3.
 ## Phase 5: Revenue + attribution → cash-attribution.json
 
 Run `python3 sync/fetch_sheets.py transactions` — pulls `CONSOLIDATED` via CSV
-export, parses `Date`/`Name`/`Email`/`Product`/`Amount`/`Closer`/`Mode`, keeps
-only rows with **non-empty Closer** (unassigned-closer rows are low-ticket
-funnel offers like the 5-Day Challenge / Freedom Coach Upgrade, not
-masterclass-attributed sales — this matches the filter the original BigQuery
-pipeline applied).
+export, parses `Date`/`Name`/`Email`/`Product`/`Amount`/`Closer`/`Mode`, and
+reads **`Attribution`** (added to the sheet 2026-09-15 — `PAID`/`ORGANIC`)
+directly as the row's source. No GHL lookup, no cache, no closer-assigned
+filter — every row with a valid date/amount/email/attribution counts,
+per the "PROPER MAPPING/WIRING of DATA SOURCE" spec doc.
 
-Run `python3 sync/fetch_sheets.py unclassified-emails` to see which emails
-in the fresh pull aren't in `sync/attribution_cache.json` yet. For each batch
-of ~15, call GHL MCP `search-contacts-advanced` filtering by email, read
-`attributionSource`:
-
-- **PAID** if `utmMedium` is `paid` or `paid_social`, OR `fbclid`/`fbc` is
-  present or (excluding pure form-medium organic fills), OR `sessionSource`
-  is `Paid Social`.
-- **ORGANIC** otherwise.
-
-Update `sync/attribution_cache.json` with the new classifications. Append the
-newly-classified transactions to `cash-attribution.json`'s `transactions`
-array (dedupe on date+email+amount), then recompute `dailyBreakdown` (sum by
-date) and `monthlySummary` (sum by `YYYY-MM`).
+Overwrite `cash-attribution.json` wholesale from the fresh pull each sync:
+group by date for `dailyBreakdown` (sum `cashFromAds`/`cashFromOrganic`), by
+`YYYY-MM` for `monthlySummary`, keep `transactions` as the full parsed list.
 
 ## Phase 6: Composite → marketing-data.json
 
@@ -136,7 +125,7 @@ sync doesn't need a rebuild — just copy the fresh JSON into `docs/data/` too:
 ```bash
 cd /Users/jayvee/Documents/ds-work/fa-masterclass-live-dashboard
 cp dashboard/public/data/*.json docs/data/
-git add dashboard/public/data/*.json docs/data/*.json sync/attribution_cache.json
+git add dashboard/public/data/*.json docs/data/*.json
 git commit -m "Sync masterclass data through <date>"
 git push origin main
 ```
@@ -147,13 +136,23 @@ data sync.
 
 Skip the push if `--no-push`.
 
-## Bootstrap note (first sync, 2026-09-14)
+## History
 
-The very first sync didn't classify all 733 CONSOLIDATED rows from scratch —
-`cash-attribution.json` and `sync/attribution_cache.json` were seeded from
-`au-fa-dashboard/marketing-dashboard/data/cash-attribution.json` (500
-already-classified transactions, itself produced by real Meta/GHL pulls, just
-via the old BigQuery pipeline). Only the ~45 rows newer than that snapshot
-needed fresh classification. Later syncs work purely off the cache going
-forward — there's no BigQuery dependency left, that file was a one-time
-bootstrap, not an ongoing link.
+- **2026-09-14, first sync**: `cash-attribution.json` was initially bootstrapped
+  from `au-fa-dashboard`'s already-classified BigQuery-era data (GHL
+  `attributionSource` lookups, cached in a now-deleted `sync/attribution_cache.json`),
+  because the CONSOLIDATED sheet had no attribution of its own yet.
+- **2026-09-15**: the sheet gained its own `Attribution` column, and the
+  "PROPER MAPPING/WIRING of DATA SOURCE" spec doc confirmed the Cash
+  Attribution section should sync straight from it. Phase 5 above was
+  rewritten accordingly — the GHL cross-reference and the cache file are
+  gone, `cash-attribution.json` is now rebuilt wholesale from the sheet every
+  sync, no closer filter. Also fixed on the same date: all period math
+  (Weekly/Monthly/Custom) now resolves "today" against Sydney's calendar via
+  `sydneyTodayISO()` instead of the viewer's browser timezone, and all
+  date-range filtering compares plain date strings instead of Date-object/UTC
+  arithmetic (`src/utils/dateRanges.ts`, `src/components/PeriodPicker.tsx`,
+  `src/pages/MarketingPage.tsx`). Checked whether Meta had a Jan 1–12, 2026
+  gap (the spec doc asks for data from Jan 1) — confirmed via a direct Meta
+  MCP pull that the account's first active day is genuinely Jan 13, 2026;
+  there's no gap to backfill.
