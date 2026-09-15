@@ -18,14 +18,25 @@ compares plain `YYYY-MM-DD` strings, never Date-object/UTC arithmetic. Keep
 any future date-range code in that same string-comparison style; it's the
 one thing that has caused real bugs in this user's other dashboards.
 
-**The gviz CSV endpoint (`fetch_csv_rows` in `sync/fetch_sheets.py`) has been
-observed to occasionally return a truncated read** — once saw 182 rows for
-the Webinar Tracker instead of its real ~4,500, gone on the very next
-request with no change on either end. `fetch_csv_rows` now fetches up to 3
-times and keeps the largest result as a mitigation. If a sync ever produces
-suspiciously low registered/attended/application counts across many dates
-at once, re-run it before trusting the numbers — it's more likely a bad read
-than a real drop.
+**A truncated sheet read is a real, recurring risk here — root cause
+confirmed by the user: someone applying a regular Filter (not a Filter View)
+to the Webinar Tracker sheet.** A basic Filter hides rows for every viewer
+*and* every reader of the sheet, including `fetch_csv_rows`'s gviz pull — a
+Filter View wouldn't cause this, it's per-viewer only. Once saw 182 rows
+instead of the real ~4,500 this way. `fetch_csv_rows` now:
+1. Retries a few times **spaced ~8s apart** (not back-to-back — a filter
+   applied to check something is usually cleared within seconds to a
+   couple minutes, so back-to-back retries would just hit the same filtered
+   window), exiting early the moment a healthy-looking read shows up.
+2. Compares the best result against a persisted baseline
+   (`sync/row_count_baseline.json`, gitignored — regenerate anytime, it's
+   just a floor, not a source of truth). If still under 70% of the last
+   known-good count after retrying, it raises `SuspiciousReadError` instead
+   of returning partial data — **do not catch this and proceed anyway**.
+   Tell the user a Filter looks active on the sheet and ask them to clear
+   it, then re-run. Recommend they use Filter Views (Data > Filter views)
+   for any ad-hoc personal filtering going forward — those don't affect
+   what this sync (or anyone else) sees.
 
 ## Usage
 

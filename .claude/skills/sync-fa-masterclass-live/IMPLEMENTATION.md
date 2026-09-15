@@ -84,9 +84,21 @@ JSON, index by date, overlay the fresh pull's dates on top (fresh wins),
 keep any date the fresh pull doesn't have. This used to be justified as
 "the sheet prunes old batches" — that was **wrong**, disproven by checking:
 the sheet holds full history back to the earliest tracked run (30+ dates,
-Apr 2026 onward). The real reason to keep merging is the gviz truncation
-risk noted at the top of SKILL.md — a bad short read should never be allowed
-to wipe out good committed history.
+Apr 2026 onward). The real reason to keep merging is defense-in-depth
+against the Filter risk (see SKILL.md) — `fetch_csv_rows` should already
+catch and refuse an actively-filtered read via `SuspiciousReadError`, but
+merge-not-overwrite is a second layer: even a filtered pull that somehow
+slips past the row-count check (e.g. baseline stale/deleted) would only
+overwrite the dates it happened to see, never silently erase dates outside
+its filtered view.
+
+If `fetch_csv_rows` raises `SuspiciousReadError`: **stop, don't catch it and
+merge anyway.** Tell the user the sheet looks like it has an active Filter
+right now (name the exact numbers from the error) and ask them to clear it —
+Data > Remove filter, or check for a highlighted filter icon in the toolbar
+— then re-run `/sync-fa-masterclass-live`. Recommend Filter Views for future
+ad-hoc filtering (Data > Filter views > Create new) — those are per-viewer
+and don't affect this sync or anyone else looking at the sheet.
 
 ## Phase 4: Revenue + attribution → cash-attribution.json
 
@@ -175,3 +187,14 @@ Skip the push if `--no-push`.
   "Revenue (This Run's Registrants)" was renamed to "Revenue Collected For
   This Run". The GHL funnel snapshot section ("Registration → Attendance,
   live snapshot") is explicitly deferred per the doc — left untouched.
+- **2026-09-15, same day, root cause of the gviz truncation confirmed**: the
+  user identified that they/a teammate occasionally apply a regular Filter
+  (not a Filter View) to the Webinar Tracker sheet, which hides rows from
+  every reader including this sync — that's what the earlier 182-row read
+  actually was, not a random network blip. Replaced the naive "retry 3x
+  immediately, take the largest" mitigation with spaced retries (~8s apart,
+  early-exiting once healthy) plus a persisted row-count baseline
+  (`sync/row_count_baseline.json`, gitignored) that raises
+  `SuspiciousReadError` if a read is still under 70% of the last known-good
+  count — surfaces the problem loudly instead of silently merging an
+  undercounted pull into committed history.

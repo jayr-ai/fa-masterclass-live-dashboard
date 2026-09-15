@@ -26,6 +26,7 @@ import io
 import json
 import re
 import sys
+import time
 import urllib.parse
 import urllib.request
 from collections import defaultdict
@@ -38,6 +39,9 @@ REGISTRATIONS_TAB = "X - AUTO"
 REVENUE_SHEET_ID = "1LKIwjIpzn1jNSaIzzLAWLkkiODJUuKReKkw3QUT9c8A"  # FA revenue tracker
 REVENUE_TAB = "CONSOLIDATED"
 
+REPO_ROOT = Path(__file__).resolve().parent.parent
+ROW_COUNT_BASELINE_PATH = REPO_ROOT / "sync" / "row_count_baseline.json"
+
 
 def _fetch_csv_once(sheet_id: str, tab: str) -> list[dict[str, str]]:
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={urllib.parse.quote(tab)}"
@@ -48,17 +52,70 @@ def _fetch_csv_once(sheet_id: str, tab: str) -> list[dict[str, str]]:
     return [{(k or "").strip(): (v or "").strip() for k, v in row.items()} for row in reader]
 
 
-def fetch_csv_rows(sheet_id: str, tab: str, attempts: int = 3) -> list[dict[str, str]]:
-    """The gviz CSV endpoint is observed to occasionally return a truncated
-    read (seen once: 182 rows instead of the sheet's real ~4,500 — gone on
-    the very next request with no code change). Fetch a few times and keep
-    the largest result; a transient short read undercounts, it doesn't
-    fabricate rows, so the biggest response is the trustworthy one."""
+def _load_row_count_baseline() -> dict[str, int]:
+    if ROW_COUNT_BASELINE_PATH.exists():
+        return json.loads(ROW_COUNT_BASELINE_PATH.read_text())
+    return {}
+
+
+def _save_row_count_baseline(baseline: dict[str, int]) -> None:
+    ROW_COUNT_BASELINE_PATH.write_text(json.dumps(baseline, indent=2))
+
+
+class SuspiciousReadError(RuntimeError):
+    """Raised when a sheet pull comes back much smaller than its last known
+    good size — almost always someone's Filter (not Filter View) is active
+    on the sheet, hiding rows from every reader including this script, not
+    an actual data loss. Filter Views are per-viewer and don't affect this;
+    the regular Filter does, for everyone, until it's cleared."""
+
+
+def fetch_csv_rows(sheet_id: str, tab: str, attempts: int = 4, retry_delay_seconds: float = 8.0) -> list[dict[str, str]]:
+    """Retries spaced several seconds apart, not back-to-back — a person
+    filtering the sheet to check something typically clears it within
+    seconds to a couple minutes, so back-to-back retries (all landing inside
+    the same filtered window) don't help, but a few seconds' gap gives a
+    real chance of catching it unfiltered. Keeps the largest result seen.
+
+    Then checks the result against a persisted per-(sheet,tab) row-count
+    baseline (sync/row_count_baseline.json). If the best result is still
+    under 70% of the last known-good count, raises SuspiciousReadError
+    instead of silently returning a partial dataset — almost certainly an
+    active Filter on the sheet (not a Filter View, which wouldn't affect
+    this), and merging a filtered-down pull into committed history would
+    quietly overwrite good numbers with undercounts. A healthy pull updates
+    the baseline forward, so real sheet growth doesn't trip this later.
+    """
+    key = f"{sheet_id}:{tab}"
+    baseline = _load_row_count_baseline()
+    last_good = baseline.get(key)
+
     best: list[dict[str, str]] = []
-    for _ in range(attempts):
+    for i in range(attempts):
         rows = _fetch_csv_once(sheet_id, tab)
         if len(rows) > len(best):
             best = rows
+        # Early exit the moment a healthy-looking read shows up — no baseline
+        # yet (first-ever run) or this attempt already clears the bar. Saves
+        # calling this 3x back-to-back (registrations/attendance/applications
+        # all hit the same sheet) from paying the full retry/delay cost when
+        # the sheet isn't currently filtered, which is the common case.
+        if last_good is None or len(best) >= last_good * 0.7:
+            break
+        if i < attempts - 1:
+            time.sleep(retry_delay_seconds)
+    if last_good is not None and len(best) < last_good * 0.7:
+        raise SuspiciousReadError(
+            f"'{tab}' returned {len(best)} rows across {attempts} spaced attempts, "
+            f"but the last known-good pull had {last_good}. This almost always means "
+            f"someone has a Filter (not a Filter View) active on the sheet right now, "
+            f"hiding rows from every reader. Ask them to clear it (Data > Remove filter, "
+            f"or check the filter icon in the toolbar) and re-run the sync — do not "
+            f"proceed with this data, it would overwrite good history with undercounts."
+        )
+
+    baseline[key] = max(len(best), int(last_good * 0.9)) if last_good else len(best)
+    _save_row_count_baseline(baseline)
     return best
 
 
