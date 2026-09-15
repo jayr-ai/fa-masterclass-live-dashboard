@@ -304,7 +304,6 @@ export function MarketingPage() {
               <tr className="border-b border-fa-border bg-fa-surface-2">
                 <th className="px-4 py-3 text-left font-medium text-fa-text-dim">Date</th>
                 <th className="px-4 py-3 text-left font-medium text-fa-text-dim">Name</th>
-                <th className="px-4 py-3 text-left font-medium text-fa-text-dim">Email</th>
                 <th className="px-4 py-3 text-left font-medium text-fa-text-dim">Product</th>
                 <th className="px-4 py-3 text-right font-medium text-fa-text-dim">Amount</th>
                 <th className="px-4 py-3 text-center font-medium text-fa-text-dim">Source</th>
@@ -316,7 +315,6 @@ export function MarketingPage() {
                   <tr key={`${tx.date}-${tx.email}-${idx}`} className="border-b border-fa-border/50 hover:bg-fa-surface-2/50">
                     <td className="px-4 py-3 text-fa-text">{tx.date}</td>
                     <td className="px-4 py-3 text-fa-text">{tx.name}</td>
-                    <td className="px-4 py-3 text-fa-text-dim text-xs">{tx.email}</td>
                     <td className="px-4 py-3 text-fa-text">{tx.product}</td>
                     <td className="px-4 py-3 text-right font-semibold text-fa-neon">{formatCurrency(tx.amount)}</td>
                     <td className="px-4 py-3 text-center">
@@ -334,7 +332,7 @@ export function MarketingPage() {
                 ))
               ) : (
                 <tr>
-                  <td colSpan={6} className="px-4 py-8 text-center text-fa-text-dim">
+                  <td colSpan={5} className="px-4 py-8 text-center text-fa-text-dim">
                     No sales data for this period and filter
                   </td>
                 </tr>
@@ -342,7 +340,7 @@ export function MarketingPage() {
             </tbody>
             <tfoot>
               <tr className="border-t-2 border-fa-border bg-fa-surface-2 font-semibold">
-                <td colSpan={4} className="px-4 py-3 text-right text-fa-text">
+                <td colSpan={3} className="px-4 py-3 text-right text-fa-text">
                   {sourceFilter === 'all' ? 'Total' : `Total (${sourceFilter === 'paid' ? 'Paid' : 'Organic'})`}
                 </td>
                 <td className="px-4 py-3 text-right text-fa-neon">{formatCurrency(totalTransactionsAmount)}</td>
