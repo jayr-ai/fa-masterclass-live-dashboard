@@ -14,6 +14,8 @@ attribution (Paid/Organic) comes straight from the CONSOLIDATED sheet's own
 
 Usage:
     python3 fetch_sheets.py registrations   # -> prints masterclass-registrations.json shape
+    python3 fetch_sheets.py attendance      # -> prints masterclass-attendance.json shape (Column N)
+    python3 fetch_sheets.py applications    # -> prints masterclass-applications.json shape (Columns I+M)
     python3 fetch_sheets.py transactions    # -> prints CONSOLIDATED rows with source attribution
 """
 
@@ -37,16 +39,27 @@ REVENUE_SHEET_ID = "1LKIwjIpzn1jNSaIzzLAWLkkiODJUuKReKkw3QUT9c8A"  # FA revenue 
 REVENUE_TAB = "CONSOLIDATED"
 
 
-def fetch_csv_rows(sheet_id: str, tab: str) -> list[dict[str, str]]:
+def _fetch_csv_once(sheet_id: str, tab: str) -> list[dict[str, str]]:
     url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={urllib.parse.quote(tab)}"
     with urllib.request.urlopen(url, timeout=30) as resp:
         raw = resp.read().decode("utf-8")
     reader = csv.DictReader(io.StringIO(raw))
     # Sheet headers/values often carry stray whitespace (e.g. "Name ", " Amount ")
-    rows = []
-    for row in reader:
-        rows.append({(k or "").strip(): (v or "").strip() for k, v in row.items()})
-    return rows
+    return [{(k or "").strip(): (v or "").strip() for k, v in row.items()} for row in reader]
+
+
+def fetch_csv_rows(sheet_id: str, tab: str, attempts: int = 3) -> list[dict[str, str]]:
+    """The gviz CSV endpoint is observed to occasionally return a truncated
+    read (seen once: 182 rows instead of the sheet's real ~4,500 — gone on
+    the very next request with no code change). Fetch a few times and keep
+    the largest result; a transient short read undercounts, it doesn't
+    fabricate rows, so the biggest response is the trustworthy one."""
+    best: list[dict[str, str]] = []
+    for _ in range(attempts):
+        rows = _fetch_csv_once(sheet_id, tab)
+        if len(rows) > len(best):
+            best = rows
+    return best
 
 
 def parse_webinar_date(raw: str, today: datetime | None = None) -> str | None:
@@ -68,34 +81,98 @@ def parse_webinar_date(raw: str, today: datetime | None = None) -> str | None:
     return None
 
 
-def build_registrations() -> dict:
+def _webinar_metrics_by_date() -> dict[str, dict]:
+    """One pass over X - AUTO, keyed by Webinar Date (Column F), each value a
+    dict of per-date sets of unique emails for registered/attended/application
+    — the three metrics this sheet drives, all counted the same way (unique
+    Column C email per date) per the mapping doc.
+
+    NOTE: this sheet only holds the most recent Masterclass batch's raw rows
+    — older dates get pruned. Every metric here needs the same merge-forward
+    treatment onto the previously-committed JSON as registrations already
+    gets, or a pruned date silently loses whatever wasn't captured before it
+    disappeared.
+    """
     rows = fetch_csv_rows(REGISTRATIONS_SHEET_ID, REGISTRATIONS_TAB)
-    by_date: dict[str, set[str]] = defaultdict(set)
+    by_date: dict[str, dict[str, set[str]]] = defaultdict(lambda: {"registered": set(), "attended": set(), "application": set()})
     for row in rows:
         email = (row.get("Email Address") or "").strip().lower()
         webinar_date = parse_webinar_date(row.get("Webinar Date", ""))
         if not email or not webinar_date:
             continue
-        by_date[webinar_date].add(email)
+        by_date[webinar_date]["registered"].add(email)
 
+        # ATTENDED — Column N (Attended Webinar), any non-empty value counts
+        # as checked (sheet renders a checkmark, exact glyph not load-bearing).
+        if (row.get("Attended Webinar") or "").strip():
+            by_date[webinar_date]["attended"].add(email)
+
+        # APPLICATION — Column I (Call Booked Event) contains "application"
+        # (case-insensitive) AND Column M (Booking Status) is BOOKED.
+        cbe = (row.get("Call Booked Event") or "").strip().lower()
+        booking_status = (row.get("Booking Status") or "").strip().upper()
+        if "application" in cbe and booking_status == "BOOKED":
+            by_date[webinar_date]["application"].add(email)
+
+    return by_date
+
+
+def build_registrations() -> dict:
+    by_date = _webinar_metrics_by_date()
     runs = []
-    for date, emails in sorted(by_date.items()):
+    for date, metrics in sorted(by_date.items()):
         dt = datetime.strptime(date, "%Y-%m-%d")
         runs.append({
             "date": date,
             "label": dt.strftime("%d %b %Y"),
-            "registered": len(emails),
+            "registered": len(metrics["registered"]),
         })
     runs.sort(key=lambda r: r["date"], reverse=True)
 
     return {
         "meta": {
             "generatedAt": datetime.utcnow().isoformat() + "Z",
-            "source": "Google Sheet 'FA | Webinar Lead Tracker' (X - AUTO tab, direct pull)",
+            "source": "Google Sheet 'FA | Webinar Lead Tracker' (X - AUTO tab, direct pull) — unique emails (Column C) per Webinar Date (Column F)",
             "dataWindow": f"{runs[-1]['date']} to {runs[0]['date']}" if runs else "no data",
             "totalRegistrations": sum(r["registered"] for r in runs),
         },
         "masterclassRegistrations": runs,
+    }
+
+
+def build_attendance() -> dict:
+    by_date = _webinar_metrics_by_date()
+    rows_out = []
+    for date, metrics in sorted(by_date.items()):
+        rows_out.append({"date": date, "attended": len(metrics["attended"])})
+    rows_out.sort(key=lambda r: r["date"], reverse=True)
+
+    return {
+        "meta": {
+            "generatedAt": datetime.utcnow().isoformat() + "Z",
+            "source": "Google Sheet 'FA | Webinar Lead Tracker' (X - AUTO tab, Column N 'Attended Webinar') — unique emails per Webinar Date",
+            "dataWindow": f"{rows_out[-1]['date']} to {rows_out[0]['date']}" if rows_out else "no data",
+            "totalAttendees": sum(r["attended"] for r in rows_out),
+        },
+        "masterclassAttendance": rows_out,
+    }
+
+
+def build_applications() -> dict:
+    by_date = _webinar_metrics_by_date()
+    rows_out = []
+    for date, metrics in sorted(by_date.items()):
+        rows_out.append({"date": date, "applications": len(metrics["application"])})
+    rows_out.sort(key=lambda r: r["date"], reverse=True)
+
+    return {
+        "meta": {
+            "generatedAt": datetime.utcnow().isoformat() + "Z",
+            "source": "Google Sheet 'FA | Webinar Lead Tracker' (X - AUTO tab, Column I 'Call Booked Event' contains 'application' + Column M 'Booking Status' = BOOKED) — unique emails per Webinar Date",
+            "dataWindow": f"{rows_out[-1]['date']} to {rows_out[0]['date']}" if rows_out else "no data",
+            "totalApplications": sum(r["applications"] for r in rows_out),
+        },
+        "applications": rows_out,
     }
 
 
@@ -156,13 +233,18 @@ def build_transactions() -> list[dict]:
 
 
 def main():
-    if len(sys.argv) < 2 or sys.argv[1] not in ("registrations", "transactions"):
+    valid = ("registrations", "attendance", "applications", "transactions")
+    if len(sys.argv) < 2 or sys.argv[1] not in valid:
         print(__doc__)
         sys.exit(1)
 
     cmd = sys.argv[1]
     if cmd == "registrations":
         print(json.dumps(build_registrations(), indent=2))
+    elif cmd == "attendance":
+        print(json.dumps(build_attendance(), indent=2))
+    elif cmd == "applications":
+        print(json.dumps(build_applications(), indent=2))
     elif cmd == "transactions":
         print(json.dumps(build_transactions(), indent=2))
 

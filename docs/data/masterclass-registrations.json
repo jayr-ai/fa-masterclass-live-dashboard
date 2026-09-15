@@ -1,41 +1,40 @@
 {
   "meta": {
-    "generatedAt": "2026-09-14T05:13:08.701991Z",
-    "source": "Google Sheet 'FA | Webinar Lead Tracker' (X - AUTO tab, direct CSV pull) + historical carry-forward from prior sync",
+    "generatedAt": "2026-09-15T02:13:39.660004Z",
+    "source": "Google Sheet 'FA | Webinar Lead Tracker' (X - AUTO tab, direct pull) \u2014 unique emails (Column C) per Webinar Date (Column F)",
     "dataWindow": "2026-04-08 to 2026-09-15",
-    "totalRegistrations": 4167,
-    "note": "The sheet's X-AUTO tab only retains recent webinar dates (it rotates); each sync merges the fresh pull on top of the previously-committed file so history isn't lost when the sheet rotates."
+    "totalRegistrations": 4233
   },
   "masterclassRegistrations": [
     {
       "date": "2026-09-15",
       "label": "15 Sep 2026",
-      "registered": 146
+      "registered": 175
     },
     {
       "date": "2026-09-08",
       "label": "08 Sep 2026",
-      "registered": 148
+      "registered": 153
     },
     {
       "date": "2026-09-01",
       "label": "01 Sep 2026",
-      "registered": 181
+      "registered": 180
     },
     {
       "date": "2026-08-25",
       "label": "25 Aug 2026",
-      "registered": 43
+      "registered": 99
     },
     {
       "date": "2026-08-18",
       "label": "18 Aug 2026",
-      "registered": 218
+      "registered": 215
     },
     {
       "date": "2026-08-11",
       "label": "11 Aug 2026",
-      "registered": 220
+      "registered": 219
     },
     {
       "date": "2026-08-05",
@@ -45,57 +44,57 @@
     {
       "date": "2026-08-04",
       "label": "04 Aug 2026",
-      "registered": 171
+      "registered": 169
     },
     {
       "date": "2026-07-28",
-      "label": "28 July 2026",
-      "registered": 182
+      "label": "28 Jul 2026",
+      "registered": 179
     },
     {
       "date": "2026-07-22",
-      "label": "22 July 2026",
-      "registered": 181
+      "label": "22 Jul 2026",
+      "registered": 180
     },
     {
       "date": "2026-07-16",
-      "label": "16 July 2026",
-      "registered": 78
+      "label": "16 Jul 2026",
+      "registered": 77
     },
     {
       "date": "2026-06-24",
-      "label": "24 June 2026",
-      "registered": 3
+      "label": "24 Jun 2026",
+      "registered": 2
     },
     {
       "date": "2026-06-17",
-      "label": "17 June 2026",
-      "registered": 97
+      "label": "17 Jun 2026",
+      "registered": 95
     },
     {
       "date": "2026-06-11",
-      "label": "11 June 2026",
-      "registered": 176
+      "label": "11 Jun 2026",
+      "registered": 175
     },
     {
       "date": "2026-06-09",
-      "label": "09 June 2026",
+      "label": "09 Jun 2026",
       "registered": 206
     },
     {
       "date": "2026-06-04",
-      "label": "04 June 2026",
+      "label": "04 Jun 2026",
       "registered": 138
     },
     {
       "date": "2026-06-02",
-      "label": "02 June 2026",
-      "registered": 194
+      "label": "02 Jun 2026",
+      "registered": 193
     },
     {
       "date": "2026-05-28",
       "label": "28 May 2026",
-      "registered": 174
+      "registered": 173
     },
     {
       "date": "2026-05-26",
@@ -105,12 +104,12 @@
     {
       "date": "2026-05-21",
       "label": "21 May 2026",
-      "registered": 150
+      "registered": 148
     },
     {
       "date": "2026-05-19",
       "label": "19 May 2026",
-      "registered": 180
+      "registered": 179
     },
     {
       "date": "2026-05-14",
@@ -125,17 +124,17 @@
     {
       "date": "2026-05-07",
       "label": "07 May 2026",
-      "registered": 140
+      "registered": 139
     },
     {
       "date": "2026-05-05",
       "label": "05 May 2026",
-      "registered": 165
+      "registered": 164
     },
     {
       "date": "2026-04-30",
       "label": "30 Apr 2026",
-      "registered": 148
+      "registered": 147
     },
     {
       "date": "2026-04-28",

@@ -55,40 +55,40 @@ Sort stages by count descending for `position` (0-indexed), compute
 `winProbability = round(count / totalOpportunities * 100, 2)`. Overwrite the
 file wholesale — it's a snapshot, not a history.
 
-## Phase 3: Registrations → masterclass-registrations.json
+## Phase 3: Registrations, Attendance, Application (Webinar Tracker sheet)
 
-Run `python3 sync/fetch_sheets.py registrations`. This pulls the sheet via
-`https://docs.google.com/spreadsheets/d/<id>/gviz/tq?tqx=out:csv&sheet=X%20-%20AUTO`
-(no auth needed, link-viewable), groups rows by `Webinar Date` (parsed as
-`"Tue Sep 1"` + current year, same as the sheet's original Apps Script sync),
-and counts `COUNT(DISTINCT Email Address)` per date.
+All three are one pass over the same sheet
+(`https://docs.google.com/spreadsheets/d/<id>/gviz/tq?tqx=out:csv&sheet=X%20-%20AUTO`,
+no auth, link-viewable — see `_webinar_metrics_by_date()` in `fetch_sheets.py`),
+grouped by `Webinar Date` (Column F, parsed as `"Tue Sep 1"` + current year),
+each counted as **unique emails** (Column C) per date:
 
-**Merge onto the existing committed file** — read the current
-`masterclass-registrations.json`, index by date, overlay the fresh pull's
-dates on top (fresh wins for dates it has), keep every date the fresh pull
-doesn't have. This is necessary because the sheet's `X - AUTO` tab only
-retains recent webinar dates — it rotates/prunes older rows, so a wholesale
-overwrite would silently lose history that BigQuery used to durably
-accumulate. The committed JSON file is now that durable store.
+- **Registered** → `masterclass-registrations.json`: every row for that date.
+- **Attended** (Column N, "Attended Webinar") → `masterclass-attendance.json`:
+  rows where that column is non-empty (any checkmark glyph counts — don't
+  match on the exact character). Replaced the old GHL-tag mechanism
+  (`accelerator masterclass - attended D/M`) on 2026-09-15 per the spec doc —
+  confirmed the two methods disagree (Sep 1: sheet says 31, GHL tags said 36),
+  sheet is now the source of truth.
+- **Application** (Column I "Call Booked Event" contains "application"
+  case-insensitive, AND Column M "Booking Status" == `BOOKED`) →
+  `masterclass-applications.json` (new file, shape `{meta, applications:
+  [{date, applications}]}` — the frontend already expected this file and
+  silently defaulted to 0 everywhere when it was missing).
 
-## Phase 4: Attendance → masterclass-attendance.json
+Run via `python3 sync/fetch_sheets.py registrations` / `attendance` /
+`applications`.
 
-For each date from Phase 3, format the GHL tag as
-`accelerator masterclass - attended {day}/{month}` (no leading zeros, e.g.
-`15/9` not `15/09`) and call GHL MCP `search-contacts-advanced` with
-`filters: [{"field": "tags", "operator": "contains_set", "value": [tag]}], pageLimit: 1`.
-Read `data.total`.
+**Merge onto the existing committed files** for all three — read the current
+JSON, index by date, overlay the fresh pull's dates on top (fresh wins),
+keep any date the fresh pull doesn't have. This used to be justified as
+"the sheet prunes old batches" — that was **wrong**, disproven by checking:
+the sheet holds full history back to the earliest tracked run (30+ dates,
+Apr 2026 onward). The real reason to keep merging is the gviz truncation
+risk noted at the top of SKILL.md — a bad short read should never be allowed
+to wipe out good committed history.
 
-**Verify the tag prefix before trusting a zero.** This scheme has changed at
-least once before (`masterclass - registered D/M` → `accelerator masterclass -
-registered D/M`). If a date that should have attendees comes back 0, pull one
-live opportunity for that date's registered stage and check its `contact.tags`
-array for the actual current attendance-tag spelling before concluding it's
-really zero.
-
-Same merge-onto-existing rule as Phase 3.
-
-## Phase 5: Revenue + attribution → cash-attribution.json
+## Phase 4: Revenue + attribution → cash-attribution.json
 
 Run `python3 sync/fetch_sheets.py transactions` — pulls `CONSOLIDATED` via CSV
 export, parses `Date`/`Name`/`Email`/`Product`/`Amount`/`Closer`/`Mode`, and
@@ -101,9 +101,10 @@ Overwrite `cash-attribution.json` wholesale from the fresh pull each sync:
 group by date for `dailyBreakdown` (sum `cashFromAds`/`cashFromOrganic`), by
 `YYYY-MM` for `monthlySummary`, keep `transactions` as the full parsed list.
 
-## Phase 6: Composite → marketing-data.json
+## Phase 5: Composite → marketing-data.json
 
-Rebuild from the four files above:
+Rebuild from the files above (`masterclass-applications.json` is fetched
+separately by the page and does NOT feed into this composite):
 
 ```python
 {
@@ -116,7 +117,7 @@ Rebuild from the four files above:
 }
 ```
 
-## Phase 7: Deploy — copy data into docs/, commit, push
+## Phase 6: Deploy — copy data into docs/, commit, push
 
 GitHub Pages serves this repo from `docs/` (branch `main`, path `/docs`), which
 is the **built** output of `dashboard/`, not the source. A routine data-only
@@ -156,3 +157,21 @@ Skip the push if `--no-push`.
   gap (the spec doc asks for data from Jan 1) — confirmed via a direct Meta
   MCP pull that the account's first active day is genuinely Jan 13, 2026;
   there's no gap to backfill.
+- **2026-09-15, MASTERCLASS tab spec doc**: verified the Ad Spend windowing
+  logic against the doc's worked example (08 Sep 2026 → window 02–08 Sep,
+  $9,402.68) — the dollar figure was already correct, but found and fixed a
+  real bug: the Executive Summary sentence displayed the *revenue* window's
+  dates ("8 Sep–14 Sep") as if they were the ad-spend window's dates, even
+  though the numbers in that sentence were correctly computed from the real
+  02–08 Sep ad-spend window. Root cause: `computeWindowedPerformance()` in
+  `liveData.ts` returned the revenue window's start/end under
+  `windowStart`/`windowEnd`, which `MasterclassPage.tsx`'s executive-summary
+  text then displayed as the ad-spend window. Fixed by returning the actual
+  ad-spend window's own dates there instead (also explains the previously-odd
+  "15 Sep–30 Dec" label on the most recent run — the revenue window has no
+  next run to bound it, so it defaulted to a sentinel far-future date).
+  Also per the spec doc: Attended switched from GHL tags to the sheet's own
+  Column N (see Phase 3), Application is a new card/file (Column I+M), and
+  "Revenue (This Run's Registrants)" was renamed to "Revenue Collected For
+  This Run". The GHL funnel snapshot section ("Registration → Attendance,
+  live snapshot") is explicitly deferred per the doc — left untouched.

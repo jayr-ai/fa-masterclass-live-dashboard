@@ -438,7 +438,7 @@ function RunView({ run, selectedWindow, windowRevenue }: { run: MasterclassRun; 
           <StatCard label="Deals Closed" value={displayDealsClosed.toLocaleString('en-AU')} />
         </div>
         <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          <StatCard label="Revenue (This Run's Registrants)" value={formatCurrency(Math.round(displayRevenue))} variant="hero" />
+          <StatCard label="Revenue Collected For This Run" value={formatCurrency(Math.round(displayRevenue))} variant="hero" />
           <StatCard label="Cash From Ads" value={formatCurrency(Math.round(displayCashFromAds))} />
           <StatCard label="Cash From Organic" value={formatCurrency(Math.round(displayCashFromOrganic))} />
           <StatCard label="ROAS" value={displayROAS === null ? 'N/A' : displayROAS.toFixed(2)} />

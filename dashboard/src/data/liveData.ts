@@ -448,16 +448,6 @@ export function computeWindowedPerformance(
     const sum = sumAdSpendInRange(days, adSpendWindowStart, adSpendWindowEnd)
     if (!sum) return
 
-    // REVENUE WINDOW: from current run date to day before next run
-    // With oldest-first sort: next run is at i+1
-    const revenueWindowStart = new Date(run.date + 'T00:00:00')
-    const nextRunDate = i < sortedRuns.length - 1 ? sortedRuns[i + 1].date : '2099-12-31'
-    const revenueWindowEnd = new Date(nextRunDate + 'T00:00:00')
-    revenueWindowEnd.setDate(revenueWindowEnd.getDate() - 1)
-
-    const windowStartStr = toLocalISODate(revenueWindowStart)
-    const windowEndStr = toLocalISODate(revenueWindowEnd)
-
     const expectedDays = Math.round((adSpendWindowEnd.getTime() - adSpendWindowStart.getTime()) / 86400000) + 1
 
     result[run.date] = {
@@ -470,8 +460,15 @@ export function computeWindowedPerformance(
       costPerClick: sum.linkClicks > 0 ? sum.spend / sum.linkClicks : 0,
       clickToLeadPct: sum.linkClicks > 0 ? (sum.leads / sum.linkClicks) * 100 : 0,
       windowDays: sum.dayCount,
-      windowStart: windowStartStr, // Revenue window start (for display)
-      windowEnd: windowEndStr,     // Revenue window end (for display)
+      // The actual ad-spend window these figures were summed from (previous
+      // run + 1 day, through this run's date) — NOT the revenue-attribution
+      // window (that's a separate, later window: this run through the day
+      // before the next one). These two were previously conflated: this
+      // function returned the revenue window's dates under windowStart/End
+      // while the Executive Summary text displayed them as if they described
+      // the ad-spend figures above, which is a different range entirely.
+      windowStart: adSpendWindowStartStr,
+      windowEnd: toLocalISODate(adSpendWindowEnd),
       isPartialWindow: sum.dayCount < expectedDays,
     }
   })

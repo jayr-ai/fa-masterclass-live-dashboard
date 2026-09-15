@@ -1,22 +1,30 @@
 {
   "meta": {
-    "generatedAt": "2026-09-14T05:13:08.701991Z",
-    "source": "GHL MCP direct pull (search-contacts-advanced, tag 'accelerator masterclass - attended D/M'), no BigQuery",
-    "dataWindow": "2026-06-04 to 2026-09-08",
-    "totalAttendees": 338
+    "generatedAt": "2026-09-15T02:13:39.660004Z",
+    "source": "Google Sheet 'FA | Webinar Lead Tracker' (X - AUTO tab, Column N 'Attended Webinar') \u2014 unique emails per Webinar Date",
+    "dataWindow": "2026-04-08 to 2026-09-15",
+    "totalAttendees": 344
   },
   "masterclassAttendance": [
     {
+      "date": "2026-09-15",
+      "attended": 0
+    },
+    {
       "date": "2026-09-08",
-      "attended": 32
+      "attended": 24
     },
     {
       "date": "2026-09-01",
-      "attended": 36
+      "attended": 31
+    },
+    {
+      "date": "2026-08-25",
+      "attended": 20
     },
     {
       "date": "2026-08-18",
-      "attended": 33
+      "attended": 31
     },
     {
       "date": "2026-08-11",
@@ -36,15 +44,91 @@
     },
     {
       "date": "2026-07-22",
-      "attended": 33
+      "attended": 34
     },
     {
       "date": "2026-07-16",
       "attended": 17
     },
     {
+      "date": "2026-06-24",
+      "attended": 0
+    },
+    {
+      "date": "2026-06-17",
+      "attended": 0
+    },
+    {
+      "date": "2026-06-11",
+      "attended": 0
+    },
+    {
+      "date": "2026-06-09",
+      "attended": 0
+    },
+    {
       "date": "2026-06-04",
       "attended": 1
+    },
+    {
+      "date": "2026-06-02",
+      "attended": 0
+    },
+    {
+      "date": "2026-05-28",
+      "attended": 0
+    },
+    {
+      "date": "2026-05-26",
+      "attended": 0
+    },
+    {
+      "date": "2026-05-21",
+      "attended": 0
+    },
+    {
+      "date": "2026-05-19",
+      "attended": 0
+    },
+    {
+      "date": "2026-05-14",
+      "attended": 0
+    },
+    {
+      "date": "2026-05-12",
+      "attended": 0
+    },
+    {
+      "date": "2026-05-07",
+      "attended": 0
+    },
+    {
+      "date": "2026-05-05",
+      "attended": 0
+    },
+    {
+      "date": "2026-04-30",
+      "attended": 0
+    },
+    {
+      "date": "2026-04-28",
+      "attended": 0
+    },
+    {
+      "date": "2026-04-23",
+      "attended": 0
+    },
+    {
+      "date": "2026-04-21",
+      "attended": 0
+    },
+    {
+      "date": "2026-04-15",
+      "attended": 0
+    },
+    {
+      "date": "2026-04-08",
+      "attended": 0
     }
   ]
 }
