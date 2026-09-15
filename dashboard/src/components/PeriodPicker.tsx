@@ -93,14 +93,29 @@ export function resolvePreviousPeriod(period: PeriodValue): ResolvedPeriod {
     const { start, end } = monthRange(prev)
     return { fromStr: formatISO(start), toStr: formatISO(end), from: start, to: end, label: prev.label }
   }
-  // Custom: previous period is the same-length span immediately preceding —
-  // pure calendar-string arithmetic, no Date-object/UTC involved.
-  const spanDays = daysBetweenISO(period.from, period.to)
-  const prevTo = addDaysISO(period.from, -1)
-  const prevFrom = addDaysISO(prevTo, -(spanDays - 1))
+  // Custom: previous period is the same-length span immediately preceding.
+  const { from: prevFrom, to: prevTo } = shiftCustomRange(period, -1)
   const from = new Date(`${prevFrom}T00:00:00`)
   const to = endOfDay(new Date(`${prevTo}T00:00:00`))
   return { fromStr: prevFrom, toStr: prevTo, from, to, label: prevFrom === prevTo ? prevFrom : `${prevFrom} → ${prevTo}` }
+}
+
+/**
+ * Shift a Custom range forward/backward by its own length — pure
+ * calendar-string arithmetic (addDaysISO/daysBetweenISO), no Date-object/UTC
+ * involved. A single day shifts to the next/previous single day; a 7-day
+ * range shifts by 7 days, etc.
+ */
+export function shiftCustomRange(period: { from: string; to: string }, dir: 1 | -1): { from: string; to: string } {
+  const spanDays = daysBetweenISO(period.from, period.to)
+  if (dir === -1) {
+    const to = addDaysISO(period.from, -1)
+    const from = addDaysISO(to, -(spanDays - 1))
+    return { from, to }
+  }
+  const from = addDaysISO(period.to, 1)
+  const to = addDaysISO(from, spanDays - 1)
+  return { from, to }
 }
 
 function shiftWeek(weekKey: string, dir: 1 | -1): string {
@@ -191,6 +206,12 @@ export function PeriodPicker({ value, onChange }: { value: PeriodValue; onChange
 
       {value.mode === 'custom' && (
         <div className="flex items-center gap-2">
+          <button
+            className={arrowButtonClass}
+            onClick={() => onChange({ mode: 'custom', ...shiftCustomRange(value, -1) })}
+          >
+            ‹
+          </button>
           <input
             type="date"
             className="rounded-lg border border-fa-border bg-fa-surface px-3 py-2 text-sm text-fa-text"
@@ -204,6 +225,12 @@ export function PeriodPicker({ value, onChange }: { value: PeriodValue; onChange
             value={value.to}
             onChange={(e) => onChange({ mode: 'custom', from: value.from, to: e.target.value })}
           />
+          <button
+            className={arrowButtonClass}
+            onClick={() => onChange({ mode: 'custom', ...shiftCustomRange(value, 1) })}
+          >
+            ›
+          </button>
         </div>
       )}
     </div>
