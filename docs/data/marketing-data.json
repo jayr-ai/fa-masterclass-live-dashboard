@@ -1,17 +1,17 @@
 {
   "meta": {
-    "generatedAt": "2026-09-15T02:14:06.610246Z",
-    "source": "Composite of marketing-performance.json / funnel-stages.json / masterclass-registrations.json / masterclass-attendance.json / masterclass-applications.json / cash-attribution.json (all direct-pulled, no BigQuery)",
+    "generatedAt": "2026-09-15T03:19:58.429525Z",
+    "source": "Composite of marketing-performance.json (Meta MCP) / funnel-stages.json (GHL REST API direct via PIT) / masterclass-registrations.json / masterclass-attendance.json / masterclass-applications.json (Google Sheet) / cash-attribution.json (Google Sheet) \u2014 no BigQuery, no MCP dependency for GHL data",
     "dataWindow": "Jan 2026 - Sep 14 2026",
-    "cacheStatus": "Direct sync via Meta MCP + GHL MCP + Google Sheets CSV export",
-    "syncedAt": "2026-09-15T02:14:06.610246Z"
+    "cacheStatus": "Direct sync via Meta MCP + GHL REST API (PIT) + Google Sheets CSV export",
+    "syncedAt": "2026-09-15T03:19:58.429525Z"
   },
   "funnelSnapshot": {
-    "generatedAt": "2026-09-14T05:12:08.133633Z",
+    "generatedAt": "2026-09-15T03:19:45.534097Z",
     "stages": [
       {
         "stage": "Registered",
-        "count": 4945
+        "count": 4962
       },
       {
         "stage": "Replay Optin",
@@ -19,11 +19,11 @@
       },
       {
         "stage": "Close Lost",
-        "count": 373
+        "count": 374
       },
       {
         "stage": "Call Cancelled / Not Interested",
-        "count": 267
+        "count": 268
       },
       {
         "stage": "No-Showed",
@@ -31,7 +31,7 @@
       },
       {
         "stage": "Call Cancelled / Need To Reschedule",
-        "count": 153
+        "count": 155
       },
       {
         "stage": "Close Won",
@@ -42,11 +42,11 @@
         "count": 29
       },
       {
-        "stage": "VIP Upgrade",
-        "count": 17
+        "stage": "Appointment Booked",
+        "count": 20
       },
       {
-        "stage": "Appointment Booked",
+        "stage": "VIP Upgrade",
         "count": 17
       },
       {
