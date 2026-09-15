@@ -5,6 +5,8 @@ description: Sync Freedom Academy Masterclass dashboard data directly from Meta 
 
 # Sync FA Masterclass Live Dashboard
 
+**Project directory**: `/Users/jayvee/Documents/ds-work/fa-masterclass-live-dashboard` — `cd` there first; this skill is registered globally so it can be invoked from any session, but every command below assumes that cwd (see IMPLEMENTATION.md Step 0).
+
 Pulls Meta Ads, the GHL funnel snapshot, and the two Google Sheets straight
 into `dashboard/public/data/*.json`. This is the no-BigQuery replacement for
 `au-fa-dashboard`'s `/sync-fa-marketing-data`: same data sources, same GHL

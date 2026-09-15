@@ -7,6 +7,15 @@ scripts now (`sync/fetch_ghl.py`, `sync/fetch_sheets.py`) since neither
 needs a session-bound MCP connection — GHL uses a Private Integration Token
 (env var), Sheets need no auth at all (link-viewable, gviz CSV export).
 
+**Step 0, always, regardless of where this skill was invoked from**: this
+skill is registered globally (`~/.claude/skills/`), so the shell's current
+directory when `/sync-fa-masterclass-live` runs is not guaranteed to be the
+project. Every `sync/fetch_*.py` command below is written as a relative
+path — before running any of them:
+```bash
+cd /Users/jayvee/Documents/ds-work/fa-masterclass-live-dashboard
+```
+
 ## Config (confirmed real, safe to hardcode)
 
 - Meta ad account: `1185223312884959` (Shane Da Costa AU / Freedom Academy, AUD)
