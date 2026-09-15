@@ -1,11 +1,15 @@
 {
   "meta": {
-    "generatedAt": "2026-09-15T04:55:01.202256Z",
+    "generatedAt": "2026-09-15T23:01:29.970605Z",
     "source": "Google Sheet 'FA | Webinar Lead Tracker' (X - AUTO tab, Column N 'Attended Webinar') \u2014 unique emails per Webinar Date",
-    "dataWindow": "2026-04-08 to 2026-09-15",
+    "dataWindow": "2026-04-08 to 2026-09-22",
     "totalAttendees": 344
   },
   "masterclassAttendance": [
+    {
+      "date": "2026-09-22",
+      "attended": 0
+    },
     {
       "date": "2026-09-15",
       "attended": 0

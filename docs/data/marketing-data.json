@@ -1,17 +1,17 @@
 {
   "meta": {
-    "generatedAt": "2026-09-15T04:55:48.157719Z",
+    "generatedAt": "2026-09-15T23:02:18.384361Z",
     "source": "Composite of marketing-performance.json (Meta MCP) / funnel-stages.json (GHL REST API direct via PIT) / masterclass-registrations.json / masterclass-attendance.json / masterclass-applications.json (Google Sheet) / cash-attribution.json (Google Sheet) \u2014 no BigQuery, no MCP dependency for GHL data",
-    "dataWindow": "2026-01-13 to 2026-09-15",
+    "dataWindow": "2026-01-13 to 2026-09-16",
     "cacheStatus": "Direct sync via Meta MCP + GHL REST API (PIT) + Google Sheets CSV export",
-    "syncedAt": "2026-09-15T04:55:48.157719Z"
+    "syncedAt": "2026-09-15T23:02:18.384361Z"
   },
   "funnelSnapshot": {
-    "generatedAt": "2026-09-15T04:54:47.500779Z",
+    "generatedAt": "2026-09-15T23:01:11.974954Z",
     "stages": [
       {
         "stage": "Registered",
-        "count": 4964
+        "count": 4983
       },
       {
         "stage": "Replay Optin",
@@ -19,15 +19,15 @@
       },
       {
         "stage": "Close Lost",
-        "count": 374
+        "count": 377
       },
       {
         "stage": "Call Cancelled / Not Interested",
-        "count": 268
+        "count": 271
       },
       {
         "stage": "No-Showed",
-        "count": 258
+        "count": 260
       },
       {
         "stage": "Call Cancelled / Need To Reschedule",
@@ -51,7 +51,7 @@
       },
       {
         "stage": "Pending Sale",
-        "count": 7
+        "count": 5
       }
     ]
   },
@@ -279,9 +279,9 @@
     {
       "date": "2026-07-28",
       "label": "28 Jul 2026",
-      "registered": 179,
+      "registered": 178,
       "attended": 32,
-      "showUpRatePct": 17.88,
+      "showUpRatePct": 17.98,
       "cashFromAds": 0,
       "cashFromOrganic": 0,
       "deals": []
@@ -359,7 +359,17 @@
     {
       "date": "2026-09-15",
       "label": "15 Sep 2026",
-      "registered": 183,
+      "registered": 187,
+      "attended": 0,
+      "showUpRatePct": null,
+      "cashFromAds": 0,
+      "cashFromOrganic": 0,
+      "deals": []
+    },
+    {
+      "date": "2026-09-22",
+      "label": "22 Sep 2026",
+      "registered": 21,
       "attended": 0,
       "showUpRatePct": null,
       "cashFromAds": 0,
@@ -1980,10 +1990,17 @@
     },
     {
       "date": "2026-09-15",
-      "spend": 799.31,
-      "impressions": 21723,
-      "linkClicks": 334,
-      "leads": 16
+      "spend": 1222.54,
+      "impressions": 34572,
+      "linkClicks": 517,
+      "leads": 36
+    },
+    {
+      "date": "2026-09-16",
+      "spend": 237.04,
+      "impressions": 7362,
+      "linkClicks": 87,
+      "leads": 7
     }
   ],
   "cashAttributionDaily": [

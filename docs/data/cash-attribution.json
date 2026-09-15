@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-09-15T04:55:32.855860Z",
+    "generatedAt": "2026-09-15T23:01:49.522337Z",
     "source": "Google Sheet 'CONSOLIDATED' (direct CSV pull), attribution from the sheet's own 'Attribution' column \u2014 no BigQuery, no GHL cross-reference",
     "dataWindow": "2025-11-06 to 2026-09-11"
   },
