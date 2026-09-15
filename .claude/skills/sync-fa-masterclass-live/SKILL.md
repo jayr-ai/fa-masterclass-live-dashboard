@@ -1,15 +1,25 @@
 ---
 name: sync-fa-masterclass-live
-description: Sync Freedom Academy Masterclass dashboard data directly from Meta MCP, GHL MCP, and Google Sheets to JSON — no BigQuery, no Apps Script
+description: Sync Freedom Academy Masterclass dashboard data directly from Meta MCP, the GHL REST API (Private Integration Token), and Google Sheets to JSON — no BigQuery, no Apps Script, no agency-scoped MCP
 ---
 
 # Sync FA Masterclass Live Dashboard
 
-Pulls Meta Ads, GHL pipeline/attendance, and the two Google Sheets straight into
-`dashboard/public/data/*.json`. This is the no-BigQuery replacement for
+Pulls Meta Ads, the GHL funnel snapshot, and the two Google Sheets straight
+into `dashboard/public/data/*.json`. This is the no-BigQuery replacement for
 `au-fa-dashboard`'s `/sync-fa-marketing-data`: same data sources, same GHL
 pipeline/stage IDs, same Meta ad account — but every step writes the final
 JSON directly instead of upserting to a warehouse table first.
+
+**GHL access is a location-scoped Private Integration Token (PIT), not the
+GHL MCP connector** — changed 2026-09-15 because the user works with
+multiple clients across different agency accounts, and the MCP connector is
+bound to one agency at a time. A PIT is per-location instead, so
+`sync/fetch_ghl.py`'s approach (direct REST calls to
+`services.leadconnectorhq.com`) generalizes to any other client's GHL
+location just by swapping the token/pipeline/stage config. The token lives
+in `sync/.env` (`FA_GHL_PIT=...`), git-ignored, never hardcoded into any
+script and never committed — this repo is **public**.
 
 **All period math (Weekly/Monthly/Custom on the Marketing page) is anchored
 to Sydney's calendar date, not the viewer's browser timezone** —
@@ -57,10 +67,12 @@ Options:
 1. **Meta Ads** (`act_1185223312884959`) — pull daily spend/impressions/link
    clicks/leads via Meta MCP (`time_increment=1`), merge into
    `marketing-performance.json`'s `daily` array by date (upsert, no dupes).
-2. **GHL Masterclass Pipeline** (`djiSwm3hJsW7Rv9tyqSl`) — 11 `search-opportunity`
-   calls, one per stage ID (see IMPLEMENTATION.md), `meta.total` is the count.
-   Overwrites `funnel-stages.json` — it's a point-in-time snapshot, not a
-   history, so there's nothing to merge.
+2. **GHL Masterclass Pipeline** (`djiSwm3hJsW7Rv9tyqSl`) — `python3
+   sync/fetch_ghl.py funnel-stages` (needs `FA_GHL_PIT` loaded from
+   `sync/.env` — `set -a; source sync/.env; set +a` first). 11 direct REST
+   calls to `/opportunities/search`, one per stage, `meta.total` is the
+   count. No MCP involved. Overwrites `funnel-stages.json` — it's a
+   point-in-time snapshot, not a history, so there's nothing to merge.
 3. **Registrations, Attendance, Application** — all three come from the same
    one pass over the Webinar Tracker sheet (`1g4h0IHwz0_BZ90nslU7NNKwIsENJw9hzgbk3A52dcQo`,
    tab `X - AUTO`), grouped by Webinar Date (Column F), each counted as
@@ -79,9 +91,9 @@ Options:
    holds full history back to the earliest tracked run).
    (The GHL Masterclass Pipeline snapshot in step 2 above — labeled
    "Registration → Attendance, live snapshot, all runs combined" on the
-   page — is a *different* thing from the per-run Attended card here, and is
-   explicitly **deferred** per the spec doc: leave it on GHL MCP, don't touch
-   it, even though it looks conceptually similar.)
+   page — is a *different* thing from the per-run Attended card here; both
+   are now off GHL MCP entirely, just via different mechanisms — PIT/REST
+   for the snapshot, the sheet's Column N for the per-run card.)
 4. **Revenue / attribution** (Google Sheet `1LKIwjIpzn1jNSaIzzLAWLkkiODJUuKReKkw3QUT9c8A`,
    tab `CONSOLIDATED`) — pull via `sync/fetch_sheets.py transactions`. The
    sheet gained its own **`Attribution` column** (`PAID`/`ORGANIC`) on

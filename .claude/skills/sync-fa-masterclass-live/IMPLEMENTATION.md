@@ -1,9 +1,11 @@
 # Implementation Guide
 
-Step-by-step for what Claude executes on `/sync-fa-masterclass-live`. All
-Meta/GHL calls are Claude tool calls made from inside the session — they
-can't be scripted standalone. Only the Google Sheets pull is a real script
-(`sync/fetch_sheets.py`), since it needs no session-bound credential.
+Step-by-step for what Claude executes on `/sync-fa-masterclass-live`. Meta
+calls are Claude tool calls made from inside the session — they can't be
+scripted standalone. GHL and Google Sheets are both real, standalone
+scripts now (`sync/fetch_ghl.py`, `sync/fetch_sheets.py`) since neither
+needs a session-bound MCP connection — GHL uses a Private Integration Token
+(env var), Sheets need no auth at all (link-viewable, gviz CSV export).
 
 ## Config (confirmed real, safe to hardcode)
 
@@ -12,6 +14,11 @@ can't be scripted standalone. Only the Google Sheets pull is a real script
 - GHL Masterclass Pipeline: `djiSwm3hJsW7Rv9tyqSl`
 - Registrations sheet: `1g4h0IHwz0_BZ90nslU7NNKwIsENJw9hzgbk3A52dcQo`, tab `X - AUTO`
 - Revenue sheet: `1LKIwjIpzn1jNSaIzzLAWLkkiODJUuKReKkw3QUT9c8A`, tab `CONSOLIDATED`
+
+**GHL PIT** (`FA_GHL_PIT`) lives in `sync/.env`, git-ignored — this repo is
+public. Load it before calling `fetch_ghl.py`: `set -a; source sync/.env;
+set +a`. Never print, log, or write the raw token value into any file that
+gets committed, any code file, or any commit message.
 
 ### 11 pipeline stage IDs
 
@@ -44,16 +51,36 @@ Recompute `meta.totalDays`/`meta.totalSpend`/`meta.dataWindow`.
 
 ## Phase 2: GHL funnel snapshot → funnel-stages.json
 
-For each of the 11 stage IDs above, call GHL MCP operation `search-opportunity`
-(`pipelineId: "djiSwm3hJsW7Rv9tyqSl", pipelineStageId: <id>, limit: 1`) via
-`execute_operation`. Read `data.meta.total` — that's the authoritative count
-for that stage (matches the GHL UI exactly; the nested contact-filter version
-of this query is unreliable, this direct opportunities-search endpoint isn't).
-Batch all 11 in parallel.
+Run `set -a; source sync/.env; set +a && python3 sync/fetch_ghl.py
+funnel-stages`. Internally this hits `GET
+https://services.leadconnectorhq.com/opportunities/search` once per stage
+ID above, with `Authorization: Bearer $FA_GHL_PIT` + `Version: 2021-07-28`
+headers. Read `meta.total` from each response — authoritative, matches the
+GHL UI exactly (the nested contact-filter version of this query is
+unreliable; this direct opportunities-search endpoint isn't).
+
+**Two non-obvious things this API needs, found by testing rather than
+guessing — don't "simplify" them back out:**
+1. Query params must be **snake_case** (`location_id`, `pipeline_id`,
+   `pipeline_stage_id`) — camelCase 422s with `"property pipelineId should
+   not exist"`. This is the opposite convention from most other GHL v2
+   endpoints (the GHL MCP tool used camelCase fine — that tool translates
+   for you; direct REST calls don't get that translation).
+2. `location_id` is **required** even though a PIT is already scoped to one
+   location — omitting it 422s with `"location_id can't be undefined"`.
+3. Cloudflare in front of the API blocks Python's default `urllib`
+   user-agent outright (403, `browser_signature_banned`) even though the
+   identical request via `curl` succeeds. `fetch_ghl.py` sets `User-Agent:
+   curl/8.7.1` to work around this.
 
 Sort stages by count descending for `position` (0-indexed), compute
 `winProbability = round(count / totalOpportunities * 100, 2)`. Overwrite the
 file wholesale — it's a snapshot, not a history.
+
+**Reusing this for another client**: swap `LOCATION_ID`, `PIPELINE_ID`, and
+`STAGE_IDS` in `fetch_ghl.py` (or parameterize if there end up being more
+than a couple of clients) and point `FA_GHL_PIT` at that client's own PIT.
+Nothing else about the auth mechanism changes.
 
 ## Phase 3: Registrations, Attendance, Application (Webinar Tracker sheet)
 
@@ -198,3 +225,15 @@ Skip the push if `--no-push`.
   `SuspiciousReadError` if a read is still under 70% of the last known-good
   count — surfaces the problem loudly instead of silently merging an
   undercounted pull into committed history.
+- **2026-09-15, same day, GHL funnel snapshot moved off MCP entirely**: the
+  user works with multiple clients across different agency accounts, and
+  the GHL MCP connector is bound to one agency at a time — not viable
+  long-term. Added `sync/fetch_ghl.py`: direct REST calls to
+  `services.leadconnectorhq.com` using a location-scoped Private
+  Integration Token (`sync/.env`, git-ignored). Verified `meta.total`
+  matched what GHL MCP was reporting moments earlier for the same stages
+  (grew slightly between the two checks, consistent with live activity, not
+  a discrepancy). Found two real API gotchas by testing rather than
+  guessing — snake_case query params, and Cloudflare blocking the default
+  Python user-agent — both documented in Phase 2. This was previously
+  explicitly deferred by the spec doc; the user asked to do it now.
