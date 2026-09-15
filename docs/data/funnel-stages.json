@@ -1,18 +1,18 @@
 {
   "meta": {
-    "generatedAt": "2026-09-15T03:19:45.534097Z",
+    "generatedAt": "2026-09-15T03:37:04.675790Z",
     "source": "GHL REST API direct (Private Integration Token, no MCP, no BigQuery)",
     "dataWindow": "2026-09-15",
-    "totalOpportunities": 6577,
+    "totalOpportunities": 6579,
     "pipelineId": "djiSwm3hJsW7Rv9tyqSl",
     "pipelineName": "Masterclass Pipeline"
   },
   "stages": [
     {
       "name": "Registered",
-      "count": 4962,
+      "count": 4964,
       "position": 0,
-      "winProbability": 75.44
+      "winProbability": 75.45
     },
     {
       "name": "Replay Optin",
@@ -24,7 +24,7 @@
       "name": "Close Lost",
       "count": 374,
       "position": 2,
-      "winProbability": 5.69
+      "winProbability": 5.68
     },
     {
       "name": "Call Cancelled / Not Interested",
