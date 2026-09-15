@@ -148,7 +148,6 @@ export function MasterclassPage() {
   const [revenueByRun, setRevenueByRun] = useState<{ label: string; amount: number }[]>([])
   const [allMasterclassDates, setAllMasterclassDates] = useState<string[]>([])
   const [selectedWindow, setSelectedWindow] = useState<{ start: string; end: string } | null>(null)
-  const [registrantsByDate, setRegistrantsByDate] = useState<Record<string, string[]>>({})
   const [windowRevenue, setWindowRevenue] = useState<{ cashFromAds: number; cashFromOrganic: number; dealsClosed: number; transactions?: any[] } | null>(null)
   const hasUserPicked = useRef(false)
 
@@ -162,22 +161,6 @@ export function MasterclassPage() {
       }
 
       console.log(`📅 Webinar dates loaded from Sheet: ${webinarDates.map(d => d.label).join(', ')}`)
-
-      // Load masterclass registrant emails for window revenue calculations
-      try {
-        const regRes = await fetch(`${import.meta.env.BASE_URL}data/masterclass-registrants.json?t=${Date.now()}`)
-        if (regRes.ok) {
-          const regData = await regRes.json() as any
-          const registrantsByDate: Record<string, string[]> = {}
-          regData.masterclassRegistrants?.forEach((r: any) => {
-            registrantsByDate[r.date] = r.registrantEmails || []
-          })
-          setRegistrantsByDate(registrantsByDate)
-          console.log(`👥 Loaded registrant emails for ${Object.keys(registrantsByDate).length} masterclass dates`)
-        }
-      } catch (e) {
-        console.warn('Could not load registrant emails:', e)
-      }
 
       // Load registration, attendance, and application data from JSON files
       let registrationMap: Record<string, number> = {}
@@ -233,20 +216,9 @@ export function MasterclassPage() {
         console.warn('Could not load ad spend daily data:', e)
       }
 
-      // Load masterclass revenue & deals from BigQuery sync
-      let dealsDataByDate: Record<string, any[]> = {}
-      try {
-        const dealsRes = await fetch(`${import.meta.env.BASE_URL}data/masterclass-revenue-deals.json?t=${Date.now()}`)
-        if (dealsRes.ok) {
-          const dealsData = await dealsRes.json() as any
-          dealsData.masterclassRevenueByDate?.forEach((run: any) => {
-            dealsDataByDate[run.date] = run.deals || []
-          })
-          console.log(`💰 Loaded deals data for ${Object.keys(dealsDataByDate).length} masterclass runs`)
-        }
-      } catch (e) {
-        console.warn('Could not load masterclass revenue & deals data:', e)
-      }
+      // Line-item deal detail for the selected run comes from windowRevenue.transactions
+      // (getMasterclassWindowRevenue, see RunView) — computed live from cash-attribution.json,
+      // not a separate committed file.
 
       // Load live data for windowed performance and cash attribution
       const liveData = await loadLiveData()
@@ -262,8 +234,7 @@ export function MasterclassPage() {
       for (const date of sortedDates) {
         try {
           const window = calculateMasterclassWindow(date, sortedDates)
-          const regEmails = registrantsByDate[date] || []
-          const windowRevenue = await getMasterclassWindowRevenue(date, window.windowStart, window.windowEnd, regEmails)
+          const windowRevenue = await getMasterclassWindowRevenue(date, window.windowStart, window.windowEnd, [])
           if (windowRevenue) {
             windowDataByDate[date] = {
               revenue: windowRevenue.cashFromAds + windowRevenue.cashFromOrganic,
@@ -308,7 +279,7 @@ export function MasterclassPage() {
           windowedAdSpend: perf?.adSpend || 0,
           cashFromAds: liveData?.masterclassRuns?.find(r => r.date === wd.date)?.cashFromAds || 0,
           cashFromOrganic: liveData?.masterclassRuns?.find(r => r.date === wd.date)?.cashFromOrganic || 0,
-          deals: dealsDataByDate[wd.date] || [],
+          deals: [], // detail is rendered live in RunView via windowRevenue.transactions instead
         }
       })
 
@@ -317,12 +288,21 @@ export function MasterclassPage() {
 
       setLiveRuns(mapped)
 
-      // Default to the latest webinar date
+      // Default to the latest webinar date. Populates selectedWindow/windowRevenue
+      // the same way handleSelect does (uses the local `allDates` from above, not
+      // the allMasterclassDates state — that state update from setAllMasterclassDates
+      // above hasn't landed yet at this point in the same effect run).
       if (!hasUserPicked.current && mapped.length > 0) {
         const sorted = [...mapped].sort((a, b) => (a.date > b.date ? -1 : 1)) // Sort newest first
         const latest = sorted[0]
         setSelected(latest.date)
         console.log(`📅 Auto-selecting most recent date: ${latest.date}`)
+        const sortedForWindow = [...allDates].sort((a, b) => (a < b ? -1 : 1))
+        const window = calculateMasterclassWindow(latest.date, sortedForWindow)
+        setSelectedWindow({ start: window.windowStart, end: window.windowEnd })
+        getMasterclassWindowRevenue(latest.date, window.windowStart, window.windowEnd, []).then((freshRevenue) => {
+          setWindowRevenue(freshRevenue)
+        })
       }
     })
 
@@ -336,34 +316,28 @@ export function MasterclassPage() {
     })
   }, [])
 
-  const handleSelect = async (date: string) => {
-    hasUserPicked.current = true
-    setSelected(date)
-
-    // Calculate and set window for this date
-    // Sort oldest-first for calculateMasterclassWindow (it expects chronological order to find next run)
-    const sortedDates = [...allMasterclassDates].sort((a, b) => (a < b ? -1 : 1))
+  // Shared by both the initial auto-select and manual dropdown selection, so
+  // first-load behavior matches interacted behavior. getMasterclassWindowRevenue
+  // filters cash-attribution.json purely by date range — it never needed
+  // registrant emails (the old gate here always evaluated false, since the
+  // registrant-emails file it depended on was never populated; the "Deals
+  // Closed — Detail" table below was silently empty on every date as a result).
+  const selectWindowFor = async (date: string, datesForWindow: string[]) => {
+    const sortedDates = [...datesForWindow].sort((a, b) => (a < b ? -1 : 1))
     const window = calculateMasterclassWindow(date, sortedDates)
     setSelectedWindow({ start: window.windowStart, end: window.windowEnd })
 
-    // Fetch fresh windowed revenue from BigQuery
-    const registrantEmails = registrantsByDate[date] || []
-    if (registrantEmails.length > 0) {
-      console.log(`🔍 Fetching windowed revenue for ${date}: ${window.windowStart} to ${window.windowEnd}`)
-      const freshRevenue = await getMasterclassWindowRevenue(
-        date,
-        window.windowStart,
-        window.windowEnd,
-        registrantEmails
-      )
-      if (freshRevenue) {
-        console.log(`💰 Window revenue: $${freshRevenue.cashFromAds.toLocaleString('en-AU')} (ads) + $${freshRevenue.cashFromOrganic.toLocaleString('en-AU')} (organic) = ${freshRevenue.dealsClosed} deals`)
-        setWindowRevenue(freshRevenue)
-      }
-    } else {
-      console.log(`⚠️ No registrant emails found for ${date}, using default values`)
-      setWindowRevenue(null)
+    const freshRevenue = await getMasterclassWindowRevenue(date, window.windowStart, window.windowEnd, [])
+    if (freshRevenue) {
+      console.log(`💰 Window revenue: $${freshRevenue.cashFromAds.toLocaleString('en-AU')} (ads) + $${freshRevenue.cashFromOrganic.toLocaleString('en-AU')} (organic) = ${freshRevenue.dealsClosed} deals`)
     }
+    setWindowRevenue(freshRevenue)
+  }
+
+  const handleSelect = async (date: string) => {
+    hasUserPicked.current = true
+    setSelected(date)
+    await selectWindowFor(date, allMasterclassDates)
   }
 
   const masterclassRuns = useMemo(
@@ -456,8 +430,9 @@ function RunView({ run, selectedWindow, windowRevenue }: { run: MasterclassRun; 
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-fa-border text-left">
-                  <th className="px-3 py-2 font-medium text-fa-text-dim">Email</th>
                   <th className="px-3 py-2 font-medium text-fa-text-dim">Date</th>
+                  <th className="px-3 py-2 font-medium text-fa-text-dim">Name</th>
+                  <th className="px-3 py-2 font-medium text-fa-text-dim">Email</th>
                   <th className="px-3 py-2 font-medium text-fa-text-dim">Product</th>
                   <th className="px-3 py-2 font-medium text-fa-text-dim">Amount</th>
                   <th className="px-3 py-2 font-medium text-fa-text-dim">Type</th>
@@ -467,12 +442,13 @@ function RunView({ run, selectedWindow, windowRevenue }: { run: MasterclassRun; 
               <tbody>
                 {(windowRevenue as any).transactions.map((txn: any, idx: number) => (
                   <tr key={idx} className="border-b border-fa-border hover:bg-fa-surface-hover">
-                    <td className="px-3 py-2 text-fa-text-secondary text-sm">{txn.email}</td>
                     <td className="px-3 py-2 text-fa-text-secondary text-sm">{txn.date}</td>
+                    <td className="px-3 py-2 text-fa-text-secondary text-sm">{txn.name || '—'}</td>
+                    <td className="px-3 py-2 text-fa-text-secondary text-sm">{txn.email}</td>
                     <td className="px-3 py-2 text-fa-text-secondary text-sm">{txn.product || '—'}</td>
                     <td className="px-3 py-2 text-fa-text-secondary text-sm">${txn.amount.toLocaleString('en-AU')}</td>
                     <td className="px-3 py-2"><span className={`rounded px-2 py-1 text-xs font-medium ${txn.source === 'Paid' ? 'bg-green-900/30 text-green-300' : 'bg-blue-900/30 text-blue-300'}`}>{txn.source}</span></td>
-                    <td className="px-3 py-2 text-fa-text-secondary text-sm">{txn.name || txn.closer || '—'}</td>
+                    <td className="px-3 py-2 text-fa-text-secondary text-sm">{txn.closer || '—'}</td>
                   </tr>
                 ))}
               </tbody>
