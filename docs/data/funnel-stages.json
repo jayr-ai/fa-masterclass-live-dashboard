@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generatedAt": "2026-09-15T03:37:04.675790Z",
+    "generatedAt": "2026-09-15T04:54:47.500779Z",
     "source": "GHL REST API direct (Private Integration Token, no MCP, no BigQuery)",
     "dataWindow": "2026-09-15",
-    "totalOpportunities": 6579,
+    "totalOpportunities": 6581,
     "pipelineId": "djiSwm3hJsW7Rv9tyqSl",
     "pipelineName": "Masterclass Pipeline"
   },
@@ -12,13 +12,13 @@
       "name": "Registered",
       "count": 4964,
       "position": 0,
-      "winProbability": 75.45
+      "winProbability": 75.43
     },
     {
       "name": "Replay Optin",
       "count": 407,
       "position": 1,
-      "winProbability": 6.19
+      "winProbability": 6.18
     },
     {
       "name": "Close Lost",
@@ -58,9 +58,9 @@
     },
     {
       "name": "Appointment Booked",
-      "count": 20,
+      "count": 22,
       "position": 8,
-      "winProbability": 0.3
+      "winProbability": 0.33
     },
     {
       "name": "VIP Upgrade",
