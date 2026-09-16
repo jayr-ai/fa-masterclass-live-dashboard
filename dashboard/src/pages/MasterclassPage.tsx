@@ -432,7 +432,6 @@ function RunView({ run, selectedWindow, windowRevenue }: { run: MasterclassRun; 
                 <tr className="border-b border-fa-border text-left">
                   <th className="px-3 py-2 font-medium text-fa-text-dim">Date</th>
                   <th className="px-3 py-2 font-medium text-fa-text-dim">Name</th>
-                  <th className="px-3 py-2 font-medium text-fa-text-dim">Email</th>
                   <th className="px-3 py-2 font-medium text-fa-text-dim">Product</th>
                   <th className="px-3 py-2 font-medium text-fa-text-dim">Amount</th>
                   <th className="px-3 py-2 font-medium text-fa-text-dim">Type</th>
@@ -444,7 +443,6 @@ function RunView({ run, selectedWindow, windowRevenue }: { run: MasterclassRun; 
                   <tr key={idx} className="border-b border-fa-border hover:bg-fa-surface-hover">
                     <td className="px-3 py-2 text-fa-text-secondary text-sm">{txn.date}</td>
                     <td className="px-3 py-2 text-fa-text-secondary text-sm">{txn.name || '—'}</td>
-                    <td className="px-3 py-2 text-fa-text-secondary text-sm">{txn.email}</td>
                     <td className="px-3 py-2 text-fa-text-secondary text-sm">{txn.product || '—'}</td>
                     <td className="px-3 py-2 text-fa-text-secondary text-sm">${txn.amount.toLocaleString('en-AU')}</td>
                     <td className="px-3 py-2"><span className={`rounded px-2 py-1 text-xs font-medium ${txn.source === 'Paid' ? 'bg-green-900/30 text-green-300' : 'bg-blue-900/30 text-blue-300'}`}>{txn.source}</span></td>
