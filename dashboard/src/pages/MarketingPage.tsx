@@ -270,158 +270,159 @@ export function MarketingPage() {
         )}
       </section>
 
-      <section>
-        <div className="mb-4 flex flex-wrap items-center justify-between gap-4">
-          <h2 className="text-xs font-medium uppercase tracking-wide text-fa-text-dim">
-            Sales Breakdown by Channel
-            <span className="ml-2 normal-case text-fa-text-faint">
-              — Individual deals with source attribution (Paid vs Organic)
-            </span>
-          </h2>
-          <div className="flex gap-2">
-            {(['all', 'paid', 'organic'] as const).map((filter) => (
-              <button
-                key={filter}
-                onClick={() => {
-                  setSourceFilter(filter)
-                  setSalesPageNum(1)
-                }}
-                className={`rounded-lg border px-4 py-2 text-sm font-medium transition-colors ${
-                  sourceFilter === filter
-                    ? 'border-fa-accent/34 bg-fa-surface-2 text-fa-text'
-                    : 'border-fa-border text-fa-text-dim hover:text-fa-text'
-                }`}
-              >
-                {filter === 'all' ? 'All' : filter === 'paid' ? 'Paid' : 'Organic'}
-              </button>
-            ))}
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:items-stretch">
+        <section className="flex h-[26rem] flex-col">
+          <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
+            <h2 className="text-[11px] font-medium uppercase tracking-wide text-fa-text-dim">
+              Sales Breakdown by Channel
+              <span className="ml-1.5 normal-case text-fa-text-faint">
+                — Paid vs Organic
+              </span>
+            </h2>
+            <div className="flex gap-1.5">
+              {(['all', 'paid', 'organic'] as const).map((filter) => (
+                <button
+                  key={filter}
+                  onClick={() => {
+                    setSourceFilter(filter)
+                    setSalesPageNum(1)
+                  }}
+                  className={`rounded-md border px-2.5 py-1 text-xs font-medium transition-colors ${
+                    sourceFilter === filter
+                      ? 'border-fa-accent/34 bg-fa-surface-2 text-fa-text'
+                      : 'border-fa-border text-fa-text-dim hover:text-fa-text'
+                  }`}
+                >
+                  {filter === 'all' ? 'All' : filter === 'paid' ? 'Paid' : 'Organic'}
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
 
-        <div className="overflow-x-auto rounded-lg border border-fa-border bg-fa-surface">
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="border-b border-fa-border bg-fa-surface-2">
-                <th className="px-4 py-3 text-left font-medium text-fa-text-dim">Date</th>
-                <th className="px-4 py-3 text-left font-medium text-fa-text-dim">Name</th>
-                <th className="px-4 py-3 text-left font-medium text-fa-text-dim">Product</th>
-                <th className="px-4 py-3 text-right font-medium text-fa-text-dim">Amount</th>
-                <th className="px-4 py-3 text-center font-medium text-fa-text-dim">Source</th>
-              </tr>
-            </thead>
-            <tbody>
-              {transactionsInPeriod.length > 0 ? (
-                transactionsInPeriod.slice((salesPageNum - 1) * ITEMS_PER_PAGE, salesPageNum * ITEMS_PER_PAGE).map((tx, idx) => (
-                  <tr key={`${tx.date}-${tx.email}-${idx}`} className="border-b border-fa-border/50 hover:bg-fa-surface-2/50">
-                    <td className="px-4 py-3 text-fa-text">{tx.date}</td>
-                    <td className="px-4 py-3 text-fa-text">{tx.name}</td>
-                    <td className="px-4 py-3 text-fa-text">{tx.product}</td>
-                    <td className="px-4 py-3 text-right font-semibold text-fa-neon">{formatCurrency(tx.amount)}</td>
-                    <td className="px-4 py-3 text-center">
-                      <span
-                        className={`inline-block rounded-full px-3 py-1 text-xs font-semibold ${
-                          tx.source === 'Paid'
-                            ? 'bg-fa-accent/30 text-fa-accent'
-                            : 'bg-fa-neon/30 text-fa-neon'
-                        }`}
-                      >
-                        {tx.source}
-                      </span>
+          <div className="min-h-0 flex-1 overflow-y-auto rounded-lg border border-fa-border bg-fa-surface">
+            <table className="w-full text-xs">
+              <thead className="sticky top-0 z-10">
+                <tr className="border-b border-fa-border bg-fa-surface-2">
+                  <th className="px-2.5 py-2 text-left font-medium text-fa-text-dim">Date</th>
+                  <th className="px-2.5 py-2 text-left font-medium text-fa-text-dim">Name</th>
+                  <th className="px-2.5 py-2 text-left font-medium text-fa-text-dim">Product</th>
+                  <th className="px-2.5 py-2 text-right font-medium text-fa-text-dim">Amount</th>
+                  <th className="px-2.5 py-2 text-center font-medium text-fa-text-dim">Source</th>
+                </tr>
+              </thead>
+              <tbody>
+                {transactionsInPeriod.length > 0 ? (
+                  transactionsInPeriod.slice((salesPageNum - 1) * ITEMS_PER_PAGE, salesPageNum * ITEMS_PER_PAGE).map((tx, idx) => (
+                    <tr key={`${tx.date}-${tx.email}-${idx}`} className="border-b border-fa-border/50 hover:bg-fa-surface-2/50">
+                      <td className="px-2.5 py-1.5 text-fa-text">{tx.date}</td>
+                      <td className="px-2.5 py-1.5 text-fa-text">{tx.name}</td>
+                      <td className="px-2.5 py-1.5 text-fa-text">{tx.product}</td>
+                      <td className="px-2.5 py-1.5 text-right font-semibold text-fa-neon">{formatCurrency(tx.amount)}</td>
+                      <td className="px-2.5 py-1.5 text-center">
+                        <span
+                          className={`inline-block rounded-full px-2 py-0.5 text-[10px] font-semibold ${
+                            tx.source === 'Paid'
+                              ? 'bg-fa-accent/30 text-fa-accent'
+                              : 'bg-fa-neon/30 text-fa-neon'
+                          }`}
+                        >
+                          {tx.source}
+                        </span>
+                      </td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr>
+                    <td colSpan={5} className="px-2.5 py-8 text-center text-fa-text-dim">
+                      No sales data for this period and filter
                     </td>
                   </tr>
-                ))
-              ) : (
-                <tr>
-                  <td colSpan={5} className="px-4 py-8 text-center text-fa-text-dim">
-                    No sales data for this period and filter
+                )}
+              </tbody>
+              <tfoot className="sticky bottom-0">
+                <tr className="border-t-2 border-fa-border bg-fa-surface-2 font-semibold">
+                  <td colSpan={3} className="px-2.5 py-2 text-right text-fa-text">
+                    {sourceFilter === 'all' ? 'Total' : `Total (${sourceFilter === 'paid' ? 'Paid' : 'Organic'})`}
+                  </td>
+                  <td className="px-2.5 py-2 text-right text-fa-neon">{formatCurrency(totalTransactionsAmount)}</td>
+                  <td className="px-2.5 py-2 text-center text-fa-text">
+                    {transactionsInPeriod.length} {transactionsInPeriod.length === 1 ? 'transaction' : 'transactions'}
                   </td>
                 </tr>
-              )}
-            </tbody>
-            <tfoot>
-              <tr className="border-t-2 border-fa-border bg-fa-surface-2 font-semibold">
-                <td colSpan={3} className="px-4 py-3 text-right text-fa-text">
-                  {sourceFilter === 'all' ? 'Total' : `Total (${sourceFilter === 'paid' ? 'Paid' : 'Organic'})`}
-                </td>
-                <td className="px-4 py-3 text-right text-fa-neon">{formatCurrency(totalTransactionsAmount)}</td>
-                <td className="px-4 py-3 text-center text-fa-text">
-                  {transactionsInPeriod.length} {transactionsInPeriod.length === 1 ? 'transaction' : 'transactions'}
-                </td>
-              </tr>
-            </tfoot>
-          </table>
-        </div>
-
-        {transactionsInPeriod.length > ITEMS_PER_PAGE && (
-          <div className="mt-4 flex items-center justify-between">
-            <button
-              onClick={() => setSalesPageNum(Math.max(1, salesPageNum - 1))}
-              disabled={salesPageNum === 1}
-              className="rounded-lg border border-fa-border px-3 py-2 text-sm text-fa-text-dim disabled:opacity-50"
-            >
-              ← Previous
-            </button>
-            <span className="text-sm text-fa-text-dim">
-              Page {salesPageNum} of {Math.ceil(transactionsInPeriod.length / ITEMS_PER_PAGE)}
-            </span>
-            <button
-              onClick={() => setSalesPageNum(Math.min(Math.ceil(transactionsInPeriod.length / ITEMS_PER_PAGE), salesPageNum + 1))}
-              disabled={salesPageNum === Math.ceil(transactionsInPeriod.length / ITEMS_PER_PAGE)}
-              className="rounded-lg border border-fa-border px-3 py-2 text-sm text-fa-text-dim disabled:opacity-50"
-            >
-              Next →
-            </button>
+              </tfoot>
+            </table>
           </div>
-        )}
-      </section>
 
+          {transactionsInPeriod.length > ITEMS_PER_PAGE && (
+            <div className="mt-2 flex items-center justify-between">
+              <button
+                onClick={() => setSalesPageNum(Math.max(1, salesPageNum - 1))}
+                disabled={salesPageNum === 1}
+                className="rounded-md border border-fa-border px-2.5 py-1 text-xs text-fa-text-dim disabled:opacity-50"
+              >
+                ← Previous
+              </button>
+              <span className="text-xs text-fa-text-dim">
+                Page {salesPageNum} of {Math.ceil(transactionsInPeriod.length / ITEMS_PER_PAGE)}
+              </span>
+              <button
+                onClick={() => setSalesPageNum(Math.min(Math.ceil(transactionsInPeriod.length / ITEMS_PER_PAGE), salesPageNum + 1))}
+                disabled={salesPageNum === Math.ceil(transactionsInPeriod.length / ITEMS_PER_PAGE)}
+                className="rounded-md border border-fa-border px-2.5 py-1 text-xs text-fa-text-dim disabled:opacity-50"
+              >
+                Next →
+              </button>
+            </div>
+          )}
+        </section>
 
-      <section>
-        <h2 className="mb-3 text-xs font-medium uppercase tracking-wide text-fa-text-dim">
-          Daily Cash Breakdown <span className="text-fa-neon">(From Transactions)</span>
-          <span className="ml-2 normal-case text-fa-text-faint">
-            — Calculated from individual transactions by date
-          </span>
-        </h2>
-        <div className="overflow-x-auto rounded-lg border border-fa-border bg-fa-surface">
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="border-b border-fa-border bg-fa-surface-2">
-                <th className="px-4 py-3 text-left font-medium text-fa-text-dim">Date</th>
-                <th className="px-4 py-3 text-right font-medium text-fa-text-dim">Paid v2</th>
-                <th className="px-4 py-3 text-right font-medium text-fa-text-dim">Organic v2</th>
-                <th className="px-4 py-3 text-right font-medium text-fa-text-dim">Total v2</th>
-              </tr>
-            </thead>
-            <tbody>
-              {dailyBreakdownV2.length > 0 ? (
-                dailyBreakdownV2.map((day) => (
-                  <tr key={day.date} className="border-b border-fa-border/50 hover:bg-fa-surface-2/50">
-                    <td className="px-4 py-3 text-fa-text">{day.date}</td>
-                    <td className="px-4 py-3 text-right text-fa-accent">{formatCurrency(day.paid)}</td>
-                    <td className="px-4 py-3 text-right text-fa-neon">{formatCurrency(day.organic)}</td>
-                    <td className="px-4 py-3 text-right font-medium text-fa-text">{formatCurrency(day.paid + day.organic)}</td>
-                  </tr>
-                ))
-              ) : (
-                <tr>
-                  <td colSpan={4} className="px-4 py-8 text-center text-fa-text-dim">
-                    No transactions for this period
-                  </td>
+        <section className="flex h-[26rem] flex-col">
+          <h2 className="mb-2 text-[11px] font-medium uppercase tracking-wide text-fa-text-dim">
+            Daily Cash Breakdown <span className="text-fa-neon">(From Transactions)</span>
+            <span className="ml-1.5 normal-case text-fa-text-faint">
+              — By date
+            </span>
+          </h2>
+          <div className="min-h-0 flex-1 overflow-y-auto rounded-lg border border-fa-border bg-fa-surface">
+            <table className="w-full text-xs">
+              <thead className="sticky top-0 z-10">
+                <tr className="border-b border-fa-border bg-fa-surface-2">
+                  <th className="px-2.5 py-2 text-left font-medium text-fa-text-dim">Date</th>
+                  <th className="px-2.5 py-2 text-right font-medium text-fa-text-dim">Paid</th>
+                  <th className="px-2.5 py-2 text-right font-medium text-fa-text-dim">Organic</th>
+                  <th className="px-2.5 py-2 text-right font-medium text-fa-text-dim">Total</th>
                 </tr>
-              )}
-            </tbody>
-            <tfoot>
-              <tr className="border-t-2 border-fa-border bg-fa-surface-2 font-semibold">
-                <td className="px-4 py-3 text-fa-text">Period Total v2</td>
-                <td className="px-4 py-3 text-right text-fa-accent">{formatCurrency(Math.round(cashFromAdsV2))}</td>
-                <td className="px-4 py-3 text-right text-fa-neon">{formatCurrency(Math.round(cashFromOrganicV2))}</td>
-                <td className="px-4 py-3 text-right text-fa-accent">{formatCurrency(Math.round(cashFromAdsV2 + cashFromOrganicV2))}</td>
-              </tr>
-            </tfoot>
-          </table>
-        </div>
-      </section>
+              </thead>
+              <tbody>
+                {dailyBreakdownV2.length > 0 ? (
+                  dailyBreakdownV2.map((day) => (
+                    <tr key={day.date} className="border-b border-fa-border/50 hover:bg-fa-surface-2/50">
+                      <td className="px-2.5 py-1.5 text-fa-text">{day.date}</td>
+                      <td className="px-2.5 py-1.5 text-right text-fa-accent">{formatCurrency(day.paid)}</td>
+                      <td className="px-2.5 py-1.5 text-right text-fa-neon">{formatCurrency(day.organic)}</td>
+                      <td className="px-2.5 py-1.5 text-right font-medium text-fa-text">{formatCurrency(day.paid + day.organic)}</td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr>
+                    <td colSpan={4} className="px-2.5 py-8 text-center text-fa-text-dim">
+                      No transactions for this period
+                    </td>
+                  </tr>
+                )}
+              </tbody>
+              <tfoot className="sticky bottom-0">
+                <tr className="border-t-2 border-fa-border bg-fa-surface-2 font-semibold">
+                  <td className="px-2.5 py-2 text-fa-text">Period Total</td>
+                  <td className="px-2.5 py-2 text-right text-fa-accent">{formatCurrency(Math.round(cashFromAdsV2))}</td>
+                  <td className="px-2.5 py-2 text-right text-fa-neon">{formatCurrency(Math.round(cashFromOrganicV2))}</td>
+                  <td className="px-2.5 py-2 text-right text-fa-accent">{formatCurrency(Math.round(cashFromAdsV2 + cashFromOrganicV2))}</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </section>
+      </div>
     </div>
   )
 }
