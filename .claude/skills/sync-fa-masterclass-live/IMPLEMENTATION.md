@@ -165,12 +165,21 @@ separately by the page and does NOT feed into this composite):
 }
 ```
 
-## Phase 6: Deploy — copy data into docs/, commit, push
+## Phase 6: Deploy — TWO separate targets, both required
 
-GitHub Pages serves this repo from `docs/` (branch `main`, path `/docs`), which
-is the **built** output of `dashboard/`, not the source. A routine data-only
-sync doesn't need a rebuild — just copy the fresh JSON into `docs/data/` too:
+There are **two independent deployments** of this dashboard, in two
+different repos, and a sync is not done until both are updated. Confirmed
+2026-09-17 after a user reported a stale revenue figure: this project's own
+GitHub Pages (`jayr-ai.github.io/fa-masterclass-live-dashboard`) had the
+fresh sync, but the actual production URL the user checks
+(`datahub.freedomacademy.com.au/marketing-dashboard/`) was still serving
+data from **two days earlier** — a separate repo (`au-fa-dashboard`) that
+this skill's docs never mentioned deploying to. The same gap meant the
+Email-column privacy fix (removed from "Deals Closed — Detail") had also
+never reached production, even though it was pushed to this repo days
+earlier.
 
+**Target A — this repo's own `docs/`** (`jayr-ai.github.io/fa-masterclass-live-dashboard`):
 ```bash
 cd /Users/jayvee/Documents/ds-work/fa-masterclass-live-dashboard
 cp dashboard/public/data/*.json docs/data/
@@ -178,12 +187,39 @@ git add dashboard/public/data/*.json docs/data/*.json
 git commit -m "Sync masterclass data through <date>"
 git push origin main
 ```
-
 Only rerun `cd dashboard && npm run build && rm -rf ../docs && cp -r dist ../docs`
 (then re-add `.nojekyll`) when frontend **code** changed, not for a plain
 data sync.
 
-Skip the push if `--no-push`.
+**Target B — the real production domain**, `datahub.freedomacademy.com.au/marketing-dashboard/`,
+served from the **separate** `au-fa-dashboard` repo's `marketing-dashboard/`
+folder (a full built copy — `index.html` + `assets/` + `data/`, not a
+symlink or submodule):
+```bash
+cd /Users/jayvee/Documents/ds-work/au-fa-dashboard
+git fetch origin && git pull --ff-only origin main   # this repo hosts other clients' dashboards too — always sync first
+cp /Users/jayvee/Documents/ds-work/fa-masterclass-live-dashboard/dashboard/public/data/*.json marketing-dashboard/data/
+git add marketing-dashboard/data
+git commit -m "Sync marketing-dashboard data through <date>"
+git push origin main
+```
+If frontend **code** changed since the last time Target B was updated (check
+by comparing the JS bundle filename in `marketing-dashboard/assets/` against
+`dashboard/dist/assets/` — different hash means different code), also copy
+the full build, not just data:
+```bash
+rm -rf marketing-dashboard/assets
+cp -r /Users/jayvee/Documents/ds-work/fa-masterclass-live-dashboard/dashboard/dist/* marketing-dashboard/
+git add marketing-dashboard
+```
+`au-fa-dashboard` is a **shared repo** other automations push to (revenue
+dashboard, sales dashboard, etc.) — always `git fetch`/`pull --ff-only`
+before editing, and scope `git add` to `marketing-dashboard/` only.
+
+Skip both pushes if `--no-push`. Verify Target B actually updated by
+fetching its live `data/cash-attribution.json` (or whichever file changed)
+and checking `meta.generatedAt` matches this run — don't assume the push
+succeeded just because the command didn't error.
 
 ## History
 
@@ -246,3 +282,13 @@ Skip the push if `--no-push`.
   guessing — snake_case query params, and Cloudflare blocking the default
   Python user-agent — both documented in Phase 2. This was previously
   explicitly deferred by the spec doc; the user asked to do it now.
+- **2026-09-17, discovered production was two dashboards behind**: user
+  reported September revenue stuck at $48,407 despite a sync having just
+  run. Traced to Phase 6 only ever having deployed to this repo's own
+  `docs/` — the actual production URL,
+  `datahub.freedomacademy.com.au/marketing-dashboard/`, is served from a
+  completely separate repo (`au-fa-dashboard/marketing-dashboard/`) that had
+  silently gone unsynced. Also found the Email-column privacy fix (removed
+  from the "Deals Closed — Detail" table a day earlier) had never reached
+  that production copy either, for the same reason. Rewrote Phase 6 as two
+  explicit, both-required deploy targets.
