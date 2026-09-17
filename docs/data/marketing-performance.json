@@ -1,12 +1,12 @@
 {
   "meta": {
-    "generatedAt": "2026-09-15T23:00:56.062203Z",
+    "generatedAt": "2026-09-17T00:56:55.083024Z",
     "source": "Meta MCP direct pull (act_1185223312884959, time_increment=1), no BigQuery",
-    "dataWindow": "2026-01-13 to 2026-09-16",
+    "dataWindow": "2026-01-13 to 2026-09-17",
     "cacheStatus": "Live sync from Meta MCP with actual daily breakdown",
-    "note": "Ad spend data current through Sep 14, 2026. Sep 1-14 from Meta MCP daily breakdown: A$16,630.72 (0.22% vs Ads Manager A$16,593.47)",
-    "totalDays": 232,
-    "totalSpend": 292055.03
+    "note": "Ad spend data current through 2026-09-17",
+    "totalDays": 233,
+    "totalSpend": 294097.25
   },
   "daily": [
     {
@@ -1614,24 +1614,31 @@
     },
     {
       "date": "2026-09-14",
-      "spend": 40.9,
-      "impressions": 1095,
-      "linkClicks": 27,
-      "leads": 1
+      "spend": 855.44,
+      "impressions": 23531,
+      "linkClicks": 299,
+      "leads": 12
     },
     {
       "date": "2026-09-15",
-      "spend": 1222.54,
-      "impressions": 34572,
+      "spend": 1223.13,
+      "impressions": 34595,
       "linkClicks": 517,
       "leads": 36
     },
     {
       "date": "2026-09-16",
-      "spend": 237.04,
-      "impressions": 7362,
-      "linkClicks": 87,
-      "leads": 7
+      "spend": 1210.21,
+      "impressions": 34266,
+      "linkClicks": 487,
+      "leads": 34
+    },
+    {
+      "date": "2026-09-17",
+      "spend": 253.92,
+      "impressions": 7026,
+      "linkClicks": 97,
+      "leads": 10
     }
   ]
 }

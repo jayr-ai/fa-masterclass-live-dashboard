@@ -1,78 +1,78 @@
 {
   "meta": {
-    "generatedAt": "2026-09-15T23:01:11.974954Z",
+    "generatedAt": "2026-09-17T00:57:07.166900Z",
     "source": "GHL REST API direct (Private Integration Token, no MCP, no BigQuery)",
-    "dataWindow": "2026-09-15",
-    "totalOpportunities": 6606,
+    "dataWindow": "2026-09-17",
+    "totalOpportunities": 6640,
     "pipelineId": "djiSwm3hJsW7Rv9tyqSl",
     "pipelineName": "Masterclass Pipeline"
   },
   "stages": [
     {
       "name": "Registered",
-      "count": 4983,
+      "count": 5007,
       "position": 0,
-      "winProbability": 75.43
+      "winProbability": 75.41
     },
     {
       "name": "Replay Optin",
-      "count": 407,
+      "count": 413,
       "position": 1,
-      "winProbability": 6.16
+      "winProbability": 6.22
     },
     {
       "name": "Close Lost",
       "count": 377,
       "position": 2,
-      "winProbability": 5.71
+      "winProbability": 5.68
     },
     {
       "name": "Call Cancelled / Not Interested",
-      "count": 271,
+      "count": 274,
       "position": 3,
-      "winProbability": 4.1
+      "winProbability": 4.13
     },
     {
       "name": "No-Showed",
       "count": 260,
       "position": 4,
-      "winProbability": 3.94
+      "winProbability": 3.92
     },
     {
       "name": "Call Cancelled / Need To Reschedule",
-      "count": 155,
+      "count": 158,
       "position": 5,
-      "winProbability": 2.35
+      "winProbability": 2.38
     },
     {
       "name": "Close Won",
       "count": 80,
       "position": 6,
-      "winProbability": 1.21
+      "winProbability": 1.2
     },
     {
       "name": "Bad Fit",
-      "count": 29,
+      "count": 30,
       "position": 7,
-      "winProbability": 0.44
-    },
-    {
-      "name": "Appointment Booked",
-      "count": 22,
-      "position": 8,
-      "winProbability": 0.33
+      "winProbability": 0.45
     },
     {
       "name": "VIP Upgrade",
+      "count": 17,
+      "position": 8,
+      "winProbability": 0.26
+    },
+    {
+      "name": "Appointment Booked",
       "count": 17,
       "position": 9,
       "winProbability": 0.26
     },
     {
       "name": "Pending Sale",
-      "count": 5,
+      "count": 7,
       "position": 10,
-      "winProbability": 0.08
+      "winProbability": 0.11
     }
   ]
 }

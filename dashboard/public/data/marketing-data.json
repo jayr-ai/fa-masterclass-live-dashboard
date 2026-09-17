@@ -1,21 +1,21 @@
 {
   "meta": {
-    "generatedAt": "2026-09-15T23:02:18.384361Z",
+    "generatedAt": "2026-09-17T00:59:34.281896Z",
     "source": "Composite of marketing-performance.json (Meta MCP) / funnel-stages.json (GHL REST API direct via PIT) / masterclass-registrations.json / masterclass-attendance.json / masterclass-applications.json (Google Sheet) / cash-attribution.json (Google Sheet) \u2014 no BigQuery, no MCP dependency for GHL data",
-    "dataWindow": "2026-01-13 to 2026-09-16",
+    "dataWindow": "2025-11-06 to 2026-09-17",
     "cacheStatus": "Direct sync via Meta MCP + GHL REST API (PIT) + Google Sheets CSV export",
-    "syncedAt": "2026-09-15T23:02:18.384361Z"
+    "syncedAt": "2026-09-17T00:59:34.281896Z"
   },
   "funnelSnapshot": {
-    "generatedAt": "2026-09-15T23:01:11.974954Z",
+    "generatedAt": "2026-09-17T00:57:07.166900Z",
     "stages": [
       {
         "stage": "Registered",
-        "count": 4983
+        "count": 5007
       },
       {
         "stage": "Replay Optin",
-        "count": 407
+        "count": 413
       },
       {
         "stage": "Close Lost",
@@ -23,7 +23,7 @@
       },
       {
         "stage": "Call Cancelled / Not Interested",
-        "count": 271
+        "count": 274
       },
       {
         "stage": "No-Showed",
@@ -31,7 +31,7 @@
       },
       {
         "stage": "Call Cancelled / Need To Reschedule",
-        "count": 155
+        "count": 158
       },
       {
         "stage": "Close Won",
@@ -39,19 +39,19 @@
       },
       {
         "stage": "Bad Fit",
-        "count": 29
-      },
-      {
-        "stage": "Appointment Booked",
-        "count": 22
+        "count": 30
       },
       {
         "stage": "VIP Upgrade",
         "count": 17
       },
       {
+        "stage": "Appointment Booked",
+        "count": 17
+      },
+      {
         "stage": "Pending Sale",
-        "count": 5
+        "count": 7
       }
     ]
   },
@@ -61,7 +61,7 @@
       "label": "08 Apr 2026",
       "registered": 1,
       "attended": 0,
-      "showUpRatePct": null,
+      "showUpRatePct": 0.0,
       "cashFromAds": 0,
       "cashFromOrganic": 0,
       "deals": []
@@ -71,7 +71,7 @@
       "label": "15 Apr 2026",
       "registered": 3,
       "attended": 0,
-      "showUpRatePct": null,
+      "showUpRatePct": 0.0,
       "cashFromAds": 0,
       "cashFromOrganic": 0,
       "deals": []
@@ -81,7 +81,7 @@
       "label": "21 Apr 2026",
       "registered": 14,
       "attended": 0,
-      "showUpRatePct": null,
+      "showUpRatePct": 0.0,
       "cashFromAds": 0,
       "cashFromOrganic": 0,
       "deals": []
@@ -91,7 +91,7 @@
       "label": "23 Apr 2026",
       "registered": 10,
       "attended": 0,
-      "showUpRatePct": null,
+      "showUpRatePct": 0.0,
       "cashFromAds": 0,
       "cashFromOrganic": 0,
       "deals": []
@@ -101,7 +101,7 @@
       "label": "28 Apr 2026",
       "registered": 149,
       "attended": 0,
-      "showUpRatePct": null,
+      "showUpRatePct": 0.0,
       "cashFromAds": 0,
       "cashFromOrganic": 0,
       "deals": []
@@ -111,7 +111,7 @@
       "label": "30 Apr 2026",
       "registered": 147,
       "attended": 0,
-      "showUpRatePct": null,
+      "showUpRatePct": 0.0,
       "cashFromAds": 0,
       "cashFromOrganic": 0,
       "deals": []
@@ -121,7 +121,7 @@
       "label": "05 May 2026",
       "registered": 164,
       "attended": 0,
-      "showUpRatePct": null,
+      "showUpRatePct": 0.0,
       "cashFromAds": 0,
       "cashFromOrganic": 0,
       "deals": []
@@ -131,7 +131,7 @@
       "label": "07 May 2026",
       "registered": 139,
       "attended": 0,
-      "showUpRatePct": null,
+      "showUpRatePct": 0.0,
       "cashFromAds": 0,
       "cashFromOrganic": 0,
       "deals": []
@@ -141,7 +141,7 @@
       "label": "12 May 2026",
       "registered": 145,
       "attended": 0,
-      "showUpRatePct": null,
+      "showUpRatePct": 0.0,
       "cashFromAds": 0,
       "cashFromOrganic": 0,
       "deals": []
@@ -151,7 +151,7 @@
       "label": "14 May 2026",
       "registered": 120,
       "attended": 0,
-      "showUpRatePct": null,
+      "showUpRatePct": 0.0,
       "cashFromAds": 0,
       "cashFromOrganic": 0,
       "deals": []
@@ -161,7 +161,7 @@
       "label": "19 May 2026",
       "registered": 179,
       "attended": 0,
-      "showUpRatePct": null,
+      "showUpRatePct": 0.0,
       "cashFromAds": 0,
       "cashFromOrganic": 0,
       "deals": []
@@ -171,7 +171,7 @@
       "label": "21 May 2026",
       "registered": 148,
       "attended": 0,
-      "showUpRatePct": null,
+      "showUpRatePct": 0.0,
       "cashFromAds": 0,
       "cashFromOrganic": 0,
       "deals": []
@@ -181,7 +181,7 @@
       "label": "26 May 2026",
       "registered": 220,
       "attended": 0,
-      "showUpRatePct": null,
+      "showUpRatePct": 0.0,
       "cashFromAds": 0,
       "cashFromOrganic": 0,
       "deals": []
@@ -191,7 +191,7 @@
       "label": "28 May 2026",
       "registered": 173,
       "attended": 0,
-      "showUpRatePct": null,
+      "showUpRatePct": 0.0,
       "cashFromAds": 0,
       "cashFromOrganic": 0,
       "deals": []
@@ -201,7 +201,7 @@
       "label": "02 Jun 2026",
       "registered": 193,
       "attended": 0,
-      "showUpRatePct": null,
+      "showUpRatePct": 0.0,
       "cashFromAds": 0,
       "cashFromOrganic": 0,
       "deals": []
@@ -221,7 +221,7 @@
       "label": "09 Jun 2026",
       "registered": 206,
       "attended": 0,
-      "showUpRatePct": null,
+      "showUpRatePct": 0.0,
       "cashFromAds": 0,
       "cashFromOrganic": 0,
       "deals": []
@@ -231,7 +231,7 @@
       "label": "11 Jun 2026",
       "registered": 175,
       "attended": 0,
-      "showUpRatePct": null,
+      "showUpRatePct": 0.0,
       "cashFromAds": 0,
       "cashFromOrganic": 0,
       "deals": []
@@ -241,7 +241,7 @@
       "label": "17 Jun 2026",
       "registered": 95,
       "attended": 0,
-      "showUpRatePct": null,
+      "showUpRatePct": 0.0,
       "cashFromAds": 0,
       "cashFromOrganic": 0,
       "deals": []
@@ -251,7 +251,7 @@
       "label": "24 Jun 2026",
       "registered": 2,
       "attended": 0,
-      "showUpRatePct": null,
+      "showUpRatePct": 0.0,
       "cashFromAds": 0,
       "cashFromOrganic": 0,
       "deals": []
@@ -361,7 +361,7 @@
       "label": "15 Sep 2026",
       "registered": 187,
       "attended": 0,
-      "showUpRatePct": null,
+      "showUpRatePct": 0.0,
       "cashFromAds": 0,
       "cashFromOrganic": 0,
       "deals": []
@@ -371,7 +371,7 @@
       "label": "22 Sep 2026",
       "registered": 21,
       "attended": 0,
-      "showUpRatePct": null,
+      "showUpRatePct": 0.0,
       "cashFromAds": 0,
       "cashFromOrganic": 0,
       "deals": []
@@ -1983,24 +1983,31 @@
     },
     {
       "date": "2026-09-14",
-      "spend": 40.9,
-      "impressions": 1095,
-      "linkClicks": 27,
-      "leads": 1
+      "spend": 855.44,
+      "impressions": 23531,
+      "linkClicks": 299,
+      "leads": 12
     },
     {
       "date": "2026-09-15",
-      "spend": 1222.54,
-      "impressions": 34572,
+      "spend": 1223.13,
+      "impressions": 34595,
       "linkClicks": 517,
       "leads": 36
     },
     {
       "date": "2026-09-16",
-      "spend": 237.04,
-      "impressions": 7362,
-      "linkClicks": 87,
-      "leads": 7
+      "spend": 1210.21,
+      "impressions": 34266,
+      "linkClicks": 487,
+      "leads": 34
+    },
+    {
+      "date": "2026-09-17",
+      "spend": 253.92,
+      "impressions": 7026,
+      "linkClicks": 97,
+      "leads": 10
     }
   ],
   "cashAttributionDaily": [
@@ -3215,6 +3222,18 @@
       "totalCash": 22967.0,
       "cashFromAds": 11967.0,
       "cashFromOrganic": 11000.0
+    },
+    {
+      "date": "2026-09-14",
+      "totalCash": 550.0,
+      "cashFromAds": 0.0,
+      "cashFromOrganic": 550.0
+    },
+    {
+      "date": "2026-09-16",
+      "totalCash": 2100.0,
+      "cashFromAds": 2000.0,
+      "cashFromOrganic": 100.0
     }
   ],
   "oneOffEvents": []
