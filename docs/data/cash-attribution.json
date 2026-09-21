@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generatedAt": "2026-09-18T04:39:21.402345Z",
+    "generatedAt": "2026-09-21T01:34:16.039813Z",
     "source": "Google Sheet 'CONSOLIDATED' (direct CSV pull), attribution from the sheet's own 'Attribution' column \u2014 no BigQuery, no GHL cross-reference",
-    "dataWindow": "2025-11-06 to 2026-09-17"
+    "dataWindow": "2025-11-06 to 2026-09-18"
   },
   "monthlySummary": [
     {
@@ -70,10 +70,10 @@
     },
     {
       "month": "2026-09",
-      "totalCash": 56657.0,
-      "cashFromAds": 32807.0,
-      "cashFromOrganic": 23850.0,
-      "transactionCount": 20
+      "totalCash": 57207.0,
+      "cashFromAds": 32907.0,
+      "cashFromOrganic": 24300.0,
+      "transactionCount": 21
     }
   ],
   "dailyBreakdown": [
@@ -1298,14 +1298,20 @@
     {
       "date": "2026-09-16",
       "totalCash": 2200.0,
-      "cashFromAds": 2000.0,
-      "cashFromOrganic": 200.0
+      "cashFromAds": 2100.0,
+      "cashFromOrganic": 100.0
     },
     {
       "date": "2026-09-17",
       "totalCash": 5500.0,
       "cashFromAds": 0.0,
       "cashFromOrganic": 5500.0
+    },
+    {
+      "date": "2026-09-18",
+      "totalCash": 550.0,
+      "cashFromAds": 0.0,
+      "cashFromOrganic": 550.0
     }
   ],
   "transactions": [
@@ -8633,7 +8639,7 @@
       "date": "2026-09-11",
       "name": "Sunita Mohanty",
       "email": "sunita.mohanty@mail.com",
-      "product": "Accelerator",
+      "product": "Accelerator Premium",
       "amount": 10000.0,
       "closer": "Stacie Skehan",
       "mode": "EFT",
@@ -8667,7 +8673,7 @@
       "amount": 100.0,
       "closer": "Shane Dacosta",
       "mode": "Stripe",
-      "source": "Organic"
+      "source": "Paid"
     },
     {
       "date": "2026-09-16",
@@ -8687,6 +8693,16 @@
       "amount": 5500.0,
       "closer": "Shane Dacosta",
       "mode": "EFT",
+      "source": "Organic"
+    },
+    {
+      "date": "2026-09-18",
+      "name": "Uale Rea",
+      "email": "ualerea@yahoo.com.au",
+      "product": "Freedom Fighters Comm",
+      "amount": 550.0,
+      "closer": "",
+      "mode": "Stripe",
       "source": "Organic"
     }
   ]

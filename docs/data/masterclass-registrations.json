@@ -1,15 +1,15 @@
 {
   "meta": {
-    "generatedAt": "2026-09-18T04:38:49.886205Z",
+    "generatedAt": "2026-09-21T01:33:39.641294Z",
     "source": "Google Sheet 'FA | Webinar Lead Tracker' (X - AUTO tab, direct pull) \u2014 unique emails (Column C) per Webinar Date (Column F)",
     "dataWindow": "2026-04-08 to 2026-09-22",
-    "totalRegistrations": 4333
+    "totalRegistrations": 4423
   },
   "masterclassRegistrations": [
     {
       "date": "2026-09-22",
       "label": "22 Sep 2026",
-      "registered": 95
+      "registered": 195
     },
     {
       "date": "2026-09-15",
@@ -19,12 +19,12 @@
     {
       "date": "2026-09-08",
       "label": "08 Sep 2026",
-      "registered": 153
+      "registered": 152
     },
     {
       "date": "2026-09-01",
       "label": "01 Sep 2026",
-      "registered": 180
+      "registered": 178
     },
     {
       "date": "2026-08-25",
@@ -39,7 +39,7 @@
     {
       "date": "2026-08-11",
       "label": "11 Aug 2026",
-      "registered": 219
+      "registered": 218
     },
     {
       "date": "2026-08-05",
@@ -49,7 +49,7 @@
     {
       "date": "2026-08-04",
       "label": "04 Aug 2026",
-      "registered": 169
+      "registered": 167
     },
     {
       "date": "2026-07-28",
@@ -74,7 +74,7 @@
     {
       "date": "2026-06-17",
       "label": "17 Jun 2026",
-      "registered": 95
+      "registered": 93
     },
     {
       "date": "2026-06-11",
@@ -104,7 +104,7 @@
     {
       "date": "2026-05-26",
       "label": "26 May 2026",
-      "registered": 220
+      "registered": 219
     },
     {
       "date": "2026-05-21",
@@ -114,7 +114,7 @@
     {
       "date": "2026-05-19",
       "label": "19 May 2026",
-      "registered": 179
+      "registered": 178
     },
     {
       "date": "2026-05-14",
