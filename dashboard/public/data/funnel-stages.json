@@ -1,54 +1,54 @@
 {
   "meta": {
-    "generatedAt": "2026-09-21T01:33:30.053131Z",
+    "generatedAt": "2026-09-22T02:52:54.488210Z",
     "source": "GHL REST API direct (Private Integration Token, no MCP, no BigQuery)",
-    "dataWindow": "2026-09-21",
-    "totalOpportunities": 6758,
+    "dataWindow": "2026-09-22",
+    "totalOpportunities": 6786,
     "pipelineId": "djiSwm3hJsW7Rv9tyqSl",
     "pipelineName": "Masterclass Pipeline"
   },
   "stages": [
     {
       "name": "Registered",
-      "count": 5108,
+      "count": 5128,
       "position": 0,
-      "winProbability": 75.58
+      "winProbability": 75.57
     },
     {
       "name": "Replay Optin",
-      "count": 415,
+      "count": 414,
       "position": 1,
-      "winProbability": 6.14
+      "winProbability": 6.1
     },
     {
       "name": "Close Lost",
       "count": 381,
       "position": 2,
-      "winProbability": 5.64
+      "winProbability": 5.61
     },
     {
       "name": "Call Cancelled / Not Interested",
       "count": 279,
       "position": 3,
-      "winProbability": 4.13
+      "winProbability": 4.11
     },
     {
       "name": "No-Showed",
       "count": 262,
       "position": 4,
-      "winProbability": 3.88
+      "winProbability": 3.86
     },
     {
       "name": "Call Cancelled / Need To Reschedule",
-      "count": 161,
+      "count": 162,
       "position": 5,
-      "winProbability": 2.38
+      "winProbability": 2.39
     },
     {
       "name": "Close Won",
       "count": 81,
       "position": 6,
-      "winProbability": 1.2
+      "winProbability": 1.19
     },
     {
       "name": "Bad Fit",
@@ -57,16 +57,16 @@
       "winProbability": 0.53
     },
     {
-      "name": "VIP Upgrade",
-      "count": 17,
+      "name": "Appointment Booked",
+      "count": 20,
       "position": 8,
-      "winProbability": 0.25
+      "winProbability": 0.29
     },
     {
-      "name": "Appointment Booked",
-      "count": 12,
+      "name": "VIP Upgrade",
+      "count": 17,
       "position": 9,
-      "winProbability": 0.18
+      "winProbability": 0.25
     },
     {
       "name": "Pending Sale",
