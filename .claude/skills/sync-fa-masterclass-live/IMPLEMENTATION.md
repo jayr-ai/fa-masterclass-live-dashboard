@@ -58,6 +58,14 @@ Parse each daily row (`amount_spent` strips `"A$"`/commas → float;
 array by date (replace if the date exists, append otherwise, keep sorted).
 Recompute `meta.totalDays`/`meta.totalSpend`/`meta.dataWindow`.
 
+**`amount_spent`'s shape is not stable** — confirmed 2026-09-23: most calls
+return a formatted string (`"A$1,609.23 AUD"`), but the same field came
+back on one call as `{"value": "1609.23", "unit": "AUD"}` instead, with no
+change in how the tool was invoked. Parse defensively: if it's a dict, read
+`.value`; if it's a string, strip non-numeric characters (`A$`, `AUD`,
+commas) before casting to float. Don't assume the string format going
+forward.
+
 ## Phase 2: GHL funnel snapshot → funnel-stages.json
 
 Run `set -a; source sync/.env; set +a && python3 sync/fetch_ghl.py
