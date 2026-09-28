@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generatedAt": "2026-09-23T00:46:57.471349Z",
+    "generatedAt": "2026-09-28T04:51:09.611285Z",
     "source": "Google Sheet 'CONSOLIDATED' (direct CSV pull), attribution from the sheet's own 'Attribution' column \u2014 no BigQuery, no GHL cross-reference",
-    "dataWindow": "2025-11-06 to 2026-09-18"
+    "dataWindow": "2025-11-06 to 2026-09-24"
   },
   "monthlySummary": [
     {
@@ -70,10 +70,10 @@
     },
     {
       "month": "2026-09",
-      "totalCash": 57207.0,
-      "cashFromAds": 32907.0,
+      "totalCash": 74207.0,
+      "cashFromAds": 49907.0,
       "cashFromOrganic": 24300.0,
-      "transactionCount": 21
+      "transactionCount": 24
     }
   ],
   "dailyBreakdown": [
@@ -1312,6 +1312,24 @@
       "totalCash": 550.0,
       "cashFromAds": 0.0,
       "cashFromOrganic": 550.0
+    },
+    {
+      "date": "2026-09-22",
+      "totalCash": 5500.0,
+      "cashFromAds": 5500.0,
+      "cashFromOrganic": 0.0
+    },
+    {
+      "date": "2026-09-23",
+      "totalCash": 500.0,
+      "cashFromAds": 500.0,
+      "cashFromOrganic": 0.0
+    },
+    {
+      "date": "2026-09-24",
+      "totalCash": 11000.0,
+      "cashFromAds": 11000.0,
+      "cashFromOrganic": 0.0
     }
   ],
   "transactions": [
@@ -8704,6 +8722,36 @@
       "closer": "",
       "mode": "Stripe",
       "source": "Organic"
+    },
+    {
+      "date": "2026-09-22",
+      "name": "Tom Corssen",
+      "email": "thcrossen@bigpond.com",
+      "product": "Accelerator Premium",
+      "amount": 5500.0,
+      "closer": "Laura Fillmann",
+      "mode": "EFT",
+      "source": "Paid"
+    },
+    {
+      "date": "2026-09-23",
+      "name": "Antoinette Haraka",
+      "email": "antoinette150585@gmail.com",
+      "product": "Accelerator Premium",
+      "amount": 500.0,
+      "closer": "Laura Fillmann",
+      "mode": "EFT",
+      "source": "Paid"
+    },
+    {
+      "date": "2026-09-24",
+      "name": "Louella Gray-Scott",
+      "email": "louellajo@yahoo.com",
+      "product": "Accelerator",
+      "amount": 11000.0,
+      "closer": "Laura Fillmann",
+      "mode": "EFT",
+      "source": "Paid"
     }
   ]
 }
