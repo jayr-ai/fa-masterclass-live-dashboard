@@ -1,8 +1,8 @@
 import { NavLink, Outlet } from 'react-router-dom'
 
 const TABS = [
-  { to: '/masterclass', label: 'Masterclass', icon: '🎓' },
   { to: '/marketing', label: 'Marketing', icon: '📈' },
+  { to: '/masterclass', label: 'Masterclass', icon: '🎓' },
   // { to: '/granular-view', label: 'Granular View', icon: '📋' }, // Hidden for now - can re-enable if needed
 ]
 
