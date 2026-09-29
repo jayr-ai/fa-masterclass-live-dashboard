@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-09-29T02:07:27.928913Z",
+    "generatedAt": "2026-09-29T02:18:26.976507Z",
     "source": "Google Sheet 'CONSOLIDATED' (direct CSV pull), attribution from the sheet's own 'Attribution' column \u2014 no BigQuery, no GHL cross-reference",
     "dataWindow": "2025-11-06 to 2026-09-26"
   },
@@ -70,10 +70,10 @@
     },
     {
       "month": "2026-09",
-      "totalCash": 86477.0,
-      "cashFromAds": 51177.0,
+      "totalCash": 86577.0,
+      "cashFromAds": 51277.0,
       "cashFromOrganic": 35300.0,
-      "transactionCount": 30
+      "transactionCount": 31
     }
   ],
   "dailyBreakdown": [
@@ -1303,8 +1303,8 @@
     },
     {
       "date": "2026-09-17",
-      "totalCash": 5500.0,
-      "cashFromAds": 0.0,
+      "totalCash": 5600.0,
+      "cashFromAds": 100.0,
       "cashFromOrganic": 5500.0
     },
     {
@@ -8724,6 +8724,16 @@
       "closer": "Shane Dacosta",
       "mode": "EFT",
       "source": "Organic"
+    },
+    {
+      "date": "2026-09-17",
+      "name": "Tim Hughes",
+      "email": "hughestim79@gmail.com",
+      "product": "Accelerator Premium",
+      "amount": 100.0,
+      "closer": "Laura Fillmann",
+      "mode": "EFT",
+      "source": "Paid"
     },
     {
       "date": "2026-09-18",
