@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generatedAt": "2026-09-28T04:51:09.611285Z",
+    "generatedAt": "2026-09-29T01:14:37.529757Z",
     "source": "Google Sheet 'CONSOLIDATED' (direct CSV pull), attribution from the sheet's own 'Attribution' column \u2014 no BigQuery, no GHL cross-reference",
-    "dataWindow": "2025-11-06 to 2026-09-24"
+    "dataWindow": "2025-11-06 to 2026-09-26"
   },
   "monthlySummary": [
     {
@@ -70,10 +70,10 @@
     },
     {
       "month": "2026-09",
-      "totalCash": 74207.0,
-      "cashFromAds": 49907.0,
-      "cashFromOrganic": 24300.0,
-      "transactionCount": 24
+      "totalCash": 77477.0,
+      "cashFromAds": 51177.0,
+      "cashFromOrganic": 26300.0,
+      "transactionCount": 29
     }
   ],
   "dailyBreakdown": [
@@ -1329,6 +1329,18 @@
       "date": "2026-09-24",
       "totalCash": 11000.0,
       "cashFromAds": 11000.0,
+      "cashFromOrganic": 0.0
+    },
+    {
+      "date": "2026-09-25",
+      "totalCash": 2200.0,
+      "cashFromAds": 200.0,
+      "cashFromOrganic": 2000.0
+    },
+    {
+      "date": "2026-09-26",
+      "totalCash": 1070.0,
+      "cashFromAds": 1070.0,
       "cashFromOrganic": 0.0
     }
   ],
@@ -8751,6 +8763,56 @@
       "amount": 11000.0,
       "closer": "Laura Fillmann",
       "mode": "EFT",
+      "source": "Paid"
+    },
+    {
+      "date": "2026-09-25",
+      "name": "Zanthea Biggin",
+      "email": "bigginzanthea@gmail.com",
+      "product": "Accelerator Premium",
+      "amount": 200.0,
+      "closer": "Shane Dacosta",
+      "mode": "Stripe",
+      "source": "Paid"
+    },
+    {
+      "date": "2026-09-25",
+      "name": "Ryan Robinson",
+      "email": "rj.robbo@gmail.com",
+      "product": "Accelerator Premium",
+      "amount": 2000.0,
+      "closer": "Shane Dacosta",
+      "mode": "Stripe",
+      "source": "Organic"
+    },
+    {
+      "date": "2026-09-26",
+      "name": "Paddy Fisher",
+      "email": "paddysk8dude@gmail.com",
+      "product": "Accelerator Premium",
+      "amount": 20.0,
+      "closer": "Stacie Skehan",
+      "mode": "Stripe",
+      "source": "Paid"
+    },
+    {
+      "date": "2026-09-26",
+      "name": "Timothy Collins",
+      "email": "timpriscollins@gmail.com",
+      "product": "Accelerator",
+      "amount": 950.0,
+      "closer": "Kymberley Peters",
+      "mode": "Stripe",
+      "source": "Paid"
+    },
+    {
+      "date": "2026-09-26",
+      "name": "David Sega",
+      "email": "d.sega82@gmail.com",
+      "product": "Accelerator Premium",
+      "amount": 100.0,
+      "closer": "Stacie Skehan",
+      "mode": "Stripe",
       "source": "Paid"
     }
   ]

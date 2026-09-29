@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-09-28T04:50:38.843656Z",
+    "generatedAt": "2026-09-29T01:14:12.089730Z",
     "source": "Google Sheet 'FA | Webinar Lead Tracker' (X - AUTO tab, Column I 'Call Booked Event' contains 'application' + Column M 'Booking Status' = BOOKED) \u2014 unique emails per Webinar Date",
     "dataWindow": "2026-04-08 to 2026-09-22",
     "totalApplications": 92
@@ -8,7 +8,7 @@
   "applications": [
     {
       "date": "2026-09-22",
-      "applications": 18
+      "applications": 17
     },
     {
       "date": "2026-09-15",
@@ -20,7 +20,7 @@
     },
     {
       "date": "2026-09-01",
-      "applications": 20
+      "applications": 21
     },
     {
       "date": "2026-08-25",
