@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-09-29T02:02:03.953504Z",
+    "generatedAt": "2026-09-29T02:07:27.928913Z",
     "source": "Google Sheet 'CONSOLIDATED' (direct CSV pull), attribution from the sheet's own 'Attribution' column \u2014 no BigQuery, no GHL cross-reference",
     "dataWindow": "2025-11-06 to 2026-09-26"
   },
@@ -70,10 +70,10 @@
     },
     {
       "month": "2026-09",
-      "totalCash": 77477.0,
+      "totalCash": 86477.0,
       "cashFromAds": 51177.0,
-      "cashFromOrganic": 26300.0,
-      "transactionCount": 29
+      "cashFromOrganic": 35300.0,
+      "transactionCount": 30
     }
   ],
   "dailyBreakdown": [
@@ -1333,9 +1333,9 @@
     },
     {
       "date": "2026-09-25",
-      "totalCash": 2200.0,
+      "totalCash": 11200.0,
       "cashFromAds": 200.0,
-      "cashFromOrganic": 2000.0
+      "cashFromOrganic": 11000.0
     },
     {
       "date": "2026-09-26",
@@ -8783,6 +8783,16 @@
       "amount": 2000.0,
       "closer": "Shane Dacosta",
       "mode": "Stripe",
+      "source": "Organic"
+    },
+    {
+      "date": "2026-09-25",
+      "name": "Ryan Robinson",
+      "email": "rj.robbo@gmail.com",
+      "product": "Accelerator Premium",
+      "amount": 9000.0,
+      "closer": "Shane Dacosta",
+      "mode": "EFT",
       "source": "Organic"
     },
     {

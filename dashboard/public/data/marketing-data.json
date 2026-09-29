@@ -1,10 +1,10 @@
 {
   "meta": {
-    "generatedAt": "2026-09-29T02:02:17.531052Z",
+    "generatedAt": "2026-09-29T02:07:41.332010Z",
     "source": "Composite of marketing-performance.json (Meta MCP) / funnel-stages.json (GHL REST API direct via PIT) / masterclass-registrations.json / masterclass-attendance.json / masterclass-applications.json (Google Sheet) / cash-attribution.json (Google Sheet) \u2014 no BigQuery, no MCP dependency for GHL data",
     "dataWindow": "2025-11-06 to 2026-09-29",
     "cacheStatus": "Direct sync via Meta MCP + GHL REST API (PIT) + Google Sheets CSV export",
-    "syncedAt": "2026-09-29T02:02:17.531052Z"
+    "syncedAt": "2026-09-29T02:07:41.332010Z"
   },
   "funnelSnapshot": {
     "generatedAt": "2026-09-29T02:01:23.634822Z",
@@ -3351,9 +3351,9 @@
     },
     {
       "date": "2026-09-25",
-      "totalCash": 2200.0,
+      "totalCash": 11200.0,
       "cashFromAds": 200.0,
-      "cashFromOrganic": 2000.0
+      "cashFromOrganic": 11000.0
     },
     {
       "date": "2026-09-26",
