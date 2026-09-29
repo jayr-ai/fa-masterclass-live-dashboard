@@ -69,13 +69,15 @@ export function MarketingPage() {
   // period, filtered by source. Plain YYYY-MM-DD string comparison — no
   // Date-object/timezone conversion, since both the period bounds and the
   // transaction dates are already Sydney-calendar-date strings.
-  const transactionsInPeriod = transactions.filter((transaction) => {
-    const inPeriod = transaction.date >= resolved.fromStr && transaction.date <= resolved.toStr
-    if (!inPeriod) return false
-    if (sourceFilter === 'all') return true
-    const txSource = transaction.source === 'Paid' ? 'paid' : 'organic'
-    return txSource === sourceFilter
-  })
+  const transactionsInPeriod = transactions
+    .filter((transaction) => {
+      const inPeriod = transaction.date >= resolved.fromStr && transaction.date <= resolved.toStr
+      if (!inPeriod) return false
+      if (sourceFilter === 'all') return true
+      const txSource = transaction.source === 'Paid' ? 'paid' : 'organic'
+      return txSource === sourceFilter
+    })
+    .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0)) // most recent first
 
   const totalTransactionsAmount = transactionsInPeriod.reduce((sum, tx) => sum + tx.amount, 0)
 
@@ -138,6 +140,12 @@ export function MarketingPage() {
   )
     .map(([_, day]) => day)
     .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+
+  // Table display wants most-recent-first, but the chart above needs
+  // ascending order so `.slice(-30)` grabs the most recent 30 days and
+  // renders them left-to-right chronologically — so this is a separate
+  // reversed copy, not a re-sort of dailyBreakdownV2 itself.
+  const dailyBreakdownV2Descending = [...dailyBreakdownV2].reverse()
 
   return (
     <div className="space-y-8">
@@ -394,8 +402,8 @@ export function MarketingPage() {
                 </tr>
               </thead>
               <tbody>
-                {dailyBreakdownV2.length > 0 ? (
-                  dailyBreakdownV2.map((day) => (
+                {dailyBreakdownV2Descending.length > 0 ? (
+                  dailyBreakdownV2Descending.map((day) => (
                     <tr key={day.date} className="border-b border-fa-border/50 hover:bg-fa-surface-2/50">
                       <td className="px-2.5 py-1.5 text-fa-text">{day.date}</td>
                       <td className="px-2.5 py-1.5 text-right text-fa-accent">{formatCurrency(day.paid)}</td>
