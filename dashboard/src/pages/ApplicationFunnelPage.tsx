@@ -22,6 +22,7 @@ import { CATEGORICAL, GRIDLINE, AXIS_MUTED } from '../utils/chartPalette'
 const SHOWED_STAGES = new Set(['Pending Payment', 'Lost', 'Won'])
 const CLOSED_STAGES = new Set(['Won'])
 const TARGET_ROAS = 3.0
+const PIPELINE_STAGE_ORDER = ['Appointment Set', 'Needs To Reschedule', 'No Show', 'Cancelled', 'Pending Payment', 'Lost', 'Won']
 
 type PresetKey = '7d' | '30d' | 'thisMonth' | 'lastMonth' | '90d' | 'allTime' | 'custom'
 
@@ -112,10 +113,13 @@ export function ApplicationFunnelPage() {
   const showed = oppsInRange.filter((o) => SHOWED_STAGES.has(o.stageName)).length
   const closed = oppsInRange.filter((o) => CLOSED_STAGES.has(o.stageName)).length
   const costPerApplication = applications > 0 ? spend / applications : null
-  const costPerBooked = booked > 0 ? spend / booked : null
   const showRate = booked > 0 ? (showed / booked) * 100 : null
   const closeRateOfShowed = showed > 0 ? (closed / showed) * 100 : null
   const closeRateOfApplications = applications > 0 ? (closed / applications) * 100 : null
+  const pipelineStages = PIPELINE_STAGE_ORDER.map((name) => ({
+    label: name,
+    value: oppsInRange.filter((o) => o.stageName === name).length,
+  }))
 
   const emailToEarliestApp = useMemo(() => {
     const map = new Map<string, string>()
@@ -297,13 +301,9 @@ export function ApplicationFunnelPage() {
         </div>
       </div>
 
-      <FunnelBars
-        linkClicks={linkClicks}
-        applications={applications}
-        booked={booked}
-        showed={showed}
-        closed={closed}
-        costPerBooked={costPerBooked}
+      <PipelineStageBars
+        stages={pipelineStages}
+        totalApplications={applications}
         showRate={showRate}
         closeRateOfShowed={closeRateOfShowed}
         closeRateOfApplications={closeRateOfApplications}
@@ -361,9 +361,10 @@ export function ApplicationFunnelPage() {
       <div className="rounded-xl border border-dashed border-fa-border bg-fa-surface/40 p-5 text-xs text-fa-text-faint">
         <div className="mb-2 font-medium uppercase tracking-wide">Data quality</div>
         <ul className="list-inside list-disc space-y-1">
+          <li>This funnel launched 2026-09-01 — ad spend, applications, and sales from before that date are excluded at the source (dropped in the sync scripts, not just hidden by a filter), since they predate this initiative.</li>
           <li>Ad spend: 8 explicit campaign IDs, confirmed 2026-09-30 (see README) — not a name-pattern match.</li>
-          <li>Applications/funnel counts: {formatNumber(opportunities.length)} opportunities in the Accelerator Application Pipeline (GHL REST, all-time).</li>
-          <li>Sales matching: email present in the pipeline AND sale date on/after that contact's earliest application — no product-name filter (Accelerator/Accelerator Premium sells through both this funnel and Masterclass). {formatNumber(totalUniqueMatched)} distinct customers matched all-time.</li>
+          <li>Applications/funnel counts: {formatNumber(opportunities.length)} opportunities in the Accelerator Application Pipeline (GHL REST, since 2026-09-01).</li>
+          <li>Sales matching: email present in the pipeline AND sale date on/after that contact's earliest application — no product-name filter (Accelerator/Accelerator Premium sells through both this funnel and Masterclass). {formatNumber(totalUniqueMatched)} distinct customers matched since launch.</li>
           <li>Projection: remaining-installment estimate uses a total-paid-vs-historical-ceiling proxy, not a real plan-structure table (none exists yet) — see code comments in <code>lib/applicationFunnel/projection.ts</code>. Close lag: {projection.closeLagDays} days ({projection.historicalCloseCount} historical closes used).</li>
           <li>This pipeline has no separate "Applied" or "Showed" stage — every opportunity starts at "Appointment Set" (Applied = Booked), and Showed is inferred as reaching Pending Payment, Lost, or Won.</li>
         </ul>
@@ -429,56 +430,39 @@ function SpendVsRevenueTrend({ cohorts, grain }: { cohorts: ReturnType<typeof bu
   )
 }
 
-function FunnelBars({
-  linkClicks,
-  applications,
-  booked,
-  showed,
-  closed,
-  costPerBooked,
+function PipelineStageBars({
+  stages,
+  totalApplications,
   showRate,
   closeRateOfShowed,
   closeRateOfApplications,
 }: {
-  linkClicks: number
-  applications: number
-  booked: number
-  showed: number
-  closed: number
-  costPerBooked: number | null
+  stages: { label: string; value: number }[]
+  totalApplications: number
   showRate: number | null
   closeRateOfShowed: number | null
   closeRateOfApplications: number | null
 }) {
-  const steps = [
-    { label: 'Link Clicks', value: linkClicks },
-    { label: 'Applications', value: applications },
-    { label: 'Booked', value: booked },
-    { label: 'Showed', value: showed },
-    { label: 'Closed', value: closed },
-  ]
-  const maxVal = Math.max(1, ...steps.map((s) => s.value))
+  const maxVal = Math.max(1, ...stages.map((s) => s.value))
 
   return (
     <div className="rounded-xl border border-fa-border bg-fa-surface p-5">
       <div className="mb-1 text-xs font-medium uppercase tracking-wide text-fa-text-dim">Funnel</div>
       <div className="mb-4 text-[11px] text-fa-text-faint">
-        Applications = Booked in this pipeline (no separate stage). Showed inferred as reaching Pending Payment/Lost/Won.
-        {costPerBooked !== null && ` Cost per Booked: ${formatCurrency(costPerBooked, { exact: true })}.`}
+        Current stage of every application in this range, within the Accelerator Application Pipeline ({formatNumber(totalApplications)} total).
       </div>
       <div className="space-y-2.5">
-        {steps.map((s, i) => {
+        {stages.map((s) => {
           const pct = Math.max(4, (s.value / maxVal) * 100)
-          const prevValue = i > 0 ? steps[i - 1].value : null
-          const stepPct = prevValue && prevValue > 0 ? (s.value / prevValue) * 100 : null
+          const shareOfTotal = totalApplications > 0 ? (s.value / totalApplications) * 100 : null
           return (
             <div key={s.label} className="flex items-center gap-3">
-              <div className="w-28 shrink-0 truncate text-sm text-fa-text-dim">{s.label}</div>
+              <div className="w-40 shrink-0 truncate text-sm text-fa-text-dim">{s.label}</div>
               <div className="relative h-6 flex-1 overflow-hidden rounded bg-fa-surface-2">
                 <div className="h-full rounded bg-gradient-to-r from-fa-accent-dim to-fa-accent" style={{ width: `${pct}%` }} />
               </div>
               <div className="w-16 shrink-0 text-right text-sm font-medium text-fa-text">{formatNumber(s.value)}</div>
-              <div className="w-14 shrink-0 text-right text-xs text-fa-text-faint">{stepPct !== null ? formatPct(stepPct) : ''}</div>
+              <div className="w-14 shrink-0 text-right text-xs text-fa-text-faint">{shareOfTotal !== null ? formatPct(shareOfTotal) : ''}</div>
             </div>
           )
         })}
@@ -532,7 +516,7 @@ function CohortTable({ rows, grain }: { rows: ReturnType<typeof buildCohorts>; g
     <div className="rounded-xl border border-fa-border bg-fa-surface p-5">
       <div className="mb-1 text-xs font-medium uppercase tracking-wide text-fa-text-dim">
         Cohort Table
-        <span className="ml-2 normal-case text-fa-text-faint">— by application {grain}, all-time history, not affected by the date range above</span>
+        <span className="ml-2 normal-case text-fa-text-faint">— by application {grain}, since launch (2026-09-01), not affected by the date range above</span>
       </div>
       <div className="max-h-96 overflow-y-auto">
         <table className="w-full text-xs">

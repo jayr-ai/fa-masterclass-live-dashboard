@@ -74,6 +74,16 @@ funnel** from Masterclass, with no webinar date. Grouped by application
 cohort (week/month the GHL opportunity was created) instead. **FA only —
 this tab does not exist on Heart Smart's dashboard.**
 
+**Launch date floor**: the funnel itself launched **2026-09-01**, per user
+decision. The GHL pipeline it reads from (`Accelerator Application
+Pipeline`) pre-dates the funnel by a year — it has ~1,000 opportunities back
+to Sep 2025 from unrelated prior use — so `FUNNEL_START_DATE = "2026-09-01"`
+in both `fetch_application_funnel.py` and `build_application_funnel_ad_spend.py`
+drops anything before that date **at fetch time**, not just via a frontend
+filter. This keeps "All time"/cohort views honest instead of diluting them
+with a year of unrelated history. If the funnel's actual launch date is ever
+revised, update that constant in both scripts and re-run.
+
 **Data sources**:
 - Meta Ads (`act_1185223312884959`), scoped to **8 explicit campaign IDs**
   (not a name pattern — campaign naming across this account's history is
@@ -110,6 +120,14 @@ this tab does not exist on Heart Smart's dashboard.**
   through both Masterclass and this funnel, so product name can't
   distinguish them — the GHL pipeline membership is the only reliable
   signal (per user decision 2026-09-30).
+
+**Funnel section (UI)**: shows the live count of applications at each of the
+7 Accelerator Application Pipeline stages (Appointment Set, Needs To
+Reschedule, No Show, Cancelled, Pending Payment, Lost, Won) for opportunities
+created within the selected date range — a direct read of GHL's own pipeline
+stages, not the derived Link Clicks → Applications → Booked → Showed → Closed
+metric funnel from the original build spec (per user decision 2026-09-30;
+Link Clicks itself is still shown in the Ad Performance KPI row above).
 
 **Projection module** (`dashboard/src/lib/applicationFunnel/projection.ts`):
 computes Cash/Contracted/Projected ROAS per the spec's Section 7 formulas,

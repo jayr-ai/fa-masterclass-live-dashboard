@@ -51,6 +51,13 @@ LOCATION_ID = "ZwP47P1XZZ8TSazVZMxc"
 PIPELINE_ID = "o3UfP72baKpNIhXMW2oV"
 PIPELINE_NAME = "Accelerator Application Pipeline"
 
+# This GHL pipeline pre-dates the Application Funnel initiative (opportunities
+# in it go back to Sep 2025) — the funnel itself only launched 2026-09-01, per
+# user decision 2026-09-30. Everything before this date is unrelated history,
+# not part of this funnel's story, so it's dropped at fetch time rather than
+# just hidden by a frontend filter.
+FUNNEL_START_DATE = "2026-09-01"
+
 # Fetched live via `list-stages` on 2026-09-30.
 STAGE_IDS: dict[str, str] = {
     "Appointment Set": "48b46d82-6220-4961-91fb-99f5d52e8b9c",
@@ -132,6 +139,9 @@ def fetch_all_opportunities() -> list[dict]:
             break
 
         for o in opps:
+            created_at = o.get("createdAt") or ""
+            if created_at[:10] < FUNNEL_START_DATE:
+                continue
             contact = o.get("contact") or {}
             attributions = o.get("attributions") or []
             attr = attributions[0] if attributions else {}

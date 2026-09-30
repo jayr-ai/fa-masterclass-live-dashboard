@@ -35,6 +35,12 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 OUT_PATH = REPO_ROOT / "dashboard" / "public" / "data" / "application-funnel-ad-spend.json"
 
+# The Application Funnel initiative launched 2026-09-01 (per user decision
+# 2026-09-30) — several of the 8 campaigns below ran earlier for other
+# purposes, so spend before this date isn't part of the funnel's story and
+# is dropped here rather than just hidden by a frontend filter.
+FUNNEL_START_DATE = "2026-09-01"
+
 CAMPAIGN_NAMES: dict[str, str] = {
     "120255384275490285": "FA | Submit Application | VSL Funnel | Mixed Creatives | Mixed Audiences",
     "120255281254990285": "FA | SubmitApplication | Optin Funnel | 10k-Guarantee | Mixed Audiences",
@@ -59,6 +65,8 @@ def build(raw_rows: list[dict]) -> dict:
         cid = r.get("id")
         if cid not in CAMPAIGN_NAMES:
             continue  # not one of the 8 confirmed campaigns — skip
+        if r["date_start"] < FUNNEL_START_DATE:
+            continue  # before the funnel's 2026-09-01 launch — not its spend
         key = (cid, r["date_start"])
         by_campaign_date[key] = {
             "campaignId": cid,
