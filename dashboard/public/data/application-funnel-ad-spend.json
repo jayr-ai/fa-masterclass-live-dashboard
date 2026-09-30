@@ -1,0 +1,1183 @@
+{
+  "meta": {
+    "generatedAt": "2026-09-30T01:46:36.278551Z",
+    "source": "Meta MCP direct pull (act_1185223312884959), campaign-level, scoped to 8 confirmed Application Funnel campaigns \u2014 no BigQuery",
+    "campaignFilter": "Explicit campaign ID list, confirmed by user 2026-09-30 (naming alone is not reliable across this account's history)",
+    "campaignIds": [
+      "120255384275490285",
+      "120255281254990285",
+      "120250367962050285",
+      "120252512362330285",
+      "120252123422660285",
+      "120251493796750285",
+      "120255291772900285",
+      "120255356743120285"
+    ],
+    "dataWindow": "2026-06-04 to 2026-09-30",
+    "totalDays": 64,
+    "totalSpend": 40477.31
+  },
+  "byCampaignDaily": [
+    {
+      "campaignId": "120250367962050285",
+      "campaignName": "PUR | FA | Application Funnel | Purchases",
+      "date": "2026-06-04",
+      "spend": 214.89,
+      "impressions": 2961,
+      "linkClicks": 36,
+      "leads": 2
+    },
+    {
+      "campaignId": "120250367962050285",
+      "campaignName": "PUR | FA | Application Funnel | Purchases",
+      "date": "2026-06-05",
+      "spend": 275.87,
+      "impressions": 3442,
+      "linkClicks": 50,
+      "leads": 1
+    },
+    {
+      "campaignId": "120250367962050285",
+      "campaignName": "PUR | FA | Application Funnel | Purchases",
+      "date": "2026-06-06",
+      "spend": 289.34,
+      "impressions": 4600,
+      "linkClicks": 93,
+      "leads": 3
+    },
+    {
+      "campaignId": "120250367962050285",
+      "campaignName": "PUR | FA | Application Funnel | Purchases",
+      "date": "2026-06-07",
+      "spend": 347.59,
+      "impressions": 6296,
+      "linkClicks": 109,
+      "leads": 2
+    },
+    {
+      "campaignId": "120250367962050285",
+      "campaignName": "PUR | FA | Application Funnel | Purchases",
+      "date": "2026-06-08",
+      "spend": 287.19,
+      "impressions": 4247,
+      "linkClicks": 64,
+      "leads": 1
+    },
+    {
+      "campaignId": "120250367962050285",
+      "campaignName": "PUR | FA | Application Funnel | Purchases",
+      "date": "2026-06-09",
+      "spend": 187.03,
+      "impressions": 3699,
+      "linkClicks": 68,
+      "leads": 0
+    },
+    {
+      "campaignId": "120250367962050285",
+      "campaignName": "PUR | FA | Application Funnel | Purchases",
+      "date": "2026-06-10",
+      "spend": 213.72,
+      "impressions": 3800,
+      "linkClicks": 60,
+      "leads": 2
+    },
+    {
+      "campaignId": "120250367962050285",
+      "campaignName": "PUR | FA | Application Funnel | Purchases",
+      "date": "2026-06-11",
+      "spend": 238.01,
+      "impressions": 4081,
+      "linkClicks": 37,
+      "leads": 1
+    },
+    {
+      "campaignId": "120250367962050285",
+      "campaignName": "PUR | FA | Application Funnel | Purchases",
+      "date": "2026-06-12",
+      "spend": 367.4,
+      "impressions": 5980,
+      "linkClicks": 94,
+      "leads": 0
+    },
+    {
+      "campaignId": "120250367962050285",
+      "campaignName": "PUR | FA | Application Funnel | Purchases",
+      "date": "2026-06-13",
+      "spend": 410.22,
+      "impressions": 5596,
+      "linkClicks": 75,
+      "leads": 1
+    },
+    {
+      "campaignId": "120250367962050285",
+      "campaignName": "PUR | FA | Application Funnel | Purchases",
+      "date": "2026-06-14",
+      "spend": 214.6,
+      "impressions": 2423,
+      "linkClicks": 35,
+      "leads": 1
+    },
+    {
+      "campaignId": "120250367962050285",
+      "campaignName": "PUR | FA | Application Funnel | Purchases",
+      "date": "2026-06-16",
+      "spend": 418.02,
+      "impressions": 5214,
+      "linkClicks": 83,
+      "leads": 1
+    },
+    {
+      "campaignId": "120250367962050285",
+      "campaignName": "PUR | FA | Application Funnel | Purchases",
+      "date": "2026-06-17",
+      "spend": 731.27,
+      "impressions": 10228,
+      "linkClicks": 136,
+      "leads": 2
+    },
+    {
+      "campaignId": "120251493796750285",
+      "campaignName": "Ugly Ads | FA | Broad 20-50 | Application Funnel",
+      "date": "2026-06-17",
+      "spend": 7.7,
+      "impressions": 287,
+      "linkClicks": 4,
+      "leads": 0
+    },
+    {
+      "campaignId": "120250367962050285",
+      "campaignName": "PUR | FA | Application Funnel | Purchases",
+      "date": "2026-06-18",
+      "spend": 904.0,
+      "impressions": 12269,
+      "linkClicks": 184,
+      "leads": 6
+    },
+    {
+      "campaignId": "120250367962050285",
+      "campaignName": "PUR | FA | Application Funnel | Purchases",
+      "date": "2026-06-19",
+      "spend": 607.88,
+      "impressions": 7480,
+      "linkClicks": 129,
+      "leads": 4
+    },
+    {
+      "campaignId": "120250367962050285",
+      "campaignName": "PUR | FA | Application Funnel | Purchases",
+      "date": "2026-06-20",
+      "spend": 1401.06,
+      "impressions": 14412,
+      "linkClicks": 266,
+      "leads": 12
+    },
+    {
+      "campaignId": "120250367962050285",
+      "campaignName": "PUR | FA | Application Funnel | Purchases",
+      "date": "2026-06-21",
+      "spend": 1380.66,
+      "impressions": 13581,
+      "linkClicks": 196,
+      "leads": 3
+    },
+    {
+      "campaignId": "120250367962050285",
+      "campaignName": "PUR | FA | Application Funnel | Purchases",
+      "date": "2026-06-22",
+      "spend": 681.1,
+      "impressions": 7048,
+      "linkClicks": 130,
+      "leads": 5
+    },
+    {
+      "campaignId": "120250367962050285",
+      "campaignName": "PUR | FA | Application Funnel | Purchases",
+      "date": "2026-06-23",
+      "spend": 1062.93,
+      "impressions": 14005,
+      "linkClicks": 203,
+      "leads": 1
+    },
+    {
+      "campaignId": "120250367962050285",
+      "campaignName": "PUR | FA | Application Funnel | Purchases",
+      "date": "2026-06-24",
+      "spend": 1357.12,
+      "impressions": 17157,
+      "linkClicks": 244,
+      "leads": 6
+    },
+    {
+      "campaignId": "120250367962050285",
+      "campaignName": "PUR | FA | Application Funnel | Purchases",
+      "date": "2026-06-25",
+      "spend": 1434.25,
+      "impressions": 19621,
+      "linkClicks": 260,
+      "leads": 6
+    },
+    {
+      "campaignId": "120250367962050285",
+      "campaignName": "PUR | FA | Application Funnel | Purchases",
+      "date": "2026-06-26",
+      "spend": 1441.47,
+      "impressions": 19908,
+      "linkClicks": 236,
+      "leads": 9
+    },
+    {
+      "campaignId": "120252123422660285",
+      "campaignName": "Winner Ad | FA | Application Funnel | Schedule",
+      "date": "2026-06-26",
+      "spend": 154.54,
+      "impressions": 7103,
+      "linkClicks": 136,
+      "leads": 2
+    },
+    {
+      "campaignId": "120250367962050285",
+      "campaignName": "PUR | FA | Application Funnel | Purchases",
+      "date": "2026-06-27",
+      "spend": 1663.1,
+      "impressions": 18120,
+      "linkClicks": 249,
+      "leads": 24
+    },
+    {
+      "campaignId": "120252123422660285",
+      "campaignName": "Winner Ad | FA | Application Funnel | Schedule",
+      "date": "2026-06-27",
+      "spend": 340.59,
+      "impressions": 14104,
+      "linkClicks": 195,
+      "leads": 5
+    },
+    {
+      "campaignId": "120250367962050285",
+      "campaignName": "PUR | FA | Application Funnel | Purchases",
+      "date": "2026-06-28",
+      "spend": 1253.18,
+      "impressions": 12679,
+      "linkClicks": 177,
+      "leads": 12
+    },
+    {
+      "campaignId": "120252123422660285",
+      "campaignName": "Winner Ad | FA | Application Funnel | Schedule",
+      "date": "2026-06-28",
+      "spend": 349.72,
+      "impressions": 13045,
+      "linkClicks": 234,
+      "leads": 9
+    },
+    {
+      "campaignId": "120250367962050285",
+      "campaignName": "PUR | FA | Application Funnel | Purchases",
+      "date": "2026-06-29",
+      "spend": 1028.67,
+      "impressions": 13252,
+      "linkClicks": 144,
+      "leads": 9
+    },
+    {
+      "campaignId": "120252123422660285",
+      "campaignName": "Winner Ad | FA | Application Funnel | Schedule",
+      "date": "2026-06-29",
+      "spend": 214.26,
+      "impressions": 10915,
+      "linkClicks": 109,
+      "leads": 1
+    },
+    {
+      "campaignId": "120250367962050285",
+      "campaignName": "PUR | FA | Application Funnel | Purchases",
+      "date": "2026-06-30",
+      "spend": 1522.79,
+      "impressions": 16497,
+      "linkClicks": 246,
+      "leads": 14
+    },
+    {
+      "campaignId": "120252123422660285",
+      "campaignName": "Winner Ad | FA | Application Funnel | Schedule",
+      "date": "2026-06-30",
+      "spend": 208.84,
+      "impressions": 9316,
+      "linkClicks": 120,
+      "leads": 3
+    },
+    {
+      "campaignId": "120250367962050285",
+      "campaignName": "PUR | FA | Application Funnel | Purchases",
+      "date": "2026-07-01",
+      "spend": 931.06,
+      "impressions": 12051,
+      "linkClicks": 181,
+      "leads": 9
+    },
+    {
+      "campaignId": "120252123422660285",
+      "campaignName": "Winner Ad | FA | Application Funnel | Schedule",
+      "date": "2026-07-01",
+      "spend": 113.36,
+      "impressions": 4302,
+      "linkClicks": 55,
+      "leads": 4
+    },
+    {
+      "campaignId": "120252512362330285",
+      "campaignName": "Relaunch | AUS | PUR | Application Funnel",
+      "date": "2026-07-01",
+      "spend": 431.35,
+      "impressions": 6242,
+      "linkClicks": 76,
+      "leads": 4
+    },
+    {
+      "campaignId": "120252512362330285",
+      "campaignName": "Relaunch | AUS | PUR | Application Funnel",
+      "date": "2026-07-02",
+      "spend": 882.48,
+      "impressions": 15783,
+      "linkClicks": 209,
+      "leads": 14
+    },
+    {
+      "campaignId": "120252512362330285",
+      "campaignName": "Relaunch | AUS | PUR | Application Funnel",
+      "date": "2026-07-03",
+      "spend": 539.71,
+      "impressions": 10662,
+      "linkClicks": 111,
+      "leads": 6
+    },
+    {
+      "campaignId": "120252512362330285",
+      "campaignName": "Relaunch | AUS | PUR | Application Funnel",
+      "date": "2026-07-04",
+      "spend": 715.56,
+      "impressions": 17370,
+      "linkClicks": 213,
+      "leads": 9
+    },
+    {
+      "campaignId": "120252512362330285",
+      "campaignName": "Relaunch | AUS | PUR | Application Funnel",
+      "date": "2026-07-05",
+      "spend": 778.38,
+      "impressions": 18629,
+      "linkClicks": 281,
+      "leads": 12
+    },
+    {
+      "campaignId": "120252512362330285",
+      "campaignName": "Relaunch | AUS | PUR | Application Funnel",
+      "date": "2026-07-06",
+      "spend": 477.99,
+      "impressions": 15708,
+      "linkClicks": 184,
+      "leads": 5
+    },
+    {
+      "campaignId": "120252512362330285",
+      "campaignName": "Relaunch | AUS | PUR | Application Funnel",
+      "date": "2026-07-07",
+      "spend": 622.44,
+      "impressions": 20339,
+      "linkClicks": 274,
+      "leads": 7
+    },
+    {
+      "campaignId": "120252512362330285",
+      "campaignName": "Relaunch | AUS | PUR | Application Funnel",
+      "date": "2026-07-08",
+      "spend": 1098.38,
+      "impressions": 23246,
+      "linkClicks": 275,
+      "leads": 19
+    },
+    {
+      "campaignId": "120252512362330285",
+      "campaignName": "Relaunch | AUS | PUR | Application Funnel",
+      "date": "2026-07-09",
+      "spend": 565.12,
+      "impressions": 9220,
+      "linkClicks": 115,
+      "leads": 5
+    },
+    {
+      "campaignId": "120252512362330285",
+      "campaignName": "Relaunch | AUS | PUR | Application Funnel",
+      "date": "2026-07-10",
+      "spend": 761.0,
+      "impressions": 11077,
+      "linkClicks": 174,
+      "leads": 22
+    },
+    {
+      "campaignId": "120252512362330285",
+      "campaignName": "Relaunch | AUS | PUR | Application Funnel",
+      "date": "2026-07-11",
+      "spend": 752.22,
+      "impressions": 10505,
+      "linkClicks": 172,
+      "leads": 15
+    },
+    {
+      "campaignId": "120252512362330285",
+      "campaignName": "Relaunch | AUS | PUR | Application Funnel",
+      "date": "2026-07-12",
+      "spend": 785.75,
+      "impressions": 13061,
+      "linkClicks": 209,
+      "leads": 23
+    },
+    {
+      "campaignId": "120252512362330285",
+      "campaignName": "Relaunch | AUS | PUR | Application Funnel",
+      "date": "2026-07-13",
+      "spend": 644.06,
+      "impressions": 15470,
+      "linkClicks": 185,
+      "leads": 15
+    },
+    {
+      "campaignId": "120252512362330285",
+      "campaignName": "Relaunch | AUS | PUR | Application Funnel",
+      "date": "2026-07-14",
+      "spend": 331.62,
+      "impressions": 8944,
+      "linkClicks": 87,
+      "leads": 3
+    },
+    {
+      "campaignId": "120252512362330285",
+      "campaignName": "Relaunch | AUS | PUR | Application Funnel",
+      "date": "2026-07-15",
+      "spend": 376.93,
+      "impressions": 10320,
+      "linkClicks": 123,
+      "leads": 2
+    },
+    {
+      "campaignId": "120252512362330285",
+      "campaignName": "Relaunch | AUS | PUR | Application Funnel",
+      "date": "2026-07-16",
+      "spend": 406.53,
+      "impressions": 9093,
+      "linkClicks": 92,
+      "leads": 2
+    },
+    {
+      "campaignId": "120252512362330285",
+      "campaignName": "Relaunch | AUS | PUR | Application Funnel",
+      "date": "2026-07-17",
+      "spend": 380.16,
+      "impressions": 8082,
+      "linkClicks": 86,
+      "leads": 5
+    },
+    {
+      "campaignId": "120252512362330285",
+      "campaignName": "Relaunch | AUS | PUR | Application Funnel",
+      "date": "2026-07-18",
+      "spend": 224.03,
+      "impressions": 5186,
+      "linkClicks": 48,
+      "leads": 3
+    },
+    {
+      "campaignId": "120252512362330285",
+      "campaignName": "Relaunch | AUS | PUR | Application Funnel",
+      "date": "2026-07-19",
+      "spend": 249.15,
+      "impressions": 5374,
+      "linkClicks": 72,
+      "leads": 0
+    },
+    {
+      "campaignId": "120252512362330285",
+      "campaignName": "Relaunch | AUS | PUR | Application Funnel",
+      "date": "2026-07-20",
+      "spend": 269.84,
+      "impressions": 5573,
+      "linkClicks": 90,
+      "leads": 2
+    },
+    {
+      "campaignId": "120252512362330285",
+      "campaignName": "Relaunch | AUS | PUR | Application Funnel",
+      "date": "2026-07-21",
+      "spend": 259.63,
+      "impressions": 5365,
+      "linkClicks": 55,
+      "leads": 0
+    },
+    {
+      "campaignId": "120252512362330285",
+      "campaignName": "Relaunch | AUS | PUR | Application Funnel",
+      "date": "2026-07-22",
+      "spend": 266.77,
+      "impressions": 5096,
+      "linkClicks": 57,
+      "leads": 3
+    },
+    {
+      "campaignId": "120252512362330285",
+      "campaignName": "Relaunch | AUS | PUR | Application Funnel",
+      "date": "2026-07-23",
+      "spend": 247.26,
+      "impressions": 3858,
+      "linkClicks": 51,
+      "leads": 7
+    },
+    {
+      "campaignId": "120252512362330285",
+      "campaignName": "Relaunch | AUS | PUR | Application Funnel",
+      "date": "2026-07-24",
+      "spend": 284.84,
+      "impressions": 4541,
+      "linkClicks": 54,
+      "leads": 6
+    },
+    {
+      "campaignId": "120252512362330285",
+      "campaignName": "Relaunch | AUS | PUR | Application Funnel",
+      "date": "2026-07-25",
+      "spend": 172.5,
+      "impressions": 3361,
+      "linkClicks": 26,
+      "leads": 0
+    },
+    {
+      "campaignId": "120252512362330285",
+      "campaignName": "Relaunch | AUS | PUR | Application Funnel",
+      "date": "2026-07-26",
+      "spend": 298.54,
+      "impressions": 4777,
+      "linkClicks": 61,
+      "leads": 5
+    },
+    {
+      "campaignId": "120252512362330285",
+      "campaignName": "Relaunch | AUS | PUR | Application Funnel",
+      "date": "2026-07-27",
+      "spend": 264.0,
+      "impressions": 4906,
+      "linkClicks": 78,
+      "leads": 4
+    },
+    {
+      "campaignId": "120252512362330285",
+      "campaignName": "Relaunch | AUS | PUR | Application Funnel",
+      "date": "2026-07-28",
+      "spend": 56.23,
+      "impressions": 1001,
+      "linkClicks": 10,
+      "leads": 2
+    },
+    {
+      "campaignId": "120252512362330285",
+      "campaignName": "Relaunch | AUS | PUR | Application Funnel",
+      "date": "2026-07-29",
+      "spend": 59.96,
+      "impressions": 922,
+      "linkClicks": 7,
+      "leads": 0
+    },
+    {
+      "campaignId": "120252512362330285",
+      "campaignName": "Relaunch | AUS | PUR | Application Funnel",
+      "date": "2026-07-30",
+      "spend": 39.83,
+      "impressions": 763,
+      "linkClicks": 7,
+      "leads": 0
+    },
+    {
+      "campaignId": "120255281254990285",
+      "campaignName": "FA | SubmitApplication | Optin Funnel | 10k-Guarantee | Mixed Audiences",
+      "date": "2026-09-23",
+      "spend": 270.16,
+      "impressions": 3345,
+      "linkClicks": 39,
+      "leads": 3
+    },
+    {
+      "campaignId": "120255291772900285",
+      "campaignName": "FA | MOF | Submit Application | VSL Funnel | Mixed Creatives",
+      "date": "2026-09-23",
+      "spend": 236.74,
+      "impressions": 4122,
+      "linkClicks": 192,
+      "leads": 0
+    },
+    {
+      "campaignId": "120255281254990285",
+      "campaignName": "FA | SubmitApplication | Optin Funnel | 10k-Guarantee | Mixed Audiences",
+      "date": "2026-09-24",
+      "spend": 552.93,
+      "impressions": 5230,
+      "linkClicks": 85,
+      "leads": 8
+    },
+    {
+      "campaignId": "120255291772900285",
+      "campaignName": "FA | MOF | Submit Application | VSL Funnel | Mixed Creatives",
+      "date": "2026-09-24",
+      "spend": 341.04,
+      "impressions": 1604,
+      "linkClicks": 33,
+      "leads": 1
+    },
+    {
+      "campaignId": "120255281254990285",
+      "campaignName": "FA | SubmitApplication | Optin Funnel | 10k-Guarantee | Mixed Audiences",
+      "date": "2026-09-25",
+      "spend": 624.53,
+      "impressions": 5920,
+      "linkClicks": 80,
+      "leads": 4
+    },
+    {
+      "campaignId": "120255291772900285",
+      "campaignName": "FA | MOF | Submit Application | VSL Funnel | Mixed Creatives",
+      "date": "2026-09-25",
+      "spend": 362.92,
+      "impressions": 1616,
+      "linkClicks": 53,
+      "leads": 1
+    },
+    {
+      "campaignId": "120255281254990285",
+      "campaignName": "FA | SubmitApplication | Optin Funnel | 10k-Guarantee | Mixed Audiences",
+      "date": "2026-09-26",
+      "spend": 241.48,
+      "impressions": 2477,
+      "linkClicks": 37,
+      "leads": 1
+    },
+    {
+      "campaignId": "120255291772900285",
+      "campaignName": "FA | MOF | Submit Application | VSL Funnel | Mixed Creatives",
+      "date": "2026-09-26",
+      "spend": 99.79,
+      "impressions": 662,
+      "linkClicks": 20,
+      "leads": 0
+    },
+    {
+      "campaignId": "120255281254990285",
+      "campaignName": "FA | SubmitApplication | Optin Funnel | 10k-Guarantee | Mixed Audiences",
+      "date": "2026-09-27",
+      "spend": 607.74,
+      "impressions": 6082,
+      "linkClicks": 91,
+      "leads": 4
+    },
+    {
+      "campaignId": "120255281254990285",
+      "campaignName": "FA | SubmitApplication | Optin Funnel | 10k-Guarantee | Mixed Audiences",
+      "date": "2026-09-28",
+      "spend": 706.98,
+      "impressions": 6039,
+      "linkClicks": 109,
+      "leads": 13
+    },
+    {
+      "campaignId": "120255384275490285",
+      "campaignName": "FA | Submit Application | VSL Funnel | Mixed Creatives | Mixed Audiences",
+      "date": "2026-09-28",
+      "spend": 39.94,
+      "impressions": 598,
+      "linkClicks": 6,
+      "leads": 0
+    },
+    {
+      "campaignId": "120255281254990285",
+      "campaignName": "FA | SubmitApplication | Optin Funnel | 10k-Guarantee | Mixed Audiences",
+      "date": "2026-09-29",
+      "spend": 190.92,
+      "impressions": 3547,
+      "linkClicks": 45,
+      "leads": 2
+    },
+    {
+      "campaignId": "120255384275490285",
+      "campaignName": "FA | Submit Application | VSL Funnel | Mixed Creatives | Mixed Audiences",
+      "date": "2026-09-29",
+      "spend": 451.43,
+      "impressions": 5374,
+      "linkClicks": 44,
+      "leads": 3
+    },
+    {
+      "campaignId": "120255281254990285",
+      "campaignName": "FA | SubmitApplication | Optin Funnel | 10k-Guarantee | Mixed Audiences",
+      "date": "2026-09-30",
+      "spend": 128.25,
+      "impressions": 2056,
+      "linkClicks": 28,
+      "leads": 2
+    },
+    {
+      "campaignId": "120255384275490285",
+      "campaignName": "FA | Submit Application | VSL Funnel | Mixed Creatives | Mixed Audiences",
+      "date": "2026-09-30",
+      "spend": 126.77,
+      "impressions": 911,
+      "linkClicks": 11,
+      "leads": 0
+    }
+  ],
+  "dailyTotal": [
+    {
+      "date": "2026-06-04",
+      "spend": 214.89,
+      "impressions": 2961,
+      "linkClicks": 36,
+      "leads": 2
+    },
+    {
+      "date": "2026-06-05",
+      "spend": 275.87,
+      "impressions": 3442,
+      "linkClicks": 50,
+      "leads": 1
+    },
+    {
+      "date": "2026-06-06",
+      "spend": 289.34,
+      "impressions": 4600,
+      "linkClicks": 93,
+      "leads": 3
+    },
+    {
+      "date": "2026-06-07",
+      "spend": 347.59,
+      "impressions": 6296,
+      "linkClicks": 109,
+      "leads": 2
+    },
+    {
+      "date": "2026-06-08",
+      "spend": 287.19,
+      "impressions": 4247,
+      "linkClicks": 64,
+      "leads": 1
+    },
+    {
+      "date": "2026-06-09",
+      "spend": 187.03,
+      "impressions": 3699,
+      "linkClicks": 68,
+      "leads": 0
+    },
+    {
+      "date": "2026-06-10",
+      "spend": 213.72,
+      "impressions": 3800,
+      "linkClicks": 60,
+      "leads": 2
+    },
+    {
+      "date": "2026-06-11",
+      "spend": 238.01,
+      "impressions": 4081,
+      "linkClicks": 37,
+      "leads": 1
+    },
+    {
+      "date": "2026-06-12",
+      "spend": 367.4,
+      "impressions": 5980,
+      "linkClicks": 94,
+      "leads": 0
+    },
+    {
+      "date": "2026-06-13",
+      "spend": 410.22,
+      "impressions": 5596,
+      "linkClicks": 75,
+      "leads": 1
+    },
+    {
+      "date": "2026-06-14",
+      "spend": 214.6,
+      "impressions": 2423,
+      "linkClicks": 35,
+      "leads": 1
+    },
+    {
+      "date": "2026-06-16",
+      "spend": 418.02,
+      "impressions": 5214,
+      "linkClicks": 83,
+      "leads": 1
+    },
+    {
+      "date": "2026-06-17",
+      "spend": 738.97,
+      "impressions": 10515,
+      "linkClicks": 140,
+      "leads": 2
+    },
+    {
+      "date": "2026-06-18",
+      "spend": 904.0,
+      "impressions": 12269,
+      "linkClicks": 184,
+      "leads": 6
+    },
+    {
+      "date": "2026-06-19",
+      "spend": 607.88,
+      "impressions": 7480,
+      "linkClicks": 129,
+      "leads": 4
+    },
+    {
+      "date": "2026-06-20",
+      "spend": 1401.06,
+      "impressions": 14412,
+      "linkClicks": 266,
+      "leads": 12
+    },
+    {
+      "date": "2026-06-21",
+      "spend": 1380.66,
+      "impressions": 13581,
+      "linkClicks": 196,
+      "leads": 3
+    },
+    {
+      "date": "2026-06-22",
+      "spend": 681.1,
+      "impressions": 7048,
+      "linkClicks": 130,
+      "leads": 5
+    },
+    {
+      "date": "2026-06-23",
+      "spend": 1062.93,
+      "impressions": 14005,
+      "linkClicks": 203,
+      "leads": 1
+    },
+    {
+      "date": "2026-06-24",
+      "spend": 1357.12,
+      "impressions": 17157,
+      "linkClicks": 244,
+      "leads": 6
+    },
+    {
+      "date": "2026-06-25",
+      "spend": 1434.25,
+      "impressions": 19621,
+      "linkClicks": 260,
+      "leads": 6
+    },
+    {
+      "date": "2026-06-26",
+      "spend": 1596.01,
+      "impressions": 27011,
+      "linkClicks": 372,
+      "leads": 11
+    },
+    {
+      "date": "2026-06-27",
+      "spend": 2003.69,
+      "impressions": 32224,
+      "linkClicks": 444,
+      "leads": 29
+    },
+    {
+      "date": "2026-06-28",
+      "spend": 1602.9,
+      "impressions": 25724,
+      "linkClicks": 411,
+      "leads": 21
+    },
+    {
+      "date": "2026-06-29",
+      "spend": 1242.93,
+      "impressions": 24167,
+      "linkClicks": 253,
+      "leads": 10
+    },
+    {
+      "date": "2026-06-30",
+      "spend": 1731.63,
+      "impressions": 25813,
+      "linkClicks": 366,
+      "leads": 17
+    },
+    {
+      "date": "2026-07-01",
+      "spend": 1475.77,
+      "impressions": 22595,
+      "linkClicks": 312,
+      "leads": 17
+    },
+    {
+      "date": "2026-07-02",
+      "spend": 882.48,
+      "impressions": 15783,
+      "linkClicks": 209,
+      "leads": 14
+    },
+    {
+      "date": "2026-07-03",
+      "spend": 539.71,
+      "impressions": 10662,
+      "linkClicks": 111,
+      "leads": 6
+    },
+    {
+      "date": "2026-07-04",
+      "spend": 715.56,
+      "impressions": 17370,
+      "linkClicks": 213,
+      "leads": 9
+    },
+    {
+      "date": "2026-07-05",
+      "spend": 778.38,
+      "impressions": 18629,
+      "linkClicks": 281,
+      "leads": 12
+    },
+    {
+      "date": "2026-07-06",
+      "spend": 477.99,
+      "impressions": 15708,
+      "linkClicks": 184,
+      "leads": 5
+    },
+    {
+      "date": "2026-07-07",
+      "spend": 622.44,
+      "impressions": 20339,
+      "linkClicks": 274,
+      "leads": 7
+    },
+    {
+      "date": "2026-07-08",
+      "spend": 1098.38,
+      "impressions": 23246,
+      "linkClicks": 275,
+      "leads": 19
+    },
+    {
+      "date": "2026-07-09",
+      "spend": 565.12,
+      "impressions": 9220,
+      "linkClicks": 115,
+      "leads": 5
+    },
+    {
+      "date": "2026-07-10",
+      "spend": 761.0,
+      "impressions": 11077,
+      "linkClicks": 174,
+      "leads": 22
+    },
+    {
+      "date": "2026-07-11",
+      "spend": 752.22,
+      "impressions": 10505,
+      "linkClicks": 172,
+      "leads": 15
+    },
+    {
+      "date": "2026-07-12",
+      "spend": 785.75,
+      "impressions": 13061,
+      "linkClicks": 209,
+      "leads": 23
+    },
+    {
+      "date": "2026-07-13",
+      "spend": 644.06,
+      "impressions": 15470,
+      "linkClicks": 185,
+      "leads": 15
+    },
+    {
+      "date": "2026-07-14",
+      "spend": 331.62,
+      "impressions": 8944,
+      "linkClicks": 87,
+      "leads": 3
+    },
+    {
+      "date": "2026-07-15",
+      "spend": 376.93,
+      "impressions": 10320,
+      "linkClicks": 123,
+      "leads": 2
+    },
+    {
+      "date": "2026-07-16",
+      "spend": 406.53,
+      "impressions": 9093,
+      "linkClicks": 92,
+      "leads": 2
+    },
+    {
+      "date": "2026-07-17",
+      "spend": 380.16,
+      "impressions": 8082,
+      "linkClicks": 86,
+      "leads": 5
+    },
+    {
+      "date": "2026-07-18",
+      "spend": 224.03,
+      "impressions": 5186,
+      "linkClicks": 48,
+      "leads": 3
+    },
+    {
+      "date": "2026-07-19",
+      "spend": 249.15,
+      "impressions": 5374,
+      "linkClicks": 72,
+      "leads": 0
+    },
+    {
+      "date": "2026-07-20",
+      "spend": 269.84,
+      "impressions": 5573,
+      "linkClicks": 90,
+      "leads": 2
+    },
+    {
+      "date": "2026-07-21",
+      "spend": 259.63,
+      "impressions": 5365,
+      "linkClicks": 55,
+      "leads": 0
+    },
+    {
+      "date": "2026-07-22",
+      "spend": 266.77,
+      "impressions": 5096,
+      "linkClicks": 57,
+      "leads": 3
+    },
+    {
+      "date": "2026-07-23",
+      "spend": 247.26,
+      "impressions": 3858,
+      "linkClicks": 51,
+      "leads": 7
+    },
+    {
+      "date": "2026-07-24",
+      "spend": 284.84,
+      "impressions": 4541,
+      "linkClicks": 54,
+      "leads": 6
+    },
+    {
+      "date": "2026-07-25",
+      "spend": 172.5,
+      "impressions": 3361,
+      "linkClicks": 26,
+      "leads": 0
+    },
+    {
+      "date": "2026-07-26",
+      "spend": 298.54,
+      "impressions": 4777,
+      "linkClicks": 61,
+      "leads": 5
+    },
+    {
+      "date": "2026-07-27",
+      "spend": 264.0,
+      "impressions": 4906,
+      "linkClicks": 78,
+      "leads": 4
+    },
+    {
+      "date": "2026-07-28",
+      "spend": 56.23,
+      "impressions": 1001,
+      "linkClicks": 10,
+      "leads": 2
+    },
+    {
+      "date": "2026-07-29",
+      "spend": 59.96,
+      "impressions": 922,
+      "linkClicks": 7,
+      "leads": 0
+    },
+    {
+      "date": "2026-07-30",
+      "spend": 39.83,
+      "impressions": 763,
+      "linkClicks": 7,
+      "leads": 0
+    },
+    {
+      "date": "2026-09-23",
+      "spend": 506.9,
+      "impressions": 7467,
+      "linkClicks": 231,
+      "leads": 3
+    },
+    {
+      "date": "2026-09-24",
+      "spend": 893.97,
+      "impressions": 6834,
+      "linkClicks": 118,
+      "leads": 9
+    },
+    {
+      "date": "2026-09-25",
+      "spend": 987.45,
+      "impressions": 7536,
+      "linkClicks": 133,
+      "leads": 5
+    },
+    {
+      "date": "2026-09-26",
+      "spend": 341.27,
+      "impressions": 3139,
+      "linkClicks": 57,
+      "leads": 1
+    },
+    {
+      "date": "2026-09-27",
+      "spend": 607.74,
+      "impressions": 6082,
+      "linkClicks": 91,
+      "leads": 4
+    },
+    {
+      "date": "2026-09-28",
+      "spend": 746.92,
+      "impressions": 6637,
+      "linkClicks": 115,
+      "leads": 13
+    },
+    {
+      "date": "2026-09-29",
+      "spend": 642.35,
+      "impressions": 8921,
+      "linkClicks": 89,
+      "leads": 5
+    },
+    {
+      "date": "2026-09-30",
+      "spend": 255.02,
+      "impressions": 2967,
+      "linkClicks": 39,
+      "leads": 2
+    }
+  ]
+}

@@ -3,6 +3,7 @@ import { NavLink, Outlet } from 'react-router-dom'
 const TABS = [
   { to: '/marketing', label: 'Marketing', icon: '📈' },
   { to: '/masterclass', label: 'Masterclass', icon: '🎓' },
+  { to: '/application-funnel', label: 'Application Funnel', icon: '🧾' },
   // { to: '/granular-view', label: 'Granular View', icon: '📋' }, // Hidden for now - can re-enable if needed
 ]
 

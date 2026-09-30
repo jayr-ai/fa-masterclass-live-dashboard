@@ -3,6 +3,7 @@ import { NavShell } from './components/NavShell'
 import { MasterclassPage } from './pages/MasterclassPage'
 import { MarketingPage } from './pages/MarketingPage'
 import { GranularViewPage } from './pages/GranularViewPage'
+import { ApplicationFunnelPage } from './pages/ApplicationFunnelPage'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Route index element={<Navigate to="/masterclass" replace />} />
           <Route path="/masterclass" element={<MasterclassPage />} />
           <Route path="/marketing" element={<MarketingPage />} />
+          <Route path="/application-funnel" element={<ApplicationFunnelPage />} />
           <Route path="/granular-view" element={<GranularViewPage />} />
         </Route>
       </Routes>
