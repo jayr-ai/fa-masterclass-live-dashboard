@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-09-30T02:03:27.898616Z",
+    "generatedAt": "2026-10-01T01:49:16.462228Z",
     "source": "Meta MCP direct pull (act_1185223312884959), campaign-level, scoped to 8 confirmed Application Funnel campaigns \u2014 no BigQuery",
     "campaignFilter": "Explicit campaign ID list, confirmed by user 2026-09-30 (naming alone is not reliable across this account's history)",
     "campaignIds": [
@@ -13,14 +13,14 @@
       "120255291772900285",
       "120255356743120285"
     ],
-    "dataWindow": "2026-09-23 to 2026-09-30",
-    "totalDays": 8,
-    "totalSpend": 4981.62
+    "dataWindow": "2026-09-23 to 2026-10-01",
+    "totalDays": 9,
+    "totalSpend": 5808.66
   },
   "byCampaignDaily": [
     {
       "campaignId": "120255281254990285",
-      "campaignName": "FA | SubmitApplication | Optin Funnel | 10k-Guarantee | Mixed Audiences",
+      "campaignName": "FA | SubmitApplication | Optin Funnel | 10k-Guarantee | TOF Audiences",
       "date": "2026-09-23",
       "spend": 270.16,
       "impressions": 3345,
@@ -38,7 +38,7 @@
     },
     {
       "campaignId": "120255281254990285",
-      "campaignName": "FA | SubmitApplication | Optin Funnel | 10k-Guarantee | Mixed Audiences",
+      "campaignName": "FA | SubmitApplication | Optin Funnel | 10k-Guarantee | TOF Audiences",
       "date": "2026-09-24",
       "spend": 552.93,
       "impressions": 5230,
@@ -56,7 +56,7 @@
     },
     {
       "campaignId": "120255281254990285",
-      "campaignName": "FA | SubmitApplication | Optin Funnel | 10k-Guarantee | Mixed Audiences",
+      "campaignName": "FA | SubmitApplication | Optin Funnel | 10k-Guarantee | TOF Audiences",
       "date": "2026-09-25",
       "spend": 624.53,
       "impressions": 5920,
@@ -74,7 +74,7 @@
     },
     {
       "campaignId": "120255281254990285",
-      "campaignName": "FA | SubmitApplication | Optin Funnel | 10k-Guarantee | Mixed Audiences",
+      "campaignName": "FA | SubmitApplication | Optin Funnel | 10k-Guarantee | TOF Audiences",
       "date": "2026-09-26",
       "spend": 241.48,
       "impressions": 2477,
@@ -92,7 +92,7 @@
     },
     {
       "campaignId": "120255281254990285",
-      "campaignName": "FA | SubmitApplication | Optin Funnel | 10k-Guarantee | Mixed Audiences",
+      "campaignName": "FA | SubmitApplication | Optin Funnel | 10k-Guarantee | TOF Audiences",
       "date": "2026-09-27",
       "spend": 607.74,
       "impressions": 6082,
@@ -101,7 +101,7 @@
     },
     {
       "campaignId": "120255281254990285",
-      "campaignName": "FA | SubmitApplication | Optin Funnel | 10k-Guarantee | Mixed Audiences",
+      "campaignName": "FA | SubmitApplication | Optin Funnel | 10k-Guarantee | TOF Audiences",
       "date": "2026-09-28",
       "spend": 706.98,
       "impressions": 6039,
@@ -110,7 +110,7 @@
     },
     {
       "campaignId": "120255384275490285",
-      "campaignName": "FA | Submit Application | VSL Funnel | Mixed Creatives | Mixed Audiences",
+      "campaignName": "FA | Submit Application | VSL Funnel | Mixed Creatives | MOF Audiences",
       "date": "2026-09-28",
       "spend": 39.94,
       "impressions": 598,
@@ -119,7 +119,7 @@
     },
     {
       "campaignId": "120255281254990285",
-      "campaignName": "FA | SubmitApplication | Optin Funnel | 10k-Guarantee | Mixed Audiences",
+      "campaignName": "FA | SubmitApplication | Optin Funnel | 10k-Guarantee | TOF Audiences",
       "date": "2026-09-29",
       "spend": 190.92,
       "impressions": 3547,
@@ -128,7 +128,7 @@
     },
     {
       "campaignId": "120255384275490285",
-      "campaignName": "FA | Submit Application | VSL Funnel | Mixed Creatives | Mixed Audiences",
+      "campaignName": "FA | Submit Application | VSL Funnel | Mixed Creatives | MOF Audiences",
       "date": "2026-09-29",
       "spend": 451.43,
       "impressions": 5374,
@@ -137,20 +137,38 @@
     },
     {
       "campaignId": "120255281254990285",
-      "campaignName": "FA | SubmitApplication | Optin Funnel | 10k-Guarantee | Mixed Audiences",
+      "campaignName": "FA | SubmitApplication | Optin Funnel | 10k-Guarantee | TOF Audiences",
       "date": "2026-09-30",
-      "spend": 128.25,
-      "impressions": 2056,
-      "linkClicks": 28,
-      "leads": 2
+      "spend": 435.04,
+      "impressions": 7695,
+      "linkClicks": 109,
+      "leads": 7
     },
     {
       "campaignId": "120255384275490285",
-      "campaignName": "FA | Submit Application | VSL Funnel | Mixed Creatives | Mixed Audiences",
+      "campaignName": "FA | Submit Application | VSL Funnel | Mixed Creatives | MOF Audiences",
       "date": "2026-09-30",
-      "spend": 126.77,
-      "impressions": 911,
-      "linkClicks": 11,
+      "spend": 330.51,
+      "impressions": 2188,
+      "linkClicks": 40,
+      "leads": 2
+    },
+    {
+      "campaignId": "120255281254990285",
+      "campaignName": "FA | SubmitApplication | Optin Funnel | 10k-Guarantee | TOF Audiences",
+      "date": "2026-10-01",
+      "spend": 205.23,
+      "impressions": 2980,
+      "linkClicks": 47,
+      "leads": 7
+    },
+    {
+      "campaignId": "120255384275490285",
+      "campaignName": "FA | Submit Application | VSL Funnel | Mixed Creatives | MOF Audiences",
+      "date": "2026-10-01",
+      "spend": 111.28,
+      "impressions": 581,
+      "linkClicks": 16,
       "leads": 0
     }
   ],
@@ -206,10 +224,17 @@
     },
     {
       "date": "2026-09-30",
-      "spend": 255.02,
-      "impressions": 2967,
-      "linkClicks": 39,
-      "leads": 2
+      "spend": 765.55,
+      "impressions": 9883,
+      "linkClicks": 149,
+      "leads": 9
+    },
+    {
+      "date": "2026-10-01",
+      "spend": 316.51,
+      "impressions": 3561,
+      "linkClicks": 63,
+      "leads": 7
     }
   ]
 }

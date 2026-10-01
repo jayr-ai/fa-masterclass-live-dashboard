@@ -1,24 +1,24 @@
 {
   "meta": {
-    "generatedAt": "2026-09-30T02:03:42.880349Z",
+    "generatedAt": "2026-10-01T01:49:29.847599Z",
     "source": "GHL REST API direct (Private Integration Token), Accelerator Application Pipeline \u2014 no BigQuery, no MCP",
     "pipelineId": "o3UfP72baKpNIhXMW2oV",
     "pipelineName": "Accelerator Application Pipeline",
-    "totalOpportunities": 33
+    "totalOpportunities": 34
   },
   "funnelSnapshot": {
-    "generatedAt": "2026-09-30T02:03:42.880251Z",
+    "generatedAt": "2026-10-01T01:49:29.847501Z",
     "pipelineId": "o3UfP72baKpNIhXMW2oV",
     "pipelineName": "Accelerator Application Pipeline",
-    "totalOpportunities": 33,
-    "applied": 33,
-    "booked": 33,
+    "totalOpportunities": 34,
+    "applied": 34,
+    "booked": 34,
     "showed": 1,
     "closed": 0,
     "lostAfterShow": 1,
     "noShowOrReschedule": 28,
     "byCurrentStage": {
-      "Appointment Set": 4,
+      "Appointment Set": 5,
       "Needs To Reschedule": 4,
       "No Show": 8,
       "Cancelled": 16,
@@ -29,6 +29,23 @@
     "note": "This pipeline has no separate Applied/Showed stage \u2014 every opportunity is created at 'Appointment Set', so Applied=Booked=total. Showed is inferred as reaching Pending Payment/Lost/Won."
   },
   "opportunities": [
+    {
+      "id": "I6wW4ENXiDXIo95LggoE",
+      "contactId": "ASERAsgCKS0esf4yll21",
+      "name": "Becky Danaher",
+      "email": "beckydanaher1@gmail.com",
+      "stageId": "48b46d82-6220-4961-91fb-99f5d52e8b9c",
+      "stageName": "Appointment Set",
+      "status": "open",
+      "monetaryValue": 10000,
+      "createdAt": "2026-10-01T01:02:52.236Z",
+      "lastStageChangeAt": "2026-10-01T01:02:52.236Z",
+      "utmCampaign": "FA | 10k-Guarantee | Cold Broad | SubmitApplication | ABO",
+      "utmMedium": "paid",
+      "fbclid": "PAZXh0bgNhZW0BMABwZG9mAmZkaWQWUPdQGAlydMChCJE5b5f24u0jGPO8SGFkaWQBqzuurCVlLXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp152Ak6LEpe1afPRpi5tDBdmpKk44urOW1Cd3eIjBn-61MRs614bCwvHgqQy_aem_UIYJkkOHJx07t016hiMWJg",
+      "fbc": "fb.2.1790816383775.PAZXh0bgNhZW0BMABwZG9mAmZkaWQWUPdQGAlydMChCJE5b5f24u0jGPO8SGFkaWQBqzuurCVlLXNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp152Ak6LEpe1afPRpi5tDBdmpKk44urOW1Cd3eIjBn-61MRs614bCwvHgqQy_aem_UIYJkkOHJx07t016hiMWJg",
+      "sessionSource": "Social media"
+    },
     {
       "id": "t4N70yEm2XnpbNbV6gNu",
       "contactId": "gUW5xxoUE5CoAJShNWIt",
@@ -56,7 +73,7 @@
       "status": "open",
       "monetaryValue": 10000,
       "createdAt": "2026-09-30T00:41:27.940Z",
-      "lastStageChangeAt": "2026-09-30T00:41:27.940Z",
+      "lastStageChangeAt": "2026-10-01T01:11:09.931Z",
       "utmCampaign": "120255281254990285",
       "utmMedium": "paid",
       "fbclid": "IwZXh0bgNhZW0BMABwZG9mAWFkaWQBqzuhDRyUHXNydGMGYXBwX2lkDDM1MDY4NTUzMTcyOAABHhvWdBrTB_A7WU0pLErvalr0fcfGoaJsbi_ZhBSmLNzAkir3H0wKCqWwJaLa_aem_V2xCf7IcwiXToxviPUUlBw",
@@ -73,7 +90,7 @@
       "status": "open",
       "monetaryValue": 10000,
       "createdAt": "2026-09-29T00:03:46.937Z",
-      "lastStageChangeAt": "2026-09-29T00:08:11.772Z",
+      "lastStageChangeAt": "2026-09-30T07:08:44.051Z",
       "utmCampaign": null,
       "utmMedium": null,
       "fbclid": null,

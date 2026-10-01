@@ -42,8 +42,8 @@ OUT_PATH = REPO_ROOT / "dashboard" / "public" / "data" / "application-funnel-ad-
 FUNNEL_START_DATE = "2026-09-01"
 
 CAMPAIGN_NAMES: dict[str, str] = {
-    "120255384275490285": "FA | Submit Application | VSL Funnel | Mixed Creatives | Mixed Audiences",
-    "120255281254990285": "FA | SubmitApplication | Optin Funnel | 10k-Guarantee | Mixed Audiences",
+    "120255384275490285": "FA | Submit Application | VSL Funnel | Mixed Creatives | MOF Audiences",
+    "120255281254990285": "FA | SubmitApplication | Optin Funnel | 10k-Guarantee | TOF Audiences",
     "120250367962050285": "PUR | FA | Application Funnel | Purchases",
     "120252512362330285": "Relaunch | AUS | PUR | Application Funnel",
     "120252123422660285": "Winner Ad | FA | Application Funnel | Schedule",
