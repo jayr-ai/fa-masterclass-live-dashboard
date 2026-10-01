@@ -4,7 +4,7 @@
     "source": "Meta MCP direct pull (act_1185223312884959, time_increment=1), no BigQuery",
     "dataWindow": "2026-01-13 to 2026-10-01",
     "cacheStatus": "Live sync from Meta MCP with actual daily breakdown",
-    "note": "Ad spend data current through 2026-09-30",
+    "note": "Ad spend data current through 2026-10-01",
     "totalDays": 247,
     "totalSpend": 307580.49
   },
