@@ -13,6 +13,12 @@ into `dashboard/public/data/*.json`. This is the no-BigQuery replacement for
 pipeline/stage IDs, same Meta ad account — but every step writes the final
 JSON directly instead of upserting to a warehouse table first.
 
+**Covers all three tabs in one run — Marketing, Masterclass, and
+Application Funnel** — per user request 2026-10-01 ("all tabs will all be
+refreshed at the same time"). Don't treat Application Funnel as optional or
+a separate ask; it's step 7 below, standard on every invocation unless
+`--masterclass-only` is passed.
+
 **GHL access is a location-scoped Private Integration Token (PIT), not the
 GHL MCP connector** — changed 2026-09-15 because the user works with
 multiple clients across different agency accounts, and the MCP connector is
@@ -59,9 +65,10 @@ instead of the real ~4,500 this way. `fetch_csv_rows` now:
 Options:
 
 ```bash
-/sync-fa-masterclass-live --meta-days 7      # Only refresh the last 7 days of Meta data
-/sync-fa-masterclass-live --ghl-only         # Skip Meta, refresh only GHL (funnel + attendance)
-/sync-fa-masterclass-live --no-push          # Update local JSON, skip git commit/push
+/sync-fa-masterclass-live --meta-days 7         # Only refresh the last 7 days of Meta data
+/sync-fa-masterclass-live --ghl-only            # Skip Meta, refresh only GHL (funnel + attendance)
+/sync-fa-masterclass-live --no-push             # Update local JSON, skip git commit/push
+/sync-fa-masterclass-live --masterclass-only    # Skip Application Funnel (steps 1-6 only)
 ```
 
 ## What it does
@@ -113,8 +120,41 @@ Options:
    missing, even though everything in it gets overwritten by the
    per-source fetches afterward. `masterclass-applications.json` is fetched
    separately by the page, not folded into this composite.
-6. **Commit & push** `dashboard/public/data/*.json` and `docs/data/*.json`
-   (see IMPLEMENTATION.md Phase 7 — GitHub Pages serves `docs/`, not
-   `dashboard/public/`) to the repo.
+6. **Application Funnel** (FA only — skip entirely for any other client's
+   dashboard) — a separate funnel from Masterclass, no webinar date, grouped
+   by application cohort. Added 2026-10-01 to this skill's standard run per
+   user request, having previously been synced as a one-off:
+   - **Meta Ads**, scoped to **8 explicit campaign IDs** (not a name
+     pattern — see `sync/build_application_funnel_ad_spend.py`'s
+     `CAMPAIGN_NAMES` dict for the current list). Pull campaign-level daily
+     insights for just those 8 campaign IDs (`object_ids`, not an
+     account-level pull) via Meta MCP, same date-range-to-sync-from logic as
+     Phase 1, save the raw JSON to a temp file, then run
+     `python3 sync/build_application_funnel_ad_spend.py <raw-file>` to
+     merge it into `application-funnel-ad-spend.json`. Most of the 8 are
+     paused — don't be alarmed if only 1-2 have spend in a given window.
+   - **GHL Accelerator Application Pipeline** (`o3UfP72baKpNIhXMW2oV`,
+     different pipeline from Masterclass's) —
+     `python3 sync/fetch_application_funnel.py build-data`, then
+     `python3 sync/fetch_application_funnel.py build-transactions` (matches
+     against the same CONSOLIDATED sheet, needs `build-data` run first).
+   - **Launch-date floor**: `FUNNEL_START_DATE = "2026-09-01"` is hardcoded
+     in both `fetch_application_funnel.py` and
+     `build_application_funnel_ad_spend.py` — this pipeline pre-dates the
+     funnel by a year (reused from prior unrelated GHL activity), so
+     anything created/dated before Sep 1, 2026 is dropped at fetch time.
+     Don't remove this filter without the user explicitly asking.
+   - These three files (`application-funnel-ad-spend.json`,
+     `application-funnel-opportunities.json`,
+     `application-funnel-transactions.json`) follow the same two-target
+     deploy as everything else (step 7) — copy into both `docs/data/` and
+     `au-fa-dashboard/marketing-dashboard/data/`.
+7. **Commit & push** `dashboard/public/data/*.json` and `docs/data/*.json`
+   (GitHub Pages serves `docs/`, not `dashboard/public/`) to this repo, then
+   mirror the same data files into `au-fa-dashboard/marketing-dashboard/data/`
+   (separate repo, separate commit/push — see IMPLEMENTATION.md Phase 6,
+   "TWO separate targets, both required"). Verify the production domain
+   actually picked up the change before calling the sync done — its CDN can
+   lag 5-15 minutes behind the push.
 
 See `IMPLEMENTATION.md` for the exact tool calls, tag formats, and file shapes.

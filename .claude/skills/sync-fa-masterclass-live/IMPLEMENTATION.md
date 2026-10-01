@@ -173,6 +173,71 @@ separately by the page and does NOT feed into this composite):
 }
 ```
 
+## Phase 5b: Application Funnel (FA only)
+
+Added 2026-10-01 as a standard phase of every sync, per user request to have
+Marketing/Masterclass/Application Funnel "all refreshed at the same time."
+Skip entirely for any client other than FA — this funnel and tab don't exist
+elsewhere. Pass `--masterclass-only` to skip it for this client too.
+
+This is a **separate funnel from Masterclass** — no webinar date, grouped by
+application cohort (week/month the GHL opportunity was created) instead.
+Full background in `fa-masterclass-live-dashboard/README.md`'s "Application
+Funnel tab" section; the essentials:
+
+1. **Meta Ads** — campaign-level pull (not account-level like Phase 1),
+   `object_ids` = the 8 explicit campaign IDs in
+   `sync/build_application_funnel_ad_spend.py`'s `CAMPAIGN_NAMES` dict (not a
+   name pattern — campaign naming across this account's history is too
+   inconsistent to auto-derive a safe rule; the list was confirmed with the
+   user 2026-09-30 after reviewing all ~45 candidates). Same
+   `fields`/`time_increment=1` as Phase 1, date range from the current
+   `application-funnel-ad-spend.json`'s last date through today. Save the raw
+   JSON to a temp file, then:
+   ```bash
+   python3 sync/build_application_funnel_ad_spend.py <raw-file>
+   ```
+   Most of the 8 campaigns are paused — seeing spend on only 1-2 of them in a
+   given window is normal, not a sign the pull is broken. If a campaign's
+   display name in the Meta pull's own `name` field drifts from
+   `CAMPAIGN_NAMES`, update the dict (cosmetic only — the script keys by ID).
+2. **GHL Accelerator Application Pipeline** (`o3UfP72baKpNIhXMW2oV`, location
+   `ZwP47P1XZZ8TSazVZMxc` — same location as Masterclass, different pipeline):
+   ```bash
+   set -a; source sync/.env; set +a
+   python3 sync/fetch_application_funnel.py build-data
+   python3 sync/fetch_application_funnel.py build-transactions
+   ```
+   `build-data` paginates every opportunity in the pipeline and writes
+   `application-funnel-opportunities.json` directly (unlike Phases 1-4, this
+   script writes the file itself rather than printing for Claude to merge).
+   `build-transactions` needs `build-data` run first in the same invocation —
+   it reads the just-written opportunities file and matches CONSOLIDATED sheet
+   rows by email + pipeline membership (no product-name filter: the same
+   product sells through both this funnel and Masterclass, so GHL pipeline
+   membership is the only reliable signal — per user decision 2026-09-30).
+3. **Launch-date floor — do not remove without the user asking**:
+   `FUNNEL_START_DATE = "2026-09-01"` is hardcoded in both
+   `fetch_application_funnel.py` and `build_application_funnel_ad_spend.py`.
+   This GHL pipeline pre-dates the funnel by about a year (~1,000 unrelated
+   opportunities back to Sep 2025, reused from prior GHL activity) — the user
+   confirmed 2026-10-01 that only opportunities/spend from the funnel's actual
+   Sep 1, 2026 launch should count, dropped at fetch time rather than just
+   hidden by a frontend filter. If the user ever says the funnel's launch
+   date was different, update the constant in both files and re-run.
+4. **Pipeline stage counts** (not a derived funnel): the "Funnel" section on
+   the page shows the 7 raw GHL stage counts (Appointment Set, Needs To
+   Reschedule, No Show, Cancelled, Pending Payment, Lost, Won) for
+   opportunities in the selected date range, computed client-side from
+   `application-funnel-opportunities.json` — nothing to do here at sync time,
+   just don't be surprised the page doesn't show a Link Clicks → Applications
+   → Booked → Showed → Closed bar chart like the original build spec
+   described; that was deliberately replaced 2026-09-30 per user request.
+
+Output: `application-funnel-ad-spend.json`, `application-funnel-opportunities.json`,
+`application-funnel-transactions.json` — deployed via the same two targets as
+everything else (Phase 6 below).
+
 ## Phase 6: Deploy — TWO separate targets, both required
 
 There are **two independent deployments** of this dashboard, in two
@@ -223,6 +288,10 @@ git add marketing-dashboard
 `au-fa-dashboard` is a **shared repo** other automations push to (revenue
 dashboard, sales dashboard, etc.) — always `git fetch`/`pull --ff-only`
 before editing, and scope `git add` to `marketing-dashboard/` only.
+
+The `*.json` wildcards above already pick up the three
+`application-funnel-*.json` files from Phase 5b — no separate copy step
+needed for those, just make sure Phase 5b actually ran first.
 
 Skip both pushes if `--no-push`. Verify Target B actually updated by
 fetching its live `data/cash-attribution.json` (or whichever file changed)
@@ -300,3 +369,12 @@ succeeded just because the command didn't error.
   from the "Deals Closed — Detail" table a day earlier) had never reached
   that production copy either, for the same reason. Rewrote Phase 6 as two
   explicit, both-required deploy targets.
+- **2026-10-01, Application Funnel folded into the standard sync**: the
+  Application Funnel tab (added 2026-09-30, see `README.md`) had its own
+  one-off sync that day but wasn't part of this skill's defined phases —
+  running `/sync-fa-masterclass-live` the next day correctly refreshed
+  Marketing/Masterclass but silently left Application Funnel a day stale.
+  User asked for all three tabs to refresh together going forward. Added
+  Phase 5b above; this skill's standard run now always includes it for FA
+  (pass `--masterclass-only` to skip, e.g. for a client that doesn't have
+  this tab).
