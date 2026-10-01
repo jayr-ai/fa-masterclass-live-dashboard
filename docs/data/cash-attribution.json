@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generatedAt": "2026-09-30T00:52:34.314333Z",
+    "generatedAt": "2026-10-01T01:44:40.158978Z",
     "source": "Google Sheet 'CONSOLIDATED' (direct CSV pull), attribution from the sheet's own 'Attribution' column \u2014 no BigQuery, no GHL cross-reference",
-    "dataWindow": "2025-11-06 to 2026-09-26"
+    "dataWindow": "2025-11-06 to 2026-09-30"
   },
   "monthlySummary": [
     {
@@ -70,10 +70,10 @@
     },
     {
       "month": "2026-09",
-      "totalCash": 86577.0,
-      "cashFromAds": 51277.0,
-      "cashFromOrganic": 35300.0,
-      "transactionCount": 31
+      "totalCash": 102688.0,
+      "cashFromAds": 56277.0,
+      "cashFromOrganic": 46411.0,
+      "transactionCount": 33
     }
   ],
   "dailyBreakdown": [
@@ -1339,9 +1339,21 @@
     },
     {
       "date": "2026-09-26",
-      "totalCash": 1070.0,
-      "cashFromAds": 1070.0,
+      "totalCash": 970.0,
+      "cashFromAds": 970.0,
       "cashFromOrganic": 0.0
+    },
+    {
+      "date": "2026-09-28",
+      "totalCash": 100.0,
+      "cashFromAds": 100.0,
+      "cashFromOrganic": 0.0
+    },
+    {
+      "date": "2026-09-30",
+      "totalCash": 16111.0,
+      "cashFromAds": 5000.0,
+      "cashFromOrganic": 11111.0
     }
   ],
   "transactions": [
@@ -8826,7 +8838,7 @@
       "source": "Paid"
     },
     {
-      "date": "2026-09-26",
+      "date": "2026-09-28",
       "name": "David Sega",
       "email": "d.sega82@gmail.com",
       "product": "Accelerator Premium",
@@ -8834,6 +8846,26 @@
       "closer": "Stacie Skehan",
       "mode": "Stripe",
       "source": "Paid"
+    },
+    {
+      "date": "2026-09-30",
+      "name": "Peter J Pollard",
+      "email": "uncle.ta007@gmail.com",
+      "product": "Accelerator",
+      "amount": 5000.0,
+      "closer": "Shane Dacosta",
+      "mode": "Stripe",
+      "source": "Paid"
+    },
+    {
+      "date": "2026-09-30",
+      "name": "Jeremy Rees-Jones",
+      "email": "jeremy_h_rees@hotmail.com",
+      "product": "Accelerator Premium",
+      "amount": 11111.0,
+      "closer": "Laura Fillmann",
+      "mode": "EFT",
+      "source": "Organic"
     }
   ]
 }
