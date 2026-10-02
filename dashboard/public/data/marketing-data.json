@@ -1,17 +1,17 @@
 {
   "meta": {
-    "generatedAt": "2026-10-01T01:45:02.549719Z",
+    "generatedAt": "2026-10-02T02:24:51.848108Z",
     "source": "Composite of marketing-performance.json (Meta MCP) / funnel-stages.json (GHL REST API direct via PIT) / masterclass-registrations.json / masterclass-attendance.json / masterclass-applications.json (Google Sheet) / cash-attribution.json (Google Sheet) \u2014 no BigQuery, no MCP dependency for GHL data",
-    "dataWindow": "2025-11-06 to 2026-10-01",
+    "dataWindow": "2025-11-06 to 2026-10-02",
     "cacheStatus": "Direct sync via Meta MCP + GHL REST API (PIT) + Google Sheets CSV export",
-    "syncedAt": "2026-10-01T01:45:02.550112Z"
+    "syncedAt": "2026-10-02T02:24:51.848518Z"
   },
   "funnelSnapshot": {
-    "generatedAt": "2026-10-01T01:43:31.963602Z",
+    "generatedAt": "2026-10-02T02:24:01.639255Z",
     "stages": [
       {
         "stage": "Registered",
-        "count": 5087
+        "count": 5086
       },
       {
         "stage": "Replay Optin",
@@ -19,7 +19,7 @@
       },
       {
         "stage": "Close Lost",
-        "count": 384
+        "count": 385
       },
       {
         "stage": "Call Cancelled / Not Interested",
@@ -27,7 +27,7 @@
       },
       {
         "stage": "No-Showed",
-        "count": 269
+        "count": 270
       },
       {
         "stage": "Call Cancelled / Need To Reschedule",
@@ -39,7 +39,7 @@
       },
       {
         "stage": "Bad Fit",
-        "count": 39
+        "count": 40
       },
       {
         "stage": "VIP Upgrade",
@@ -47,7 +47,7 @@
       },
       {
         "stage": "Appointment Booked",
-        "count": 15
+        "count": 13
       },
       {
         "stage": "Pending Sale",
@@ -2102,10 +2102,17 @@
     },
     {
       "date": "2026-10-01",
-      "spend": 359.81,
-      "impressions": 11070,
-      "linkClicks": 61,
-      "leads": 7
+      "spend": 1190.54,
+      "impressions": 32275,
+      "linkClicks": 179,
+      "leads": 14
+    },
+    {
+      "date": "2026-10-02",
+      "spend": 728.3,
+      "impressions": 15018,
+      "linkClicks": 101,
+      "leads": 6
     }
   ],
   "cashAttributionDaily": [
@@ -3386,6 +3393,12 @@
       "totalCash": 16111.0,
       "cashFromAds": 5000.0,
       "cashFromOrganic": 11111.0
+    },
+    {
+      "date": "2026-10-01",
+      "totalCash": 12500.0,
+      "cashFromAds": 12500.0,
+      "cashFromOrganic": 0.0
     }
   ],
   "oneOffEvents": []

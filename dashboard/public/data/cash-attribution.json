@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generatedAt": "2026-10-01T01:44:40.158978Z",
+    "generatedAt": "2026-10-02T02:24:41.720457Z",
     "source": "Google Sheet 'CONSOLIDATED' (direct CSV pull), attribution from the sheet's own 'Attribution' column \u2014 no BigQuery, no GHL cross-reference",
-    "dataWindow": "2025-11-06 to 2026-09-30"
+    "dataWindow": "2025-11-06 to 2026-10-01"
   },
   "monthlySummary": [
     {
@@ -74,6 +74,13 @@
       "cashFromAds": 56277.0,
       "cashFromOrganic": 46411.0,
       "transactionCount": 33
+    },
+    {
+      "month": "2026-10",
+      "totalCash": 12500.0,
+      "cashFromAds": 12500.0,
+      "cashFromOrganic": 0.0,
+      "transactionCount": 2
     }
   ],
   "dailyBreakdown": [
@@ -1354,6 +1361,12 @@
       "totalCash": 16111.0,
       "cashFromAds": 5000.0,
       "cashFromOrganic": 11111.0
+    },
+    {
+      "date": "2026-10-01",
+      "totalCash": 12500.0,
+      "cashFromAds": 12500.0,
+      "cashFromOrganic": 0.0
     }
   ],
   "transactions": [
@@ -8866,6 +8879,26 @@
       "closer": "Laura Fillmann",
       "mode": "EFT",
       "source": "Organic"
+    },
+    {
+      "date": "2026-10-01",
+      "name": "Dilip Tamang Pakhren",
+      "email": "dilptmg777@gmail.com",
+      "product": "Accelerator",
+      "amount": 1500.0,
+      "closer": "Shane Dacosta",
+      "mode": "Stripe",
+      "source": "Paid"
+    },
+    {
+      "date": "2026-10-01",
+      "name": "Bron Irwin",
+      "email": "bsirwin@outlook.com",
+      "product": "Accelerator",
+      "amount": 11000.0,
+      "closer": "Stacie Skehan",
+      "mode": "EFT",
+      "source": "Paid"
     }
   ]
 }

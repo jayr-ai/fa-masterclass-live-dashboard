@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generatedAt": "2026-10-01T01:49:30.962325Z",
+    "generatedAt": "2026-10-02T02:25:28.743509Z",
     "source": "Google Sheet 'CONSOLIDATED', matched by email against Accelerator Application Pipeline opportunities (no product-name filter \u2014 same product sells through both Masterclass and this funnel, so email+pipeline match is the only reliable signal, per user decision 2026-09-30)",
     "matchRule": "email present in pipeline AND sale date >= that contact's earliest opportunity createdAt",
     "totalMatchedTransactions": 0,

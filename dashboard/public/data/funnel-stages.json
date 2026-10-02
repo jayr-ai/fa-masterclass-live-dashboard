@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generatedAt": "2026-10-01T01:43:31.963602Z",
+    "generatedAt": "2026-10-02T02:24:01.639255Z",
     "source": "GHL REST API direct (Private Integration Token, no MCP, no BigQuery)",
-    "dataWindow": "2026-10-01",
+    "dataWindow": "2026-10-02",
     "totalOpportunities": 6785,
     "pipelineId": "djiSwm3hJsW7Rv9tyqSl",
     "pipelineName": "Masterclass Pipeline"
@@ -10,9 +10,9 @@
   "stages": [
     {
       "name": "Registered",
-      "count": 5087,
+      "count": 5086,
       "position": 0,
-      "winProbability": 74.97
+      "winProbability": 74.96
     },
     {
       "name": "Replay Optin",
@@ -22,9 +22,9 @@
     },
     {
       "name": "Close Lost",
-      "count": 384,
+      "count": 385,
       "position": 2,
-      "winProbability": 5.66
+      "winProbability": 5.67
     },
     {
       "name": "Call Cancelled / Not Interested",
@@ -34,9 +34,9 @@
     },
     {
       "name": "No-Showed",
-      "count": 269,
+      "count": 270,
       "position": 4,
-      "winProbability": 3.96
+      "winProbability": 3.98
     },
     {
       "name": "Call Cancelled / Need To Reschedule",
@@ -52,9 +52,9 @@
     },
     {
       "name": "Bad Fit",
-      "count": 39,
+      "count": 40,
       "position": 7,
-      "winProbability": 0.57
+      "winProbability": 0.59
     },
     {
       "name": "VIP Upgrade",
@@ -64,9 +64,9 @@
     },
     {
       "name": "Appointment Booked",
-      "count": 15,
+      "count": 13,
       "position": 9,
-      "winProbability": 0.22
+      "winProbability": 0.19
     },
     {
       "name": "Pending Sale",
